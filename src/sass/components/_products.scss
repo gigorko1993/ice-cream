@@ -1,0 +1,33 @@
+.products-card {
+  background-color: $bg-header;
+  width: 280px;
+  height: 598px;
+  &:not(:last-child) {
+    margin-bottom: 17px;
+  }
+}
+
+.products-label {
+  font-family: Titan One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: $secondary-text-color;
+}
+
+.products-title {
+  font-family: Titan One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 34px;
+  line-height: 39px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $accent-color;
+}
