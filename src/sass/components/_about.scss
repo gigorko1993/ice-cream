@@ -1,14 +1,17 @@
 .visually-hidden {
   position: absolute;
-  clip: rect (0 0 0 0);
   width: 1px;
   height: 1px;
   margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
 }
 
 .about-section {
   padding: 130px 40px 140px;
-  background-color: #fff5f6;
+  background-color: $bg-advantages-footer;
 
   &-label {
     font-family: Titan One;
@@ -18,7 +21,7 @@
     line-height: 30px;
     text-align: center;
     text-transform: uppercase;
-    color: #ffa5ba;
+    color: $text;
   }
   &-title {
     font-family: Titan One;
@@ -29,9 +32,31 @@
     text-align: center;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    color: #d41443;
+    color: $accent-color;
   }
   &-box {
+    padding: 0px;
+    margin: 0px;
+    // display: column;
+  }
+
+  &-picture {
     display: flex;
+    align-items: center;
+  }
+  &-image {
+    display: flex;
+    align-items: center;
+  }
+
+  &-description {
+    margin: 45px 50px 20px;
+  }
+  &-text-1 {
+    color: $black-text-color;
+  }
+  &-text-2,
+  &-text-3 {
+    color: $primary-text-color;
   }
 }

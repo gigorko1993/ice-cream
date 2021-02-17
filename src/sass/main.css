@@ -75,10 +75,13 @@ img {
 
 .visually-hidden {
   position: absolute;
-  clip: rect 0 0 0 0;
   width: 1px;
   height: 1px;
   margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
 }
 
 .about-section {
@@ -110,8 +113,37 @@ img {
 }
 
 .about-section-box {
+  padding: 0px;
+  margin: 0px;
+}
+
+.about-section-picture {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about-section-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about-section-description {
+  margin: 45px 50px 20px;
+}
+
+.about-section-text-1 {
+  color: #000000;
+}
+
+.about-section-text-2, .about-section-text-3 {
+  color: #907e82;
 }
 /*# sourceMappingURL=main.css.map */
