@@ -7,8 +7,7 @@
 }
 
 .about-section {
-  padding-top: 130px;
-  padding-bottom: 140px;
+  padding: 130px 40px 140px;
   background-color: #fff5f6;
 
   &-label {
@@ -31,5 +30,8 @@
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: #d41443;
+  }
+  &-box {
+    display: flex;
   }
 }
