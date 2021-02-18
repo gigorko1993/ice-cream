@@ -1,0 +1,95 @@
+.hero {
+  background-color: $bg-header;
+}
+
+.hero-title-box {
+  max-width: 220px;
+
+  @include media_min($tablet) {
+    max-width: 162px;
+  }
+
+  @include media_min($desktop) {
+    max-width: 277px;
+  }
+}
+
+.hero-title {
+  color: $accent-color;
+
+  font-family: Titan One;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 0.958;
+  text-transform: uppercase;
+
+  margin-bottom: 20px;
+
+  @include media_min($tablet) {
+    font-size: 34px;
+    line-height: 0.912;
+  }
+
+  @include media_min($desktop) {
+    margin-bottom: 25px;
+    font-size: 58px;
+    line-height: 0.897;
+  }
+}
+
+.hero-title-label {
+  color: $white-text-color;
+
+  font-size: 26px;
+  line-height: 1.15;
+
+  @include media_min($tablet) {
+    font-size: 22px;
+    line-height: 1.14;
+  }
+  @include media_min($desktop) {
+    font-size: 38px;
+    line-height: 1.16;
+  }
+}
+
+.hero-button {
+  display: inline-block;
+  padding-top: 8px;
+  padding-right: 14px;
+  padding-bottom: 8px;
+  padding-left: 14px;
+  border-radius: 20px;
+
+  color: $main-text-color;
+  background-color: $accent-color;
+
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 1.25;
+  text-align: center;
+
+  @include media_min($desktop) {
+    padding-top: 13px;
+    padding-right: 22px;
+    padding-bottom: 13px;
+    padding-left: 22px;
+
+    font-size: 14px;
+    line-height: 1.29;
+  }
+}
+.hero-button:hover,
+.hero-button:focus {
+  background-color: $bg-customers-reviews-dots;
+}
+
+.hero-button-pink {
+  color: $accent-color;
+  background-color: $white-text-color;
+}
+
+.hero-button-pink:hover,
+.hero-button-pink:focus {
+  background-color: $bg-button-hower;
+}
