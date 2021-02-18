@@ -4,6 +4,7 @@
     background-color: #FFF5F6;
 }
 .container {
+    width: 220px;
     padding: 43px 20px;
 
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
@@ -16,6 +17,8 @@
 }
 
 .contact-item {
+    height: 427px;
+    
     color: tomato;
     text-transform: uppercase;
    
@@ -48,14 +51,37 @@
 }
 
 .contact-schedule {
+   
+    margin-bottom: 25px;
+    // margin-top: 25px;
+    border-bottom: 1px solid #E1E1E1;
     color: black;
 }
 
 .contact-title {
+    margin-bottom: 10px;
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: 0.04em;
+
     color: #000000;
 }
 
+.contact-time {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 22px;
+    
+    color: #FFA5BA;
+}
 .contact-description {
+    // margin-bottom: 25px;
+ 
+    // font-weight: 500;
+    // font-size: 12px;
+    // line-height: 1.5px;
     color: #907E82;
 }
 
@@ -66,5 +92,13 @@
     line-height: 1.5px;
 
     color: #907E82;
-
 }
+
+.contact-days {
+    margin-bottom: 10px;
+}
+
+// .contact-border {
+//     margin-top: 25px;
+//     border-bottom: 1px solid #E1E1E1;
+// }
