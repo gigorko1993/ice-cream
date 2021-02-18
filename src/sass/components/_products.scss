@@ -214,3 +214,19 @@
     margin-right: 44px;
   }
 }
+.decorative-dots {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 18px;
+
+  & .dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: $bg-customers-reviews-dots;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}
