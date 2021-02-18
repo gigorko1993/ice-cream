@@ -2,65 +2,75 @@
 
 // Загальне для body
 body {
-    font-family: $main-font-family;
-    font-weight: $main-font-weight;
-    letter-spacing: $main-letter-spacing;
-    background-color: $main-background-color;
-    color: $main-text-color;
+  font-family: $main-font-family;
+  font-weight: $main-font-weight;
+  letter-spacing: $main-letter-spacing;
+  background-color: $bg-main-color;
+  color: $main-text-color;
 }
-  
+
 //   Забираємо нижній і верхній маржен декорацію списку
 ul {
-    list-style: none;
-    margin-top: 0;
-    margin-bottom: 0;
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
 }
 // Забираємо нижній і верхній маржини
-p {
-    margin-top: 0;
-    margin-bottom: 0;
+p,
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 // Забираємо підкреслення в ссилок
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 // Базові дані для контентних картинок
-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
+img,
+picture {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
- /*Контейнер загальний для всіх секцій*/
+/*Контейнер загальний для всіх секцій*/
 .container {
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
 
-    @media screen and (max-width:767px) {
-        min-width: 280px;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-    @media screen and (min-width:768px) and (max-width:1279px) {
-        min-width: 768px;
-        padding-left: 34px;
-        padding-right: 34px;
-    }
-    @media screen and (min-width:1280px) {
-        min-width: 1080px;
-        padding-left: 15px;
-        padding-right: 15px;
-    }
 
+  @media screen and (max-width: $max-responsive-mobile) {
+    min-width: 100%;
+  }
+
+  @media screen and (min-width: $mobile) {
+    min-width: 480px;
+
+  }
+  @media screen and (min-width: $tablet) {
+    min-width: 768px;
+    padding-left: 34px;
+    padding-right: 34px;
+  }
+  @media screen and (min-width: $desktop) {
+    min-width: 1080px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 // Приховування елементів
 .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    border: 0;
-    clip: rect(0 0 0 0)
-  }
-
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}

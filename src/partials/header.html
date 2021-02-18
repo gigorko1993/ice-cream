@@ -2,30 +2,42 @@
 
 <header class="header">
     <div class="header__container">
-        <a class="header__link" href="">
-            <img src="" alt="">
+        <a class="header__link-logo" href="">
+            <span class="header__logo-text">icecream</span>
         </a>
-        <nav>
-            <ul>
-                <li>
-                    <a class="header__link" href="">Home</a>
+        <button type="button" class="header__button-menu">
+            <svg class="header__icon-burger" width="20px" height="12px">
+                <!-- <use
+                    href="..src/images/sprite.svg#Burger";>
+                </use> -->
+            </svg>
+        </button>
+        <nav class="header__navigation">
+            <ul class="header__list">
+                <li class="header__item">
+                    <a class="header__link header__link-current" href="">Home</a>
                 </li>
-                <li>
+                <li class="header__item">
                     <a class="header__link" href="">About us</a>
                 </li>
-                <li>
+                <li class="header__item">
                     <a class="header__link" href="">How it’s made?</a>
                 </li>
-                <li>
+                <li class="header__item">
                     <a class="header__link" href="">Our products</a>
-                </li>
-                <li>
+                </li >
+                <li class="header__item">
                     <a class="header__link" href="">Contact</a>
                 </li>
             </ul>
         </nav>
-        <button type="button" class="header__button">
-            Buy now >
+        <button type="button" class="header__button-buy">
+            <span class="header__buy-text">Buy now</span>
+            <svg class="header__icon-narrow" width="4px" height="8px">
+                <use>
+
+                </use>
+            </svg>
         </button>
     </div>
 </header>
