@@ -1,11 +1,12 @@
 .products-card {
   position: relative;
+
   width: 280px;
   height: 485px;
   border-radius: 24px;
 
   &:not(:last-child) {
-    margin-bottom: 17px;
+    margin-bottom: 130px;
   }
 
   &__picture {
@@ -77,4 +78,8 @@
 
     margin: 30px 40px;
   }
+}
+
+.products-item:not(:last-child) {
+  margin-bottom: 130px;
 }
