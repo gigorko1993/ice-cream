@@ -21,6 +21,7 @@
     text-align: center;
     text-transform: uppercase;
     color: $text;
+    margin-bottom: 15px;
   }
   &-title {
     font-family: Titan One;
@@ -54,7 +55,7 @@
   }
 
   &-description {
-    margin: 45px 50px 20px;
+    margin: 45px 30px 20px;
   }
   &-text-1 {
     margin-bottom: 35px;
@@ -65,7 +66,7 @@
     line-height: 162%;
   }
   &-text-2 {
-    margin-bottom: 35px;
+    margin-bottom: 20px;
   }
   &-text-2,
   &-text-3 {
@@ -89,7 +90,7 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 1.29;
-  padding: 10px 37px 56px 10px;
+  padding: 10px 56px 10px 37px;
   color: $accent-color;
   background-color: $main-text-color;
   cursor: pointer;
@@ -97,4 +98,10 @@
   // transition: color $animation-duration $transition-timing-function,
   //   background-color $animation-duration $transition-timing-function,
   //   box-shadow $animation-duration $transition-timing-function;
+
+  &-arrow {
+    fill: $accent-color;
+    margin-left: 13px;
+    padding: 0;
+  }
 }
