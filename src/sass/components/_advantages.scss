@@ -1,0 +1,32 @@
+.advantages-picture {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.advantages-text {
+  font-style: normal;
+  font-size: 12px;
+  line-height: 1.7;
+  /* or 20px */
+
+  color: $black-text-color;
+
+  &:not(:last-child) {
+    margin-bottom: 38px;
+  }
+}
+
+.advantages-span {
+  font-family: Titan One;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  color: $accent-color;
+}
+
+.advantages-item:not(:last-child) {
+  margin-bottom: 38px;
+}
