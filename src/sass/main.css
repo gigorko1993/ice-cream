@@ -4,8 +4,8 @@
  * Все паршалы подключаются сюда.
  */
 body {
-  font-family: DM Sans, sans-serif;
-  font-weight: 700;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
   letter-spacing: 0.04em;
   background-color: #E5E5E5;
   color: #FFFFFF;
@@ -15,9 +15,14 @@ ul {
   list-style: none;
   margin-top: 0;
   margin-bottom: 0;
+  padding: 0;
 }
 
-p {
+p,
+h1,
+h2,
+h3,
+h4 {
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -26,7 +31,8 @@ a {
   text-decoration: none;
 }
 
-img {
+img,
+picture {
   display: block;
   max-width: 100%;
   height: auto;
@@ -36,17 +42,23 @@ img {
 .container {
   margin-left: auto;
   margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 479px) {
   .container {
-    min-width: 280px;
-    padding-left: 20px;
-    padding-right: 20px;
+    min-width: 100%;
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 480px) {
+  .container {
+    min-width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
   .container {
     min-width: 768px;
     padding-left: 34px;
@@ -85,19 +97,18 @@ img {
 }
 
 .about-section {
-  padding: 130px 40px 140px;
   background-color: #fff5f6;
 }
 
 .about-section-label {
   font-family: Titan One;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 26px;
-  line-height: 30px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.16;
   text-align: center;
   text-transform: uppercase;
   color: #ffa5ba;
+  margin-bottom: 15px;
 }
 
 .about-section-title {
@@ -105,7 +116,7 @@ img {
   font-style: normal;
   font-weight: normal;
   font-size: 34px;
-  line-height: 39px;
+  line-height: 1.15;
   text-align: center;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -121,29 +132,71 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+  width: 280px;
+  height: auto;
 }
 
 .about-section-image {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  height: auto;
 }
 
 .about-section-description {
-  margin: 45px 50px 20px;
+  margin: 45px 30px 20px;
 }
 
 .about-section-text-1 {
+  margin-bottom: 35px;
+  font-family: "DM Sans", sans-serif;
   color: #000000;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 162%;
+}
+
+.about-section-text-2 {
+  margin-bottom: 20px;
 }
 
 .about-section-text-2, .about-section-text-3 {
+  font-family: "DM Sans", sans-serif;
   color: #907e82;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 162%;
+}
+
+.about-section-text-3 {
+  margin-bottom: 20px;
+}
+
+.about-section-button {
+  border: 1px solid transparent;
+  border-radius: 30px;
+  font-family: "DM Sans", sans-serif;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.29;
+  padding: 10px 56px 10px 37px;
+  color: #d41443;
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
+
+.about-section-button-arrow {
+  fill: #d41443;
+  margin-left: 13px;
+  padding: 0;
 }
 /*# sourceMappingURL=main.css.map */
