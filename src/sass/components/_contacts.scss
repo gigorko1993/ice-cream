@@ -23,7 +23,6 @@
 }
 
 .contact-decor {
-    margin-bottom: 25px;
     width: 80px;
     height: 16px;
     left: 70px;
@@ -49,8 +48,7 @@
 }
 
 .contact-schedule {
-    padding-bottom: 25px;
-    margin-bottom: 25px;
+    // padding-bottom: 25px;
     // margin-top: 25px;
     border-bottom: 1px solid #E1E1E1;
     color: black;
@@ -74,6 +72,14 @@
     
     color: #FFA5BA;
 }
+
+
+.contact-item {
+    @media screen and (max-width: 767px) {
+        margin-bottom: 20px
+      }
+}
+
 .contact-description {
  
     font-weight: 500;
@@ -93,4 +99,9 @@
 
 .contact-days {
     margin-bottom: 10px;
+
+}
+.contact-border {
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
