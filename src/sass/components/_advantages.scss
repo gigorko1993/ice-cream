@@ -36,7 +36,6 @@
 }
 
 .advantages-picture {
-  // display: block;
   margin-bottom: 16px;
 
   @media screen and (min-width: 768px) {
@@ -48,16 +47,10 @@
   }
 }
 
-.advantages-text {
-  font-style: normal;
-  font-size: 12px;
-  line-height: 1.7;
-
-  color: $black-text-color;
-}
-
 .advantages-span {
   display: block;
+
+  margin-bottom: 10px;
 
   font-family: Titan One;
   font-size: 36px;
@@ -78,5 +71,23 @@
 
     font-size: 58px;
     line-height: 1.14;
+  }
+}
+
+.advantages-text {
+  font-style: normal;
+  font-size: 12px;
+  line-height: 1.7;
+
+  color: $black-text-color;
+
+  @media screen and (min-width: 768px) {
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+    letter-spacing: 0.02em;
   }
 }
