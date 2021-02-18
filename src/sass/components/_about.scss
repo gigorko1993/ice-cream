@@ -42,11 +42,16 @@
 
   &-picture {
     display: flex;
+    justify-content: center;
     align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    width: 280px;
+    height: auto;
   }
+
   &-image {
-    display: flex;
-    align-items: center;
+    height: auto;
   }
 
   &-description {
