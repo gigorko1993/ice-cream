@@ -32,6 +32,7 @@
 
     border-radius: 50%;
     border: none;
+    fill: $bg-customers-reviews-dots;
   }
 }
 
@@ -116,7 +117,7 @@
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1279px) {
   .products-label {
     font-size: 26px;
     line-height: 30px;
@@ -170,7 +171,7 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .products-label {
     font-size: 30px;
     line-height: 34px;
@@ -212,4 +213,4 @@
     margin-top: 32px;
     margin-right: 44px;
   }
-} ;
+}
