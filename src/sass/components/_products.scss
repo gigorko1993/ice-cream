@@ -61,15 +61,6 @@
   margin: 30px 40px;
 }
 
-.product-icon {
-  display: block;
-  width: 26px;
-  height: 6px;
-  border: 1px solid black;
-  margin-right: auto;
-  margin-left: auto;
-}
-
 .prodbtn-icon {
   display: block;
 }
@@ -108,7 +99,7 @@
   margin-bottom: 130px;
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (min-width: $mobile) and (max-width: $max-mobile) {
   .products-card {
     width: 280px;
   }
@@ -117,7 +108,7 @@
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: $tablet) and (max-width: $max-tablet) {
   .products-label {
     font-size: 26px;
     line-height: 30px;
@@ -171,7 +162,7 @@
   }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: $desktop) {
   .products-label {
     font-size: 30px;
     line-height: 34px;
