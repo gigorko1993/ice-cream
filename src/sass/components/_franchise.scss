@@ -54,7 +54,7 @@
 
     &-tittle {
         margin: 0;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
 
         font-family: Titan One;
         font-style: normal;
@@ -86,7 +86,7 @@
         font-family: DM Sans;
         font-style: normal;
         font-weight: bold;
-        font-size: 12px;
+        font-size: 10px;
         line-height: 1.13;
         letter-spacing: 0.02em;
 
@@ -96,11 +96,11 @@
         color: #000000;
 
         @media screen and (min-width: $tablet) {
-            font-size: 14px;
+            font-size: 12px;
           }
     
         @media screen and (min-width: $desktop) {
-            font-size: 16px;
+            font-size: 14px;
           }
     }
 
@@ -184,7 +184,7 @@
         
     &-form-feedback {
         display: block;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }      
         
     &-form-button {
