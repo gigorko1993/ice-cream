@@ -25,8 +25,7 @@
   }
   &-title {
     font-family: Titan One;
-    font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 34px;
     line-height: 1.15;
     text-align: center;
@@ -59,7 +58,7 @@
   }
   &-text-1 {
     margin-bottom: 35px;
-    font-family: $main-font-family;
+    font-family: DM Sans;
     color: $black-text-color;
     font-weight: 500;
     font-size: 12px;
@@ -70,7 +69,7 @@
   }
   &-text-2,
   &-text-3 {
-    font-family: $main-font-family;
+    font-family: DM Sans;
     color: $primary-text-color;
     font-weight: 500;
     font-size: 12px;
@@ -84,7 +83,7 @@
 .about-section-button {
   border: 1px solid transparent;
   border-radius: 30px;
-  font-family: $main-font-family;
+  font-family: Titan One;
   align-items: center;
   text-align: center;
   font-weight: 700;
@@ -100,7 +99,7 @@
   //   box-shadow $animation-duration $transition-timing-function;
 
   &-arrow {
-    fill: $accent-color;
+    fill: #000;
     margin-left: 13px;
     padding: 0;
   }
