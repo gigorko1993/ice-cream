@@ -1,9 +1,12 @@
 .advantages {
+  padding-top: 65px;
+  padding-bottom: 140px;
+
   background-color: $bg-advantages-footer;
 }
 
 .advantages-list {
-  @media screen and (min-width: 768px) {
+  @include media_min(768px) {
     display: flex;
     justify-content: center;
   }
@@ -12,11 +15,12 @@
 .advantages-item {
   width: 230px;
 
-  &:not(:last-child) {
-    margin-bottom: 38px;
+  @include media_max(767px) {
+    &:not(:last-child) {
+      margin-bottom: 38px;
+    }
   }
-
-  @media screen and (min-width: 768px) {
+  @include media_min(768px) {
     margin-bottom: 0;
 
     width: 180px;
@@ -26,7 +30,7 @@
     }
   }
 
-  @media screen and (min-width: 1280px) {
+  @include media_min(1280px) {
     width: 330px;
 
     &:not(:last-child) {
@@ -38,11 +42,11 @@
 .advantages-picture {
   margin-bottom: 16px;
 
-  @media screen and (min-width: 768px) {
+  @include media_min(768px) {
     margin-bottom: 36px;
   }
 
-  @media screen and (min-width: 768px) {
+  @include media_min(1280px) {
     margin-bottom: 40px;
   }
 }
@@ -52,21 +56,21 @@
 
   margin-bottom: 10px;
 
-  font-family: Titan One;
+  font-family: $secondary-font-family;
   font-size: 36px;
   line-height: 1.14;
   text-transform: uppercase;
 
   color: $accent-color;
 
-  @media screen and (min-width: 768px) {
+  @include media_min(768px) {
     margin-bottom: 13px;
 
     font-size: 48px;
     line-height: 1.15;
   }
 
-  @media screen and (min-width: 1280px) {
+  @include media_min(1280px) {
     margin-bottom: 13px;
 
     font-size: 58px;
@@ -81,12 +85,12 @@
 
   color: $black-text-color;
 
-  @media screen and (min-width: 768px) {
+  @include media_min(768px) {
     font-weight: 700;
     font-size: 14px;
   }
 
-  @media screen and (min-width: 1280px) {
+  @include media_min(1280px) {
     font-size: 16px;
     letter-spacing: 0.02em;
   }
