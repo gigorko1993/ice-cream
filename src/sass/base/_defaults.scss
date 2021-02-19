@@ -1,5 +1,5 @@
 // Добавляємо базові стилі для компонентів, які часто повторюються в коді або є скелетом проекту (bodi , li, img). Патерни, як наприклад .visualy-hidden
-@import './mixins';
+// @import './mixins';
 // Загальне для body
 body {
   font-family: $main-font-family;
@@ -43,36 +43,36 @@ picture {
   padding-left: 20px;
   padding-right: 20px;
 
-  @include media_min($mobile) {
-    width: 480px;
-  }
-  @include media_min($tablet) {
-    width: 768px;
-    padding-left: 34px;
-    padding-right: 34px;
-  }
-  @include media_min($desktop) {
-    width: 1080px;
-    padding-left: 115px;
-    padding-right: 115px;
-  }
-
-  // @media screen and (max-width: $max-responsive-mobile) {
-  //   min-width: 100%;
+  // @include media_min($mobile) {
+  //   width: 480px;
   // }
-  // @media screen and (min-width: $mobile) {
-  //   min-width: 480px;
-  // }
-  // @media screen and (min-width: $tablet) {
-  //   min-width: 768px;
+  // @include media_min($tablet) {
+  //   width: 768px;
   //   padding-left: 34px;
   //   padding-right: 34px;
   // }
-  // @media screen and (min-width: $desktop) {
-  //   min-width: 1080px;
-  //   padding-left: 15px;
-  //   padding-right: 15px;
+  // @include media_min($desktop) {
+  //   width: 1080px;
+  //   padding-left: 115px;
+  //   padding-right: 115px;
   // }
+
+  @media screen and (max-width: $max-responsive-mobile) {
+    min-width: 100%;
+  }
+  @media screen and (min-width: $mobile) {
+    min-width: 480px;
+  }
+  @media screen and (min-width: $tablet) {
+    min-width: 768px;
+    padding-left: 34px;
+    padding-right: 34px;
+  }
+  @media screen and (min-width: $desktop) {
+    min-width: 1080px;
+    padding-left: 115px;
+    padding-right: 115px;
+  }
 }
 // Приховування елементів
 .visually-hidden {

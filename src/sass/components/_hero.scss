@@ -1,5 +1,6 @@
 .hero {
   padding-top: 193px;
+  padding-bottom: 160px;
   font-weight: 400;
 
   margin-left: auto;
@@ -17,6 +18,9 @@
     background-position: top 92px left 117px, top 83px right 0px;
   }
   @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
+    padding-top: 102px;
+    padding-bottom: 33px;
+
     min-width: $tablet;
     height: 399px;
 
@@ -30,6 +34,8 @@
       top 63px left 378px, top 31px right 307px;
   }
   @media screen and (min-width: $desktop) {
+    padding-top: 171px;
+    padding-bottom: 56px;
     min-width: 1280px;
     height: 665px;
 
@@ -48,6 +54,13 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+
+  @include media_min($tablet) {
+    margin-bottom: 66px;
+  }
+  @include media_min($desktop) {
+    margin-bottom: 112px;
+  }
 }
 
 .hero-title-box {
@@ -174,15 +187,23 @@
 }
 
 .hero-text {
+  max-width: 114px;
+
   font-size: 8px;
   line-height: 1.5;
 
   @include media_min($desktop) {
+    max-width: 200px;
+
     font-size: 14px;
     line-height: 1.4;
   }
 }
 
-// .hero-list {
-//   display: none;
-// }
+.hero-list,
+.hero-text,
+.hero-link {
+  @include media_max($max-mobile) {
+    display: none;
+  }
+}
