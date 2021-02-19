@@ -4,13 +4,13 @@
  */
 
 // Стили для файла с примером HTML-фрагмента
-@import './example';
-// Шрифти
-@import './base/fonts';
-// Утиліти:змінні для гамми кольорів, змінні для шрифтів, змінні для розмірів екрану
-@import './utils/main';
+// @import './example';
+// Утиліти: колір, шрифт, розміри екрану
+@import 'utils/main';
 // Базові стилі
 @import './base/defaults';
+
+@import './base/fonts';
 // Міксіни
 @import './base/mixins';
 // Стилі для Header
