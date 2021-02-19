@@ -10,20 +10,31 @@
 }
 
 .about-section {
-  background-color: $bg-advantages-footer;
-  @media screen and (min-width: $desktop) {
-    background: url('../images/DesktopPhoto/SectionBgMilkDesktop.png') no-repeat
-      left 0px top 700px;
+  // width: 100%;
+  background: $bg-advantages-footer
+    url('../images/MobilePhoto/sectionBgMobile.png') no-repeat 50% 99%;
+  background-size: 100%;
+
+  @media screen and (min-width: 767px) and (max-width: 1279px) {
+    background-image: {
+      display: none;
+    }
   }
-  // background: $bg-advantages-footer
-  //   url('../images/MobilePhoto/SectionBgMobile.png') cover no-repeat left 0px
-  //   top 700px;
-  // background-repeat: no-repeat;
-  //   background-position: center;
-  //   background-size: cover;
-  //   width: 100%;
-  // center center cover no-repeat fixed
+  @media screen and (min-width: $desktop) {
+    background: $bg-advantages-footer
+      url('../images/DesktopPhoto/SectionBgMilkDesktop.png') no-repeat 50% 100%;
+  }
 }
+
+// background: $bg-advantages-footer
+//   url('../images/MobilePhoto/SectionBgMobile.png') cover no-repeat left 0px
+//   top 700px;
+// background-repeat: no-repeat;
+//   background-position: center;
+//   background-size: cover;
+//   width: 100%;
+// center center cover no-repeat fixed
+
 .about-section {
   padding-top: 125px;
 
