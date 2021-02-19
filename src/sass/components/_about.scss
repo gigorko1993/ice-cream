@@ -107,7 +107,7 @@
 
 .about-section-button {
   border: 1px solid transparent;
-  border-radius: 30px;
+  border-radius: 22px;
   font-family: Titan One;
   align-items: center;
   text-align: center;
@@ -123,8 +123,13 @@
   //   background-color $animation-duration $transition-timing-function,
   //   box-shadow $animation-duration $transition-timing-function;
 
+  &:hover,
+  &:focus {
+    background-color: #ecebeb;
+  }
+
   &-arrow {
-    fill: #000;
+    stroke: #d41443;
     margin-left: 13px;
     padding: 0;
   }
