@@ -1,107 +1,176 @@
 .contact {
-    padding-left: 50px;
-    padding-right: 50px;
-    background-color: #FFF5F6;
-}
-.container {
-    width: 220px;
-    padding: 43px 20px;
+    // padding: 0 54px 50px 54px;
 
-    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
-    border-radius: 24px;
-    
-    background-color: #fff;
+    background-color: #FFF5F6;
+
+    // @media screen and (min-width: 479px) {
+    //     min-width: 100%;
+    // }
+
 }
 .contact-list {
-
+// margin: 0 54px 50px 54px;
 }
 
 .contact-item {
-    height: 427px;
+    position: relative;
+    top: -80px;
+    width: 100%;
     
-    color: tomato;
+    padding: 43px 21px;
+    
+    background-color:$main-text-color;
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    border-radius: 24px;
+
+    // @media screen and (min-width: 480px) and (max-width: 767px){
+    //     width: 220px;
+    // }
+
+    // @media screen and (min-width: 768px) and (max-width: 1279px) {
+    //     width: 280px;
+    // }
 }
 
+.contact-item:not(:last-child){
+    margin-bottom: 12px;
+}
+
+.contact-item {
+   
+//   @media screen and (min-width:480px) and (max-width: 767px) {
+      
+//   }
+}
+
+
+
 .contact-decor {
+    display: flex;
+    margin-bottom: 25px;
+
     width: 80px;
     height: 16px;
-    left: 70px;
-    top: 5163px;
-
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 22px;
-    display: flex;
+    
     justify-content: center;
     align-items: center;
     text-align: center;
-    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    font-family: $main-font-family;
+    font-weight: $main-font-weight;
+    letter-spacing: $main-letter-spacing;
+    font-size: 12px;
+    line-height: 22px;
 
     color: #FFFFFF;
 
-    background: #F0D1A5;
     border-radius: 4px;
-}
 
-.contact-info {
-
+    background-color: #F0D1A5;
 }
 
 .contact-schedule {
-    // padding-bottom: 25px;
-    // margin-top: 25px;
     border-bottom: 1px solid #E1E1E1;
     color: black;
 }
 
 .contact-title {
+    margin: 0;
     margin-bottom: 10px;
+   
+    font-family: $main-font-family;
+    font-weight: $main-font-weight;
+    // font-size: 12px;
+    // line-height: 22px;
 
-    font-weight: 500;
+    color: $black-text-color;
+}
+
+.contact-description {
+    
+    font-family: $main-font-family;
+    font-weight: $main-font-weight;
     font-size: 12px;
-    line-height: 22px;
-    letter-spacing: 0.04em;
-
-    color: #000000;
+    line-height: 1.8px;
+    
+    color: #907E82;
 }
 
 .contact-time {
-    font-weight: 500;
-    font-size: 12px;
+    font-family: $main-font-family;
+    font-weight: $main-font-weight;
     line-height: 22px;
     
     color: #FFA5BA;
 }
 
 
-.contact-item {
-    @media screen and (max-width: 767px) {
-        margin-bottom: 20px
-      }
-}
 
-.contact-description {
- 
-    font-weight: 500;
-    font-size: 12px;
-    
-    color: #907E82;
-}
+
+// .contact-item {
+//     @media screen and (max-width: 767px) {
+//         margin-bottom: 20px
+//       }
+// }
+
 
 .contact-tel,
 .contact-mail {
-    font-weight: 500;
-    font-size: 12px;
+    font-family: $main-font-family;
+    font-weight: $main-font-weight;
+    font-size: 12px  ;
     line-height: 1.5px;
+    letter-spacing: $main-letter-spacing;
 
     color: #907E82;
 }
 
-.contact-days {
+.contact-days:not(:last-child){
     margin-bottom: 10px;
-
 }
 .contact-border {
     padding-top: 25px;
     padding-bottom: 25px;
+    border-bottom: 1px solid #E1E1E1;
 }
+
+.contact-meta {
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+// .contacts-location{
+//     width:62px;
+//     height: 44px;
+//     background: red;
+//     margin-bottom: 10px;
+//     border: none;
+//     border-radius: 22px;
+
+//     &:hover,
+//     &:focus{
+//         background-color: white;
+//         color: red;
+//     }
+
+    
+// }
+
+// .contacts-franchise {
+//     width:62px;
+//     height: 44px;
+//     background: red;
+//     margin-bottom: 10px;
+//     border: none;
+//     border-radius: 22px;
+
+//     &:hover,
+//     &:focus{
+//         background-color: white;
+//         color: red;
+//     }
+// }
