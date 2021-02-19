@@ -10,8 +10,19 @@
 }
 
 .about-section {
-  padding-top: 125px;
   background-color: $bg-advantages-footer;
+
+  // background: $bg-advantages-footer
+  //   url('../images/MobilePhoto/SectionBgMobile.png') cover no-repeat left 0px
+  //   top 700px;
+  // background-repeat: no-repeat;
+  //   background-position: center;
+  //   background-size: cover;
+  //   width: 100%;
+  // center center cover no-repeat fixed
+}
+.about-section {
+  padding-top: 125px;
 
   &-label {
     font-family: 'Titan One';
