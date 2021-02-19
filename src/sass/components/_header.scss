@@ -1,71 +1,48 @@
-// Якщо робити весь Header в одному Scss паршалі, можна видалити імпорт, я потім перероблю.
-// Підключаємо мобільне меню до Header
-@import './mobile-menu';
+// Стилі для хедера і мобільного меню
 
-.overlay {
-    margin-left: auto;
-    margin-right: auto;
-    background-color: $bg-header;
-
-    @media screen and (max-width: $max-mobile) {
-        min-width: 320px;
-        height: 502px;
-
-        background-image: url(../images/MobilePhoto/heroMobile.png), url(../images/MobilePhoto/circleMobile.png);
-        background-repeat: no-repeat;
-        background-size: 171px, 289px;
-        background-position: top 92px left 117px, top 83px right 0px;
-    }
-    @media screen and (min-width:$tablet) and (max-width:$max-tablet) {
-        min-width: $tablet;
-        height: 399px;
-
-        // background-image: url(../images/MobileTablet/tastyTablet.png), url(../images/TabletPhoto/bioEcoTablet.png), url(../images/TabletPhoto/heroTablet.png), url(../images/TabletPhoto/circleTablet.png);
-        // background-repeat: no-repeat;
-        // background-size: 168px, 124px, 171px, 289px;
-        // background-position: top 266px left 566px, top 245px left 34px, top 63px left 378px, top 31px right 307px;
-    }
-    @media screen and (min-width:$desktop) {
-        min-width: 1280px;
-        height: 665px;
-
-        // background-image: url(../images/DesktopPhoto/tastyDesktop.png), url(../images/DesktopPhoto/bioEcoDesktop.png), url(../images/DesktopPhoto/heroDesktop.png), url(../images/DesktopPhoto/circleDesktop.png);
-        // background-repeat: no-repeat;
-        // background-size: 293px, 188px, 236px, 538px;
-        // background-position: top 433px left 878px, top 429px left 77px, top 108px left 594px, top 52px right 475px;
-    }
-}
-.header {
-    position: absolute;
-    @media screen and (max-width: $max-mobile) {
-        top: 7px;
-        left: 93px;
-    }
-    @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
-        top: 37px;
-        left: 104px;
-    }
-    @media screen and (min-width: $desktop) {
-        top: 37px;
-        left: 116px;
-    }
-}
 .header__container {
     display: flex;
     align-items: center;
     
+    background-color: $bg-header;
+    
     @media screen and (max-width: $max-mobile) {
         justify-content: space-between;
+        padding-top: 7px;
+        padding-left: 70px;
     }
-    // @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
-    //     justify-content: space-between;
-    // }
+    @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
+        padding-top: 37px;
+        padding-left: 70px;
+    }
+    @media screen and (min-width: $desktop) {
+        padding-top: 37px;
+        padding-left: 70px;
+    }
+}
+.header__logo {
+    @media screen and (max-width: $max-tablet) {
+        display: none;
+    }
+    @media screen and (min-width: $desktop) {
+        display: flex;
+
+        position: absolute;
+        top: 37px;
+        left: 0px;
+
+        width: 50px;
+        height: 40px;
+    
+        background-color: $accent-color;
+
+        transform: translateX(-70px);
+    }
 }
 .header__link-logo {
     position: relative;
 
-    font-family: 'Titan One';
-    font-style: normal;
+    font-family: $secondary-font-family;
     font-weight: 400;
     font-size: 30px;
     line-height: 44px;
@@ -88,7 +65,7 @@
     width: 50px;
     height: 40px;
 
-    
+    // Поставила тимчасово бекграунд, бо не відображається іконка
     background-color: $accent-color;
 
     // background-image: url(../images/Logo_icon/logo_icon.png);
@@ -97,18 +74,22 @@
     // background-position: center;
 }
 .header__button-menu {
+    display: flex;
     align-items: center;
-    justify-content: center;
 
     padding: 0px;
 
     color: $bg-menu;
     border: none;
+
+    // Забрати бекграунд, розкоментувати свг
     background-color:$accent-color;
 
     @media screen and (max-width:$max-mobile) {
-        display: flex;
-        margin-left: 291px;
+        margin-left: auto;
+    }
+    @media screen and (min-width:$tablet) and (max-width:$max-tablet) {
+        margin-left: auto;
         margin-right: 30px;
     }
     @media screen and (min-width: $desktop) {
@@ -125,7 +106,6 @@
     @media screen and (min-width: $desktop) {
         display: block;
         margin-left: 110px;
-        margin-right: 110px;
     }
 }
 .header__list {
@@ -139,26 +119,23 @@
     }
 }
 .header__link {
-    font-family: DM Sans;
-    font-style: normal;
+    font-family:$main-font-family;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.31;
 
-    // display: flex;
-    // align-items: center;
-
     color: #FFFFFF;
+
     &:hover, &:focus {
         color: $accent-color;
     }
+    &.header__link-current  {
+        color: $accent-color;
+    }
 }
-.header__link.header__link-current  {
-    color: $accent-color;
-}
+
 .header__button-buy {
-    font-family: DM Sans;
-    font-style: normal;
+    font-family: $main-font-family;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.31;
@@ -169,11 +146,20 @@
 
     padding: 10px 37px;
     
-
-    color: #D41443;
-    background: #FFFFFF;
+    color: $accent-color;
+    background-color:  $white-text-color;
     border-radius: 22px;
     border: none;
+
+    @media screen and (max-width:$max-mobile) {
+        display: none;
+    }
+    @media screen and (min-width: $tablet) and (max-width:$max-tablet){
+        margin-left: 30px;
+    }
+    @media screen and (min-width:$desktop) {
+        margin-left: 110px;
+    }
 }
 .header__buy-text {
     display: block;
@@ -184,16 +170,95 @@
     background-color: $accent-color;
 }
 
+// Стилі для мобільного меню
 
+.menu {
+    position: absolute;
+    top: 0px;
+    right: 0px;
 
+    width: 250px;
+    padding: 23px 20px;
+    background-color: $bg-menu;
 
-// .bg {
-//     width: 100%;
-//     height: 100%;
-//     background-color: transparent;
-//     background-image: url(../images/MobilePhoto/heroMobile.jpg);
-//     background-repeat: no-repeat;
-//     background-position: center;
-//     background-size: 40px;
-//     z-index: 3;
-// }
+    @media screen and (min-width: $tablet) {
+        width: 250px;
+        padding: 23px 34px;
+    }
+
+    transform: translateX(100%);
+}
+.menu__close {
+    display: flex;
+    align-items: center;
+
+    padding: 0px;
+
+    color: $white-text-color;
+    border: none;
+
+    // Забрати бекграунд, розкоментувати свг
+    background-color:$white-text-color;
+
+    margin-right: 8px;
+    margin-bottom: 23px;
+    margin-left: auto;
+
+    @media screen and (min-width: $tablet) {
+        margin-right: 0px;
+    }
+}
+.menu__icon-close {
+    fill: currentColor;
+}
+.menu__button-buy {
+    font-family: $main-font-family;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.31;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 48px;
+    
+    color:$accent-color;
+    background-color: $white-text-color;
+    border-radius: 22px;
+    border: none;
+
+    margin-bottom: 32px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (min-width: $tablet) {
+        padding: 10px 37px;
+    }
+}
+.menu__list {
+    text-align: left;
+}
+.menu__item {
+    &:not(:last-of-type) {
+        margin-bottom: 23px;
+    }
+}
+.menu__link {
+    font-family: $main-font-family;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.29;
+
+    display: flex;
+    align-items: center;
+
+    color:$white-text-color;
+
+    &:hover, &:focus {
+        color: $accent-color;
+    }
+    &.menu__link-current  {
+        color: $accent-color;
+    }
+}
