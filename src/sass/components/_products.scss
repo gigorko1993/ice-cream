@@ -8,7 +8,6 @@
   &__pictur {
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 22px;
   }
 
   &.pink {
@@ -102,6 +101,9 @@
 @media screen and (min-width: $mobile) and (max-width: $max-mobile) {
   .products-card {
     width: 280px;
+    &__pictur {
+      margin-bottom: 22px;
+    }
   }
   .products-item:not(:last-child) {
     margin-bottom: 130px;
