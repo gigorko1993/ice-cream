@@ -11,7 +11,10 @@
 
 .about-section {
   background-color: $bg-advantages-footer;
-
+  @media screen and (min-width: $desktop) {
+    background: url('../images/DesktopPhoto/SectionBgMilkDesktop.png') no-repeat
+      left 0px top 700px;
+  }
   // background: $bg-advantages-footer
   //   url('../images/MobilePhoto/SectionBgMobile.png') cover no-repeat left 0px
   //   top 700px;
@@ -168,6 +171,7 @@
 
   &-arrow {
     stroke: #d41443;
+    fill: none;
     margin-left: 13px;
     padding: 0;
   }
