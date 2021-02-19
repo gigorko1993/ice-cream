@@ -1,3 +1,264 @@
-// Якщо робити весь Header в одному Scss паршалі, можна видалити імпорт, я потім перероблю.
-// Підключаємо мобільне меню до Header
-@import './mobile-menu';
+// Стилі для хедера і мобільного меню
+
+.header__container {
+    display: flex;
+    align-items: center;
+    
+    background-color: $bg-header;
+    
+    @media screen and (max-width: $max-mobile) {
+        justify-content: space-between;
+        padding-top: 7px;
+        padding-left: 70px;
+    }
+    @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
+        padding-top: 37px;
+        padding-left: 70px;
+    }
+    @media screen and (min-width: $desktop) {
+        padding-top: 37px;
+        padding-left: 70px;
+    }
+}
+.header__logo {
+    @media screen and (max-width: $max-tablet) {
+        display: none;
+    }
+    @media screen and (min-width: $desktop) {
+        display: flex;
+
+        position: absolute;
+        top: 37px;
+        left: 0px;
+
+        width: 50px;
+        height: 40px;
+    
+        background-color: $accent-color;
+
+        transform: translateX(-70px);
+    }
+}
+.header__link-logo {
+    position: relative;
+
+    font-family: $secondary-font-family;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 44px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+.header__logo-text {
+    display: block;
+    color: $accent-color;
+    height: 100%;
+}
+.header__logo-text::before {
+    content: "";
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transform: translateX(-70px);
+
+    width: 50px;
+    height: 40px;
+
+    // Поставила тимчасово бекграунд, бо не відображається іконка
+    background-color: $accent-color;
+
+    // background-image: url(../images/Logo_icon/logo_icon.png);
+    // background-repeat: no-repeat;
+    // background-size: contain;
+    // background-position: center;
+}
+.header__button-menu {
+    display: flex;
+    align-items: center;
+
+    padding: 0px;
+
+    color: $bg-menu;
+    border: none;
+
+    // Забрати бекграунд, розкоментувати свг
+    background-color:$accent-color;
+
+    @media screen and (max-width:$max-mobile) {
+        margin-left: auto;
+    }
+    @media screen and (min-width:$tablet) and (max-width:$max-tablet) {
+        margin-left: auto;
+        margin-right: 30px;
+    }
+    @media screen and (min-width: $desktop) {
+        display: none;
+    }
+}
+.header__icon-burger {
+    fill: currentColor;
+}
+.header__navigation {
+    @media screen and (max-width:$max-tablet) {
+        display: none;
+    }
+    @media screen and (min-width: $desktop) {
+        display: block;
+        margin-left: 110px;
+    }
+}
+.header__list {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+.header__item {
+    &:not(:last-of-type) {
+        margin-right: 35px;
+    }
+}
+.header__link {
+    font-family:$main-font-family;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.31;
+
+    color: #FFFFFF;
+
+    &:hover, &:focus {
+        color: $accent-color;
+    }
+    &.header__link-current  {
+        color: $accent-color;
+    }
+}
+
+.header__button-buy {
+    font-family: $main-font-family;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.31;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 37px;
+    
+    color: $accent-color;
+    background-color:  $white-text-color;
+    border-radius: 22px;
+    border: none;
+
+    @media screen and (max-width:$max-mobile) {
+        display: none;
+    }
+    @media screen and (min-width: $tablet) and (max-width:$max-tablet){
+        margin-left: 30px;
+    }
+    @media screen and (min-width:$desktop) {
+        margin-left: 110px;
+    }
+}
+.header__buy-text {
+    display: block;
+    margin-right: 12px;
+}
+.header__icon-narrow {
+    fill: currentColor;
+    background-color: $accent-color;
+}
+
+// Стилі для мобільного меню
+
+.menu {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+
+    width: 250px;
+    padding: 23px 20px;
+    background-color: $bg-menu;
+
+    @media screen and (min-width: $tablet) {
+        width: 250px;
+        padding: 23px 34px;
+    }
+
+    transform: translateX(100%);
+}
+.menu__close {
+    display: flex;
+    align-items: center;
+
+    padding: 0px;
+
+    color: $white-text-color;
+    border: none;
+
+    // Забрати бекграунд, розкоментувати свг
+    background-color:$white-text-color;
+
+    margin-right: 8px;
+    margin-bottom: 23px;
+    margin-left: auto;
+
+    @media screen and (min-width: $tablet) {
+        margin-right: 0px;
+    }
+}
+.menu__icon-close {
+    fill: currentColor;
+}
+.menu__button-buy {
+    font-family: $main-font-family;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.31;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 48px;
+    
+    color:$accent-color;
+    background-color: $white-text-color;
+    border-radius: 22px;
+    border: none;
+
+    margin-bottom: 32px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (min-width: $tablet) {
+        padding: 10px 37px;
+    }
+}
+.menu__list {
+    text-align: left;
+}
+.menu__item {
+    &:not(:last-of-type) {
+        margin-bottom: 23px;
+    }
+}
+.menu__link {
+    font-family: $main-font-family;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.29;
+
+    display: flex;
+    align-items: center;
+
+    color:$white-text-color;
+
+    &:hover, &:focus {
+        color: $accent-color;
+    }
+    &.menu__link-current  {
+        color: $accent-color;
+    }
+}
