@@ -1,0 +1,32 @@
+.gallery {
+  padding-bottom: 0;
+  background: linear-gradient(
+    $bg-advantages-footer 0%,
+    $bg-advantages-footer 39.5%,
+    $white-text-color 40.5%,
+    $white-text-color 100%
+  );
+
+  @include media_min($tablet) {
+    background: linear-gradient(
+      $bg-advantages-footer 0%,
+      $bg-advantages-footer 34%,
+      $white-text-color 35%,
+      $white-text-color 100%
+    );
+    padding-bottom: 40px;
+  }
+
+  @include media_min($desktop) {
+    background: linear-gradient(
+      $bg-advantages-footer 0%,
+      $bg-advantages-footer 36%,
+      $white-text-color 36.5%,
+      $white-text-color 100%
+    );
+  }
+
+  &-picture {
+    margin: 0 auto;
+  }
+}
