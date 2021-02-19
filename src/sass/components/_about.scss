@@ -5,13 +5,11 @@
   background-size: 100%;
 
   @media screen and (min-width: 767px) and (max-width: 1279px) {
-    background-image: {
-      display: none;
-    }
+    background-image: none;
   }
   @media screen and (min-width: $desktop) {
     background: $bg-advantages-footer
-      url('../images/DesktopPhoto/SectionBgMilkDesktop.png') no-repeat 50% 100%;
+      url('../images/DesktopPhoto/sectionBgMilkDesktop.png') no-repeat 50% 100%;
   }
 }
 
