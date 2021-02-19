@@ -6,7 +6,7 @@ body {
   font-weight: $main-font-weight;
   letter-spacing: $main-letter-spacing;
   background-color: $bg-main-color;
-  color: $main-text-color;
+  color: $white-text-color;
 }
 
 //   Забираємо нижній і верхній маржен декорацію списку
@@ -40,8 +40,8 @@ picture {
 .container {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 115px;
+  padding-right: 115px;
 
 
   @media screen and (max-width: $max-responsive-mobile) {
