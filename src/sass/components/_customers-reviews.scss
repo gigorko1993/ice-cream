@@ -42,7 +42,7 @@
     position: absolute;
     top: -10px;
     left: 5px;
-    background-color: rgba(0, 255, 0, 0.3);
+    background-image: url();
   }
 }
 
@@ -73,8 +73,10 @@
 .slick-dots {
   display: flex;
   justify-content: center;
+  border: none; 
 
   & li:not(:last-child) {
     margin-right: 18px;
   }
-}
+
+
