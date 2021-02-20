@@ -1,7 +1,6 @@
 .hero {
   padding-top: 137px;
   padding-bottom: 160px;
-  font-weight: 400;
   overflow-x: hidden;
 
   background-color: $bg-header;
@@ -59,37 +58,6 @@
       bottom: -56px;
     }
   }
-  // &-image-main::before {
-  //   position: absolute;
-  //   z-index: -1;
-  //   left: -81px;
-  //   bottom: 75px;
-  //   // bottom: -160px;
-
-  //   background-image: url("../images/circleMobile.svg");
-  //   background-repeat: no-repeat;
-  //   background-size: contain;
-  //   content: "";
-  //   width: 346px;
-  //   height: 344px;
-
-  //   @include media_min($tablet) {
-  //     width: 324px;
-  //     height: 322px;
-
-  //     // left: 247px;
-  //     left: -71px;
-  //     // bottom: -33px;
-  //     bottom: 46px;
-  //   }
-  //   @include media_min($desktop) {
-  //     width: 538px;
-  //     height: 538px;
-
-  //     left: -119px;
-  //     bottom: 75px;
-  //   }
-  // }
 
   &-image-tasty {
     left: 566px;
@@ -153,6 +121,7 @@
     font-size: 48px;
     line-height: 0.958;
     text-transform: uppercase;
+    font-weight: 400;
 
     margin-bottom: 20px;
 
@@ -175,6 +144,7 @@
 
     font-size: 26px;
     line-height: 1.15;
+    font-weight: 400;
 
     @include media_min($tablet) {
       font-size: 22px;
@@ -195,11 +165,12 @@
     border-radius: 20px;
     cursor: pointer;
 
-    color: $main-text-color;
+    color: $white-text-color;
     background-color: $accent-color;
 
     font-size: 8px;
     line-height: 1.25;
+    font-weight: 400;
     text-align: center;
 
     @include media_min($desktop) {
@@ -249,6 +220,7 @@
     font-size: 28px;
     line-height: 1.14;
     margin-left: auto;
+    font-weight: 400;
 
     @include media_min($desktop) {
       font-size: 46px;
@@ -259,6 +231,7 @@
   &-item-unit {
     font-size: 8px;
     line-height: 10px;
+    font-weight: 400;
 
     @include media_min($desktop) {
       font-size: 14px;
@@ -277,6 +250,7 @@
 
     font-size: 8px;
     line-height: 1.5;
+    font-weight: 400;
 
     @include media_min($desktop) {
       max-width: 200px;
@@ -289,9 +263,15 @@
   }
   &-link {
     margin-left: 120px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border-color: transparent;
 
     @include media_min($desktop) {
       margin-left: 180px;
+      width: 26px;
+      height: 26px;
     }
   }
 
