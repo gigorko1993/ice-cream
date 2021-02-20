@@ -3,6 +3,16 @@
   background: $bg-advantages-footer
     url('../images/MobilePhoto/sectionBgMobile.png') no-repeat 50% 99%;
   background-size: 100%;
+  @media screen and (min-resolution: 2dppx) {
+    background: $bg-advantages-footer
+      url('../images/MobilePhoto/sectionBgMobile@2x.png') no-repeat 50% 99%;
+    background-size: 100%;
+  }
+  @media screen and (min-resolution: 3dppx) {
+    background: $bg-advantages-footer
+      url('../images/MobilePhoto/sectionBgMobile@3x.png') no-repeat 50% 99%;
+    background-size: 100%;
+  }
 
   @media screen and (min-width: 767px) and (max-width: 1279px) {
     background-image: none;
@@ -10,6 +20,18 @@
   @media screen and (min-width: $desktop) {
     background: $bg-advantages-footer
       url('../images/DesktopPhoto/sectionBgMilkDesktop.png') no-repeat 50% 100%;
+  }
+  @media screen and (min-resolution: 2dppx) {
+    background: $bg-advantages-footer
+      url('../images/DesktopPhoto/sectionBgMilkDesktop@2x.png') no-repeat 50%
+      99%;
+    background-size: 100%;
+  }
+  @media screen and (min-resolution: 3dppx) {
+    background: $bg-advantages-footer
+      url('../images/DesktopPhoto/sectionBgMilkDesktop@3x.png') no-repeat 50%
+      99%;
+    background-size: 100%;
   }
 }
 
@@ -25,8 +47,17 @@
     text-transform: uppercase;
     color: $secondary-text-color;
     margin-bottom: 15px;
+    @media screen and (min-width: $tablet) {
+      font-size: 26px;
+      line-height: 1.15;
+    }
+    @media screen and (min-width: $tablet) {
+      font-size: 30px;
+      line-height: 1.13;
+    }
   }
   &-title {
+    margin-bottom: 26px;
     font-family: 'Titan One';
     font-weight: 400;
     font-size: 34px;
@@ -35,6 +66,14 @@
     letter-spacing: $main-letter-spacing;
     text-transform: uppercase;
     color: $accent-color;
+    @media screen and (min-width: $tablet) {
+      font-size: 48px;
+      line-height: 1.14;
+    }
+    @media screen and (min-width: $tablet) {
+      font-size: 58px;
+      line-height: 1.13;
+    }
   }
   &-box {
     padding: 0px;
@@ -58,7 +97,7 @@
   @media screen and (min-width: $tablet) {
     display: flex;
     width: 340px;
-    margin: 50px 15px 0px 0px;
+    margin: 50px 17px 0px 0px;
 
     @media screen and (min-width: $desktop) {
       width: 516px;
@@ -83,6 +122,7 @@
     margin: 100px 0px 0px;
     width: 340px;
     @media screen and (min-width: $desktop) {
+      margin: 106px 0px 0px;
       width: 463px;
     }
   }
@@ -95,9 +135,11 @@
   font-size: 12px;
   line-height: 162%;
   @media screen and (min-width: $tablet) {
+    margin-bottom: 40px;
     font-size: 14px;
     line-height: 176%;
     @media screen and (min-width: $desktop) {
+      margin-bottom: 35px;
       font-size: 16px;
       line-height: 176%;
     }
@@ -123,7 +165,7 @@
   }
 }
 .about-section-text-3 {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   @media screen and (min-width: $tablet) {
     margin-bottom: 62px;
   }
