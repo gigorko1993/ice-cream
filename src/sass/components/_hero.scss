@@ -1,71 +1,127 @@
 .hero {
-  // padding-top: 137px;
-  padding-top: 193px;
+  padding-top: 137px;
   padding-bottom: 160px;
   font-weight: 400;
+  overflow-x: hidden;
 
   background-color: $bg-header;
 
   @include media_min($tablet) {
-    // padding-top: 20px;
-    padding-top: 102px;
+    padding-top: 20px;
     padding-bottom: 33px;
   }
 
   @include media_min($desktop) {
-    // padding-top: 89px;
-    padding-top: 171px;
+    padding-top: 89px;
     padding-bottom: 56px;
   }
 
   &-container {
-    margin-left: auto;
-    margin-right: auto;
+    position: relative;
+  }
 
-    // @media screen and (max-width: $max-mobile) {
-    //   min-width: 320px;
-    //   height: 502px;
+  // Позиціонування фонових картинок
+  &-image {
+    position: absolute;
+    z-index: 3;
+  }
 
-    //   background-image: url(../images/MobilePhoto/heroMobile.png),
-    //     url(../images/MobilePhoto/circleMobile.png);
-    //   background-repeat: no-repeat;
-    //   background-size: 171px, 289px;
-    //   background-position: top 92px left 117px, top 83px right 0px;
-    // }
-    // @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
-    //   padding-top: 102px;
-    //   padding-bottom: 33px;
+  &-image-circle {
+    left: 36px;
+    bottom: -85px;
+    z-index: 2;
+    width: 346px;
+    height: 346px;
 
-    //   min-width: $tablet;
-    //   height: 399px;
+    @include media_min($tablet) {
+      left: 307px;
+      bottom: 12px;
+      width: 324px;
+      height: 324px;
+    }
+    @include media_min($desktop) {
+      left: 475px;
+      bottom: 19px;
+      width: 538px;
+      height: 538px;
+    }
+  }
+  &-image-main {
+    left: 117px;
+    bottom: -160px;
 
-    //   background-image: url(../images/TabletPhoto/tastyTablet.png),
-    //     url(../images/TabletPhoto/bioEcoTablet.png),
-    //     url(../images/TabletPhoto/heroTablet.png),
-    //     url(../images/TabletPhoto/circleTablet.png);
-    //   background-repeat: no-repeat;
-    //   background-size: 168px, 124px, 171px, 289px;
-    //   background-position: top 266px left 566px, top 245px left 34px,
-    //     top 63px left 378px, top 31px right 307px;
-    // }
-    // @media screen and (min-width: $desktop) {
-    //   padding-top: 171px;
-    //   padding-bottom: 56px;
-    //   min-width: 1280px;
-    //   height: 665px;
+    @include media_min($tablet) {
+      left: 378px;
+      bottom: -33px;
+    }
+    @include media_min($desktop) {
+      left: 594px;
+      bottom: -56px;
+    }
+  }
+  // &-image-main::before {
+  //   position: absolute;
+  //   z-index: -1;
+  //   left: -81px;
+  //   bottom: 75px;
+  //   // bottom: -160px;
 
-    //   background-image: url(../images/DesktopPhoto/tastyDesktop.png),
-    //     url(../images/DesktopPhoto/bioEcoDesktop.png),
-    //     url(../images/DesktopPhoto/heroDesktop.png),
-    //     url(../images/DesktopPhoto/circleDesktop.png);
-    //   background-repeat: no-repeat;
-    //   background-size: 293px, 188px, 236px, 538px;
-    //   background-position: top 433px left 878px, top 429px left 77px,
-    //     top 108px left 594px, top 52px right 475px;
-    // }
+  //   background-image: url("../images/circleMobile.svg");
+  //   background-repeat: no-repeat;
+  //   background-size: contain;
+  //   content: "";
+  //   width: 346px;
+  //   height: 344px;
+
+  //   @include media_min($tablet) {
+  //     width: 324px;
+  //     height: 322px;
+
+  //     // left: 247px;
+  //     left: -71px;
+  //     // bottom: -33px;
+  //     bottom: 46px;
+  //   }
+  //   @include media_min($desktop) {
+  //     width: 538px;
+  //     height: 538px;
+
+  //     left: -119px;
+  //     bottom: 75px;
+  //   }
+  // }
+
+  &-image-tasty {
+    left: 566px;
+    bottom: -33px;
+
+    @include media_max($max-mobile) {
+      display: none;
+    }
+
+    @include media_min($desktop) {
+      left: 878px;
+      bottom: -56px;
+    }
+  }
+
+  &-image-bio {
+    left: 34px;
+    bottom: -5px;
+
+    @include media_max($max-mobile) {
+      display: none;
+    }
+    @include media_min($desktop) {
+      left: 77px;
+      bottom: 0px;
+    }
   }
 
   &-thumb {
+    position: relative;
+    z-index: 4;
+
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -94,7 +150,6 @@
     color: $accent-color;
 
     font-family: $secondary-font-family;
-    //   font-weight: 400;
     font-size: 48px;
     line-height: 0.958;
     text-transform: uppercase;
@@ -138,11 +193,11 @@
     padding-bottom: 8px;
     padding-left: 13px;
     border-radius: 20px;
+    cursor: pointer;
 
     color: $main-text-color;
     background-color: $accent-color;
 
-    //   font-weight: 400;
     font-size: 8px;
     line-height: 1.25;
     text-align: center;
@@ -160,6 +215,8 @@
   &-button:hover,
   &-button:focus {
     background-color: $bg-customers-reviews-dots;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
   }
 
   &-button-pink {
@@ -170,15 +227,28 @@
   &-button-pink:hover,
   &-button-pink:focus {
     background-color: $bg-button-hower;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  &-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
   }
 
   &-item-number {
     color: $accent-color;
 
     font-family: $secondary-font-family;
-    //   font-weight: 400;
     font-size: 28px;
     line-height: 1.14;
+    margin-left: auto;
 
     @include media_min($desktop) {
       font-size: 46px;
@@ -187,7 +257,6 @@
   }
 
   &-item-unit {
-    //   font-weight: 400;
     font-size: 8px;
     line-height: 10px;
 

@@ -1,82 +1,134 @@
 <!DOCTYPE html>
 <section class="hero">
     <div class="container hero-container">
-        <img class="hero-image" src="../images/DesktopPhoto/bioEcoDesktop.png" alt="">
-        <img class="hero-image" src="../images/DesktopPhoto/heroDesktop.png" alt="">
-        <img class="hero-image" src="../images/DesktopPhoto/tastyDesktop.png" alt="">
-    <div class="hero-thumb">
-    <div class="hero-title-box">
-        <h1 class="hero-title"><span class="hero-title-label">ice cream made with </span>passion</h1>
-        <a href="#products" class="hero-button ">Products</a>
-        <a href="#about" class="hero-button hero-button-pink">How it’s made?</a>
-    </div>
-
-    <h2 id="outlets" class="visually-hidden">Our outlets</h2>
-    <ul aria-labelledby="outlets" class="hero-list" title="our outlets">
-        <li class="hero-item">
-            <p class="hero-item-number">16</p>
-            <h3 class="hero-item-unit">cafes</h3>
-        </li>
-        <li class="hero-item">
-            <p class="hero-item-number">23</p>
-            <h3 class="hero-item-unit">food trucks</h3>
-        </li>
-    </ul>
-    </div>
-    <h2 class="visually-hidden">Сomposition of our product</h2>
-    <p class="hero-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-        labore et</p>
-    <button class="hero-link"> --)
-
-        <!-- <picture> 
-            <source srcset="../images/ArrowHero/ArrowHeroDesktop.webp 1x, ../images/ArrowHero/ArrowHeroDesktop@2x.webp 2x, ../images/ArrowHero/ArrowHeroDesktop@3x.webp 3x" 
+        <picture class="hero-image hero-image-bio">
+            <source
+                srcset="../images/DesktopPhoto/bioEcoDesktop.webp 1x, ../images/DesktopPhoto/bioEcoDesktop@2x.webp 2x, ../images/DesktopPhoto/bioEcoDesktop@3x.webp 3x"
                 type="image/webp" media="(min-width:1280px)" />
-            <source srcset="../images/ArrowHero/ArrowHeroTablet.webp 1x, ../images/ArrowHero/ArrowHeroTablet@2x.webp 2x, ../images/ArrowHero/ArrowHeroTablet@3x.webp 3x" 
+            <source
+                srcset="../images/TabletPhoto/bioEcoTablet.webp 1x, ../images/TabletPhoto/bioEcoTablet@2x.webp 2x, ../images/TabletPhoto/bioEcoTablet@3x.webp 3x"
                 type="image/webp" media="(min-width:768px)" />
-            
-            <source srcset="../images/ArrowHero/ArrowHeroDesktop.png 1x, ../images/ArrowHero/ArrowHeroDesktop@2x.png 2x, ../images/ArrowHero/ArrowHeroDesktop@3x.png 3x"
+
+            <source
+                srcset="../images/DesktopPhoto/bioEcoDesktop.png 1x, ../images/DesktopPhoto/bioEcoDesktop@2x.png 2x, ../images/DesktopPhoto/bioEcoDesktop@3x.png 3x"
                 media="(min-width:1280px)" />
-            <source srcset="../images/ArrowHero/ArrowHeroTablet.png 1x, ../images/ArrowHero/ArrowHeroTablet@2x.png 2x, ../images/ArrowHero/ArrowHeroTablet@3x.png 3x"
-                media="(min-width:768px)" /> -->
-        
-            <img src="../images/ArrowHero/ArrowHeroTablet.png" alt="Семантически верний вебдизайн"/>
-        <!-- </picture>  -->
-    </button>
+            <source
+                srcset="../images/TabletPhoto/bioEcoTablet.png 1x, ../images/TabletPhoto/bioEcoTablet@2x.png 2x, ../images/TabletPhoto/bioEcoTablet@3x.png 3x"
+                media="(min-width:768px)" />
+
+            <img src="../images/TabletPhoto/bioEcoTablet.png" alt="" />
+        </picture>
+        <picture class="hero-image hero-image-main">
+            <source
+                srcset="../images/DesktopPhoto/heroDesktop.webp 1x, ../images/DesktopPhoto/heroDesktop@2x.webp 2x, ../images/DesktopPhoto/heroDesktop@3x.webp 3x"
+                type="image/webp" media="(min-width:1280px)" />
+            <source
+                srcset="../images/TabletPhoto/heroTablet.webp 1x, ../images/TabletPhoto/heroTablet@2x.webp 2x, ../images/TabletPhoto/heroTablet@3x.webp 3x"
+                type="image/webp" media="(min-width:768px)" />
+            <source
+                srcset="../images/MobilePhoto/heroMobile.webp 1x, ../images/MobilePhoto/heroMobile@2x.webp 2x, ../images/MobilePhoto/heroMobile@3x.webp 3x"
+                media="(max-width:767px)" />
+
+            <source
+                srcset="../images/DesktopPhoto/heroDesktop.png 1x, ../images/DesktopPhoto/heroDesktop@2x.png 2x, ../images/DesktopPhoto/heroDesktop@3x.png 3x"
+                png media="(min-width:1280px)" />
+            <source
+                srcset="../images/TabletPhoto/heroTablet.png 1x, ../images/TabletPhoto/heroTablet@2x.png 2x, ../images/TabletPhoto/heroTablet@3x.png 3x"
+                media="(min-width:768px)" />
+            <source
+                srcset="../images/MobilePhoto/heroMobile.png 1x, ../images/MobilePhoto/heroMobile@2x.png 2x, ../images/MobilePhoto/heroMobile@3x.png 3x"
+                media="(max-width:767px)" />
+
+            <img src="../images/MobilePhoto/heroMobile.png" alt="" />
+        </picture>
+        <svg class="hero-image hero-image-circle">
+            <use href="../images/sprite.svg#circle"></use>
+        </svg>
+        <!-- <picture class="hero-image hero-image-circle">
+                <source
+                    srcset="../images/DesktopPhoto/circleDesktop.webp 1x, ../images/DesktopPhoto/circleDesktop@2x.webp 2x, ../images/DesktopPhoto/circleDesktop@3x.webp 3x"
+                    type="image/webp" media="(min-width:1280px)" />
+                <source
+                    srcset="../images/TabletPhoto/circleTablet.webp 1x, ../images/TabletPhoto/circleTablet@2x.webp 2x, ../images/TabletPhoto/circleTablet@3x.webp 3x"
+                    type="image/webp" media="(min-width:768px)" />
+                <source
+                    srcset="../images/MobilePhoto/circleMobile.webp 1x, ../images/MobilePhoto/circleMobile@2x.webp 2x, ../images/MobilePhoto/circleMobile@3x.webp 3x"
+                    media="(max-width:767px)" />
+            
+                <source
+                    srcset="../images/DesktopPhoto/circleDesktop.png 1x, ../images/DesktopPhoto/circleDesktop@2x.png 2x, ../images/DesktopPhoto/circleDesktop@3x.png 3x"
+                    png media="(min-width:1280px)" />
+                <source
+                    srcset="../images/TabletPhoto/circleTablet.png 1x, ../images/TabletPhoto/circleTablet@2x.png 2x, ../images/TabletPhoto/circleTablet@3x.png 3x"
+                    media="(min-width:768px)" />
+                <source
+                    srcset="../images/MobilePhoto/circleMobile.png 1x, ../images/MobilePhoto/circleMobile@2x.png 2x, ../images/MobilePhoto/circleMobile@3x.png 3x"
+                    media="(max-width:767px)" />
+            
+                <img src="../images/MobilePhoto/circleMobile.png" alt="" />
+            </picture> -->
+        <picture class="hero-image hero-image-tasty">
+            <source
+                srcset="../images/DesktopPhoto/tastyDesktop.webp 1x, ../images/DesktopPhoto/tastyDesktop@2x.webp 2x, ../images/DesktopPhoto/tastyDesktop@3x.webp 3x"
+                type="image/webp" media="(min-width:1280px)" />
+            <source
+                srcset="../images/TabletPhoto/tastyTablet.webp 1x, ../images/TabletPhoto/tastyTablet@2x.webp 2x, ../images/TabletPhoto/tastyTablet@3x.webp 3x"
+                type="image/webp" media="(min-width:768px)" />
+
+            <source
+                srcset="../images/DesktopPhoto/tastyDesktop.png 1x, ../images/DesktopPhoto/tastyDesktop@2x.png 2x, ../images/DesktopPhoto/tastyDesktop@3x.png 3x"
+                media="(min-width:1280px)" />
+            <source
+                srcset="../images/TabletPhoto/tastyTablet.png 1x, ../images/TabletPhoto/tastyTablet@2x.png 2x, ../images/TabletPhoto/tastyTablet@3x.png 3x"
+                media="(min-width:768px)" />
+
+            <img src="../images/TabletPhoto/tastyTablet.png" alt="" />
+        </picture>
+        <div class="hero-thumb">
+            <div class="hero-title-box">
+                <h1 class="hero-title"><span class="hero-title-label">ice cream made with </span>passion</h1>
+                <a href="#products" class="hero-button ">Products</a>
+                <a href="#about" class="hero-button hero-button-pink">How it’s made?</a>
+            </div>
+
+            <h2 id="outlets" class="visually-hidden">Our outlets</h2>
+            <ul aria-labelledby="outlets" class="hero-list" title="our outlets">
+                <li class="hero-item">
+                    <p class="hero-item-number">16</p>
+                    <h3 class="hero-item-unit">cafes</h3>
+                </li>
+                <li class="hero-item">
+                    <p class="hero-item-number">23</p>
+                    <h3 class="hero-item-unit">food trucks</h3>
+                </li>
+            </ul>
+        </div>
+
+        <div class="hero-text-thumb">
+            <h2 class="visually-hidden">Сomposition of our product</h2>
+            <p class="hero-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt
+                ut
+                labore et</p>
+            <button class="hero-link">
+                <picture>
+                    <source
+                        srcset="../images/ArrowHero/ArrowHeroDesktop.webp 1x, ../images/ArrowHero/ArrowHeroDesktop@2x.webp 2x, ../images/ArrowHero/ArrowHeroDesktop@3x.webp 3x"
+                        type="image/webp" media="(min-width:1280px)" />
+                    <source
+                        srcset="../images/ArrowHero/ArrowHeroTablet.webp 1x, ../images/ArrowHero/ArrowHeroTablet@2x.webp 2x, ../images/ArrowHero/ArrowHeroTablet@3x.webp 3x"
+                        type="image/webp" media="(min-width:768px)" />
+
+                    <source
+                        srcset="../images/ArrowHero/ArrowHeroDesktop.png 1x, ../images/ArrowHero/ArrowHeroDesktop@2x.png 2x, ../images/ArrowHero/ArrowHeroDesktop@3x.png 3x"
+                        media="(min-width:1280px)" />
+                    <source
+                        srcset="../images/ArrowHero/ArrowHeroTablet.png 1x, ../images/ArrowHero/ArrowHeroTablet@2x.png 2x, ../images/ArrowHero/ArrowHeroTablet@3x.png 3x"
+                        media="(min-width:768px)" />
+
+                    <img src="../images/ArrowHero/ArrowHeroTablet.png" alt="Семантически верний вебдизайн" />
+                </picture>
+            </button>
+        </div>
     </div>
 </section>
-<!-- <div id="products">
-    <h2>Products</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, dolorem!</p>
-    <h2>Lorem ipsum dolor sit amet.</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, dolorem!</p>
-    <h2>Lorem ipsum dolor sit amet.</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, dolorem!</p>
-    <h2>Lorem ipsum dolor sit amet.</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, dolorem!</p>
-    <h2>Lorem ipsum dolor sit amet.</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, dolorem!</p>
-    <h2>Lorem ipsum dolor sit amet.</h2>
-</div>
-<div id="about">
-        <h2>about</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, dolorem!</p>
-        <h2>Lorem ipsum dolor sit amet.</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, dolorem!</p>
-        <h2>Lorem ipsum dolor sit amet.</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, dolorem!</p>
-        <h2>Lorem ipsum dolor sit amet.</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, dolorem!</p>
-        <h2>Lorem ipsum dolor sit amet.</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, dolorem!</p>
-        <h2>Lorem ipsum dolor sit amet.</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, dolorem!</p>
-        <h2>Lorem ipsum dolor sit amet.</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, dolorem!</p>
-        <h2>Lorem ipsum dolor sit amet.</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, dolorem!</p>
-        <h2>Lorem ipsum dolor sit amet.</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, dolorem!</p>
-        <h2>Lorem ipsum dolor sit amet.</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, dolorem!</p>
-        <h2>Lorem ipsum dolor sit amet.</h2>
-</div> -->
