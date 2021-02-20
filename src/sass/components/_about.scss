@@ -3,6 +3,16 @@
   background: $bg-advantages-footer
     url('../images/MobilePhoto/sectionBgMobile.png') no-repeat 50% 99%;
   background-size: 100%;
+  @media screen and (min-resolution: 2dppx) {
+    background: $bg-advantages-footer
+      url('../images/MobilePhoto/sectionBgMobile@2x.png') no-repeat 50% 99%;
+    background-size: 100%;
+  }
+  @media screen and (min-resolution: 3dppx) {
+    background: $bg-advantages-footer
+      url('../images/MobilePhoto/sectionBgMobile@3x.png') no-repeat 50% 99%;
+    background-size: 100%;
+  }
 
   @media screen and (min-width: 767px) and (max-width: 1279px) {
     background-image: none;
@@ -10,6 +20,18 @@
   @media screen and (min-width: $desktop) {
     background: $bg-advantages-footer
       url('../images/DesktopPhoto/sectionBgMilkDesktop.png') no-repeat 50% 100%;
+  }
+  @media screen and (min-resolution: 2dppx) {
+    background: $bg-advantages-footer
+      url('../images/DesktopPhoto/sectionBgMilkDesktop@2x.png') no-repeat 50%
+      99%;
+    background-size: 100%;
+  }
+  @media screen and (min-resolution: 3dppx) {
+    background: $bg-advantages-footer
+      url('../images/DesktopPhoto/sectionBgMilkDesktop@3x.png') no-repeat 50%
+      99%;
+    background-size: 100%;
   }
 }
 
