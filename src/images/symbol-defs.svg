@@ -21,5 +21,8 @@
         <symbol id="icon-burger" viewBox="0 0 32 32">
             <path d="M0 1h20M0 7h20M0 13h20" stroke="#D41443"/>
         </symbol>
+        <symbol id="circle" viewBox="0 0 32 32">
+            <path fill="#ffa5ba" style="fill: var(--color1, #ffa5ba)" d="M0 16.012c0-8.847 7.2-16.012 16.090-16.012s16.090 7.166 16.090 16.012c0 8.846-7.2 16.012-16.090 16.012s-16.090-7.166-16.090-16.012z"></path>
+        </symbol>
     </defs>
 </svg>
