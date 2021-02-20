@@ -25,6 +25,14 @@
     text-transform: uppercase;
     color: $secondary-text-color;
     margin-bottom: 15px;
+    @media screen and (min-width: $tablet) {
+      font-size: 26px;
+      line-height: 1.15;
+    }
+    @media screen and (min-width: $tablet) {
+      font-size: 30px;
+      line-height: 1.13;
+    }
   }
   &-title {
     font-family: 'Titan One';
@@ -35,6 +43,14 @@
     letter-spacing: $main-letter-spacing;
     text-transform: uppercase;
     color: $accent-color;
+    @media screen and (min-width: $tablet) {
+      font-size: 48px;
+      line-height: 1.14;
+    }
+    @media screen and (min-width: $tablet) {
+      font-size: 58px;
+      line-height: 1.13;
+    }
   }
   &-box {
     padding: 0px;
