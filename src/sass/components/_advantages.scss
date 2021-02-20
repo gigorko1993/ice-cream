@@ -99,6 +99,10 @@
   }
 }
 
+.apple-text {
+  display: flex;
+}
+
 .icon-apple::before {
   content: '';
   background-image: url('../images/MobilePhoto/iconAdvantades2.png');
