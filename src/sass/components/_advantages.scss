@@ -13,7 +13,7 @@
 }
 
 .advantages-item {
-  width: 230px;
+  max-width: 230px;
 
   @include media_max(767px) {
     &:not(:last-child) {
@@ -39,43 +39,58 @@
   }
 }
 
-.advantages-picture {
-  margin-bottom: 16px;
+// .advantages-picture {
+//   margin-bottom: 16px;
 
-  @include media_min(768px) {
-    margin-bottom: 36px;
-  }
+//   @include media_min(768px) {
+//     margin-bottom: 36px;
+//   }
 
-  @include media_min(1280px) {
-    margin-bottom: 40px;
-  }
+//   @include media_min(1280px) {
+//     margin-bottom: 40px;
+//   }
+// }
+
+// .advantages-span {
+//   display: block;
+
+//   margin-bottom: 10px;
+
+//   font-family: $secondary-font-family;
+//   font-size: 36px;
+//   line-height: 1.14;
+//   text-transform: uppercase;
+
+//   color: $accent-color;
+
+//   @include media_min(768px) {
+//     margin-bottom: 13px;
+
+//     font-size: 48px;
+//     line-height: 1.15;
+//   }
+
+//   @include media_min(1280px) {
+//     margin-bottom: 13px;
+
+//     font-size: 58px;
+//     line-height: 1.14;
+//   }
+// }
+
+.icon-udder::before {
+  content: '';
+  background-image: url('../images/MobilePhoto/iconAdvantades1.png');
 }
 
-.advantages-span {
-  display: block;
+.icon-apple::before {
+  content: '';
+  background-image: url('../images/MobilePhoto/iconAdvantades2.png');
+}
 
-  margin-bottom: 10px;
-
-  font-family: $secondary-font-family;
-  font-size: 36px;
-  line-height: 1.14;
-  text-transform: uppercase;
-
-  color: $accent-color;
-
-  @include media_min(768px) {
-    margin-bottom: 13px;
-
-    font-size: 48px;
-    line-height: 1.15;
-  }
-
-  @include media_min(1280px) {
-    margin-bottom: 13px;
-
-    font-size: 58px;
-    line-height: 1.14;
-  }
+.icon-heart::before {
+  content: '';
+  background-image: url('../images/MobilePhoto/iconAdvantades3.png');
 }
 
 .advantages-text {
