@@ -15,6 +15,93 @@
   </head>
     <body>
 
+        <!-- <div class="overlay"></div> -->
+
+<header class="container">
+    <div class=" header__container">
+        <div class="header__logo"></div>
+        <a class="header__link-logo" href="">
+            <span class="header__logo-text">icecream</span>
+        </a>
+        <button type="button" class="header__button-menu" data-menu-open>
+            <svg class="header__icon-burger" width="20px" height="12px">
+                <!-- Закомітила іконку, бо в мене ламається все, виправлю -->
+
+                <!-- <use
+                    href="..src/images/symbol-defs.svg#icon-burger">
+                </use> -->
+            </svg>
+        </button>
+        <nav class="header__navigation">
+            <ul class="header__list">
+                <li class="header__item">
+                    <a class="header__link header__link-current" href="">Home</a>
+                </li>
+                <li class="header__item">
+                    <a class="header__link" href="">About us</a>
+                </li>
+                <li class="header__item">
+                    <a class="header__link" href="">How it’s made?</a>
+                </li>
+                <li class="header__item">
+                    <a class="header__link" href="">Our products</a>
+                </li >
+                <li class="header__item">
+                    <a class="header__link" href="">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <button type="button" class="header__button-buy">
+            <span class="header__buy-text">Buy now</span>
+            <svg class="header__icon-narrow" width="4px" height="8px">
+                <!-- <use
+                    href="..src/images/symbol-defs.svg#icon-Vector-button">
+                </use> -->
+            </svg>
+        </button>
+    </div>
+</header>
+
+
+<!-- Розмітка для мобільного меню -->
+<div class="menu" data-menu>
+    <button type="button" class="menu__close" data-menu-close>
+        <svg class="menu__icon-close" width="14px" height="14px">
+            <!-- Закомітила іконку, бо в мене ламається все, виправлю -->
+
+            <!-- <use
+                href="..src/images/symbol-defs.svg#icon-close">
+            </use> -->
+        </svg>
+    </button>
+    <button type="button" class="menu__button-buy">
+        <span class="header__buy-text">Buy now</span>
+        <svg class="header__icon-narrow" width="4px" height="8px">
+            <!-- <use
+                href="..src/images/symbol-defs.svg#icon-Vector-button">
+            </use> -->
+        </svg>
+    </button>    
+    <ul class="menu__list">
+        <li class="menu__item">
+            <a class="menu__link menu__link-current" href="">Home</a>
+        </li>
+        <li class="menu__item">
+            <a class="menu__link" href="">About us</a>
+        </li>
+        <li class="menu__item">
+            <a class="menu__link" href="">How it’s made?</a>
+        </li>
+        <li class="menu__item">
+            <a class="menu__link" href="">Our products</a>
+        </li >
+        <li class="menu__item">
+            <a class="menu__link" href="">Contact</a>
+        </li>
+    </ul>
+</div>
+
+
     <!-- <ul>
         <button class="button" onclick="firstP(1)">1st Project</button>
         <div id="Project1" style="display:none" align="right">
@@ -860,6 +947,53 @@
 
     <!-- тестова ссилка на головну сторінку, потім заберу -->
     <a href="./index.html">Ссилка на сторінку index</a>
+</section>
+
+<section class="footer">
+    <div class="container footer-wrapper">
+        <p class="footer-title">homemade ice cream made
+               <span class="accent-text">with passion</span>
+        </p>
+        <div class="social-and-contacts">
+        <div class="footer-social">
+        <ul class="social-list">
+            <li class="social-item">
+                <a href="#" class="social-link">
+                    <svg class="social-icon " width="19px"  height="19px">
+                        <use href="../src/images/symbol-defs.svg#icon-github"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="social-item">
+                <a href="#" class="social-link">
+                    <svg class="social-icon" width="19px"  height="15px">
+                        <use href="../src/images/symbol-defs.svg#icon-telegram"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="social-item">
+                <a href="#" class="social-link">
+
+                    <svg class="social-icon" width="8px"  height="19px"> 
+
+                        <use href="../src/images/symbol-defs.svg#icon-facebook"></use>
+                    </svg>
+                 </a>
+            </li>
+        </ul>
+        </div>
+        <div class="footer-contacts">
+            <p class="contact">Feel free to contact <a href="tel:+61 (0) 383 766 284" class="contact-link"> +61 (0) 383 766 284</a></p>
+        </div>
+        </div>
+        </div>
+</section>
+<section class="copyright-section">
+        <div class="footer-border"></div>
+        <div class="copyright-text">
+            &#169 2019 - IceCream.
+            All Rights Reserved.
+        </div>
 </section>
 
     <script>
