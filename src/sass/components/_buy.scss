@@ -1,0 +1,126 @@
+.example {
+    color: black;
+      
+    &__item:not(:last-child) {
+      margin-bottom: 30px;
+
+      @media screen and (min-width: 768px) {
+        margin-bottom: 0;
+      }
+    }
+      
+    &__link {
+      display: block;
+      height: 100%;
+
+      border-right: 1px solid black;
+      border-bottom: 1px solid black;
+      border-left: 1px solid black;
+      
+      box-shadow: 0px 1px 1px, 0px 4px 4px ,
+        1px 4px 6px;
+    }
+      
+    &__link:focus,
+    &__link:hover {
+      box-shadow: 0px 1px 1px, 0px 4px 4px rgba(0, 0, 0, 0.06),
+          1px 4px 6px rgba(0, 0, 0, 0.16);
+          border-color: red;
+    }
+      
+    &__content {
+      padding: 20px 24px;
+      background-color: grey;
+    }
+      
+    &__title {
+      margin: 0;
+      margin-bottom: 4px;
+
+    //   font-weight: $font-weight-bold;
+    //   font-size: $font-size-example;
+    //   line-height: $line-height-example;
+
+      letter-spacing: 0.06em;
+              
+    //   color: $text-title-color;
+    }
+      
+    &__text {
+        // font-size: $font-size-subtitle-button;
+        // line-height: $line-height-submit;
+        
+        color: black;
+      }
+      
+    &__overlay {
+        position: relative;
+        overflow: hidden;
+      }
+      
+    &__description {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(33, 150, 243, 0.9);
+        transform: translateY(100%);
+      
+      }
+      
+    &__specification {
+        margin: 77px 24px;
+        
+        // font-weight: $font-weight-normal;
+        // font-size: $font-size-example;
+        // line-height: $line-height-specification;
+        
+        color: grey;
+
+        @media screen and (min-width: 768px) {
+          margin: 49px 24px;
+        }
+
+        @media screen and (min-width: 1200px) {
+          position: absolute;
+          width: 322px;
+          height: 168px;
+          margin: 0;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+    }
+      
+    &__link:focus .example__description,
+    &__link:hover .example__description {
+        transform: translateY(0);
+      }
+
+    /* TABLET */
+
+    @media screen and (min-width: 768px) {
+      &__list {
+          display: flex;
+          flex-wrap: wrap;
+          margin-top: -30px;
+          margin-right: -15px;
+          margin-left: -15px;
+        }
+          
+        &__item {
+          display: inline-block;
+          margin-top: 30px;
+          margin-right: 15px;
+          margin-left: 15px;
+    
+          height: auto;
+          width: calc((100% - 4 * 15px) / 2);
+
+          @media screen and (min-width: 1200px) {
+            width: calc((100% - 6 * 15px) / 3);
+          }
+        }
+  }
+}

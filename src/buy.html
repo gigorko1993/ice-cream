@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="./slick/slick.scss" />
+    <!--<link rel="stylesheet" href="./slick/slick-theme.scss" />-->
+    <title>IceCreame</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="images/png" />
+  </head>
+  <body>
+    <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
+
+    <include src="./partials/header.html"></include>
+
+    <!-- початок тесту -->
+    <section>
+        <ul>
+            <button class="button" onclick="project(this)">1st Project</button>
+            <div id="Project1" style="display: none;" align="right">Information about the first project...</div>
+          
+          </ul>
+          
+          <ul>
+            <button class="button" onclick="project(this)">2nd Project</button>
+            <div id="Project2" style="display: none;" align="right">Information about the second project...</div>
+          </ul>
+          
+          <ul>
+            <button class="button" onclick="project(this)">3rd Project</button>
+            <div id="Project3" style="display: none;" align="right">            <img
+                class="products-card__pictur"
+                src="../src/images/MobilePhoto/iceCofeeMobile.png"
+                alt="" 
+              /></div>
+          </ul>
+    </section>
+        <!-- кінець тесту -->
+
+        <include src="./partials/footer.html"></include>
+
+    <!-- тестове посилання для нової сторінки, потім заберу -->
+    <a href="./index.html">Посилання на сторінку buy</a>
+
+    <!-- скрипт для кнопок -->
+    <script>
+    function project(btn) {
+  document.querySelectorAll('[id^="Project"]').forEach(div => div.style.display = "none");
+  btn.nextElementSibling.style.display = "block";
+}
+   </script>
+
+    <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
+    <script src="./index.js"></script>
+  </body>
+</html>
