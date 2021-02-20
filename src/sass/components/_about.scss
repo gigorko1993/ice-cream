@@ -35,6 +35,7 @@
     }
   }
   &-title {
+    margin-bottom: 26px;
     font-family: 'Titan One';
     font-weight: 400;
     font-size: 34px;
@@ -74,7 +75,7 @@
   @media screen and (min-width: $tablet) {
     display: flex;
     width: 340px;
-    margin: 50px 15px 0px 0px;
+    margin: 50px 17px 0px 0px;
 
     @media screen and (min-width: $desktop) {
       width: 516px;
@@ -99,6 +100,7 @@
     margin: 100px 0px 0px;
     width: 340px;
     @media screen and (min-width: $desktop) {
+      margin: 106px 0px 0px;
       width: 463px;
     }
   }
@@ -111,9 +113,11 @@
   font-size: 12px;
   line-height: 162%;
   @media screen and (min-width: $tablet) {
+    margin-bottom: 40px;
     font-size: 14px;
     line-height: 176%;
     @media screen and (min-width: $desktop) {
+      margin-bottom: 35px;
       font-size: 16px;
       line-height: 176%;
     }
@@ -139,7 +143,7 @@
   }
 }
 .about-section-text-3 {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   @media screen and (min-width: $tablet) {
     margin-bottom: 62px;
   }
