@@ -27,7 +27,7 @@
       <p class="about-section-text-3">
         Aliquam erat volutpat. Aenean accumsan.
       </p>
-      <button type="button" class="about-section-button">Read more
+      <button type="button" class="about-section-button" data-toggle-backdrop-schedule>Read more
         <!-- <svg width="8" height="9" class="about-section-button-arrow" style="outline: none;">
         <polyline points="0,0 4, 4,0 8" fill="transparent" stroke-width="1.5" />
       </svg> -->
@@ -38,4 +38,36 @@
 </div>
 
 </div>
+<!-- modal  -->
+<div class="about-section-backdrop is-hidden backdrop--hidden" data-backdrop-schedule>
+<div class="about-section-modal backdrop--hidden">
+  <button type="button" class="about-section-modal-button" data-toggle-backdrop-schedule><svg class="about-section-modal-close" width="8"
+      height="8">
+      <use href="../src/images/symbol-defs.svg#icon-close"></use>
+    </svg></button>
+  <div class="about-section-modal-text">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur debitis aliquam vitae voluptatibus corrupti odit a incidunt totam nam placeat cumque ducimus quam at hic sint eligendi, error magni minima!
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur debitis aliquam vitae voluptatibus corrupti odit a
+    incidunt totam nam placeat cumque ducimus quam at hic sint eligendi, error magni minima!
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur debitis aliquam vitae voluptatibus corrupti odit a
+    incidunt totam nam placeat cumque ducimus quam at hic sint eligendi, error magni minima!
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur debitis aliquam vitae voluptatibus corrupti odit a
+    incidunt totam nam placeat cumque ducimus quam at hic sint eligendi, error magni minima!
+  </div>
+</div>
+</div>
 </section>
+
+<script>
+  const setup = name => {
+    const backdrop = document.querySelector(`[data-backdrop-${name}]`);
+    const buttons = document.querySelectorAll(`[data-toggle-backdrop-${name}]`);
+    const toggleBackdrop = () =>
+      backdrop.classList.toggle('backdrop--hidden');
+    buttons.forEach(button =>
+      button.addEventListener('click', toggleBackdrop),
+    );
+  }
+  setup('schedule')
+  setup('menu')
+</script>

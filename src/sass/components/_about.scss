@@ -1,4 +1,5 @@
 .about-section {
+  position: relative;
   // width: 100%;
   background: $bg-advantages-footer
     url('../images/MobilePhoto/sectionBgMobile.png') no-repeat 50% 99%;
@@ -205,5 +206,121 @@
     fill: none;
     margin-left: 13px;
     padding: 0;
+  }
+}
+
+// backdrop
+.about-section-backdrop {
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.about-section-backdrop.backdrop--hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.9);
+}
+.about-section-backdrop.backdrop--hidden .about-section-modal {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
+.about-section-modal {
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  left: 50%;
+  width: 320px;
+  height: 500px;
+  padding: 30px 20px 25px;
+  margin: 0px;
+  border-radius: 20px;
+  opacity: 1;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  transform: translate(-50%, -50%) scale(1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  animation-name: changeBgColor;
+  animation: changeBgColor 6000ms infinite ease-in-out;
+
+  &:hover {
+    animation-play-state: paused;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 700px;
+    height: 500px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 900px;
+    height: 500px;
+  }
+}
+
+@keyframes changeBgColor {
+  0% {
+    background-color: $bg-advantages-footer;
+  }
+
+  50% {
+    background-color: $bg-header;
+  }
+
+  100% {
+    background-color: $bg-advantages-footer;
+  }
+}
+
+.about-section-modal-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 25px;
+  height: 25px;
+  right: 15px;
+  top: 10px;
+  border: none;
+  border-radius: 50%;
+  background-color: $accent-color;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    // color: $accent-color;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+  }
+}
+
+// .about-section-modal-close {
+//   fill: currentColor;
+//   transition-property: color;
+//   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+// }
+
+.about-section-modal-text {
+  font-family: 'DM Sans';
+  color: $primary-text-color;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 162%;
+  margin: 0;
+  @media screen and (min-width: $tablet) {
+    font-size: 18px;
+    line-height: 176%;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 20px;
+    line-height: 176%;
   }
 }
