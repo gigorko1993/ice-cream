@@ -1,9 +1,12 @@
 .hero {
   padding-top: 137px;
   padding-bottom: 160px;
-  overflow-x: hidden;
 
   background-color: $bg-header;
+
+  @include media_max($max-mobile) {
+    overflow-x: hidden;
+  }
 
   @include media_min($tablet) {
     padding-top: 20px;
@@ -31,6 +34,7 @@
     z-index: 2;
     width: 346px;
     height: 346px;
+    fill: $secondary-text-color;
 
     @include media_min($tablet) {
       left: 307px;
@@ -165,8 +169,8 @@
     border-radius: 20px;
     cursor: pointer;
 
-    color: $white-text-color;
-    background-color: $accent-color;
+    color: $accent-color;
+    background-color: $white-text-color;
 
     font-size: 8px;
     line-height: 1.25;
@@ -183,21 +187,24 @@
       line-height: 1.29;
     }
   }
+
+  &-button-pink {
+    background-color: $accent-color;
+    color: $white-text-color;
+  }
+
   &-button:hover,
-  &-button:focus {
-    background-color: $bg-customers-reviews-dots;
+  &-button:focus,
+  &-link:hover,
+  &-link:focus {
+    background-color: $bg-button-hower;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
       0px 2px 2px rgba(0, 0, 0, 0.12);
   }
 
-  &-button-pink {
-    color: $accent-color;
-    background-color: $white-text-color;
-  }
-
   &-button-pink:hover,
   &-button-pink:focus {
-    background-color: $bg-button-hower;
+    background-color: $bg-customers-reviews-dots;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
       0px 2px 2px rgba(0, 0, 0, 0.12);
   }
@@ -214,6 +221,8 @@
   }
 
   &-item-number {
+    position: relative;
+
     color: $accent-color;
 
     font-family: $secondary-font-family;
@@ -225,6 +234,30 @@
     @include media_min($desktop) {
       font-size: 46px;
       line-height: 1.15;
+    }
+  }
+
+  &-item-number::after {
+    @include media_min($tablet) {
+      position: absolute;
+      top: -2px;
+      left: 24px;
+      z-index: -1;
+
+      background-image: url('../../src/images/circle.svg');
+      content: '';
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      width: 16px;
+      height: 16px;
+    }
+
+    @include media_min($desktop) {
+      top: -6px;
+      left: 39px;
+      width: 30px;
+      height: 30px;
     }
   }
 
@@ -262,6 +295,9 @@
     }
   }
   &-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     margin-left: 120px;
     width: 18px;
     height: 18px;
@@ -280,6 +316,17 @@
   &-link {
     @include media_max($max-mobile) {
       display: none;
+    }
+  }
+
+  &-link-image {
+    fill: $accent-color;
+    width: 6px;
+    height: 6px;
+
+    @include media_min($desktop) {
+      width: 7px;
+      height: 7px;
     }
   }
 }
