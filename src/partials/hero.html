@@ -1,6 +1,6 @@
 <section class="hero">
     <div class="container hero-container">
-        <picture class="hero-image hero-image-bio">
+        <picture class="hero-image hero-image-bio animate__animated animate__fadeInLeft">
             <source
                 srcset="./images/DesktopPhoto/bioEcoDesktop.webp 1x, ./images/DesktopPhoto/bioEcoDesktop@2x.webp 2x, ./images/DesktopPhoto/bioEcoDesktop@3x.webp 3x"
                 type="image/webp" media="(min-width:1280px)" />
@@ -17,7 +17,7 @@
 
             <img src="./images/TabletPhoto/bioEcoTablet.png" alt="" />
         </picture>
-        <picture class="hero-image hero-image-main">
+        <picture class="hero-image hero-image-main animate__animated animate__backInDown">
             <source
                 srcset="./images/DesktopPhoto/heroDesktop.webp 1x, ./images/DesktopPhoto/heroDesktop@2x.webp 2x, ./images/DesktopPhoto/heroDesktop@3x.webp 3x"
                 type="image/webp" media="(min-width:1280px)" />
@@ -63,32 +63,29 @@
         <div class="hero-thumb">
             <div class="hero-title-box">
                 <h1 class="hero-title"><span class="hero-title-label">ice cream made with </span>passion</h1>
-                <a href="#products" class="hero-button ">Products</a>
-                <a href="#about" class="hero-button hero-button-pink">How it’s made?</a>
+                <a href="#products" class="button-pink hero-button">Products</a>
+                <a href="#about" class="button-white hero-button">How it’s made?</a>
             </div>
             <h2 id="outlets" class="visually-hidden">Our outlets</h2>
             <ul aria-labelledby="outlets" class="hero-list" title="our outlets">
-                <li class="hero-item">
-                    <p class="hero-item-number">16</p>
+                <li class="hero-item outlets__inner">
+                    <p class="hero-item-number outlets__number-cafe">16</p>
                     <h3 class="hero-item-unit">cafes</h3>
                 </li>
-                <li class="hero-item">
-                    <p class="hero-item-number">23</p>
+                <li class="hero-item outlets__inner">
+                    <p class="hero-item-number outlets__number-food-truck">23</p>
                     <h3 class="hero-item-unit">food trucks</h3>
                 </li>
             </ul>
         </div>
-        <div class="hero-text-thumb">
             <h2 class="visually-hidden">Сomposition of our product</h2>
-            <p class="hero-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt
-                ut
-                labore et</p>
-            <button class="hero-link">
-                    <svg width="7px" height="7px">
-                        <use href="../src/images/symbol-defs.svg#icon-Vector-button"></use>
+            <p class="hero-text" data-text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                sed do eiusmod tempor ut labore et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque laboriosam, consequatur nobis explicabo iste quos deleniti a dolores. Nostrum eaque, incidunt voluptate laboriosam quasi dolore. Asperiores excepturi dolorem aperiam repellat, fuga suscipit nulla inventore explicabo cum eum corporis alias quo. Dicta inventore quam similique obcaecati officia, corrupti doloribus. Beatae, impedit.</p>
+            <button class="hero-link" data-show-text-button>
+                    <svg class="hero-link-image">
+                        <use href="../src/images/symbol-defs.svg#arrow-right"></use>
                     </svg>               
             </button>
-        </div>
+            <div class="hero-plug"></div>
     </div>
 </section>

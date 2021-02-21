@@ -1,0 +1,18 @@
+.button-top {
+    display: block;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    padding: 8px 8px;
+    background-color: pink;
+    border-radius:15px;
+
+    &-svg {
+        width: 40px;
+        height: 40px;
+        fill: red;
+    }
+
+}
