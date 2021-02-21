@@ -170,9 +170,6 @@
     border-radius: 20px;
     cursor: pointer;
 
-    // color: $accent-color;
-    // background-color: $white-text-color;
-
     font-size: 8px;
     line-height: 1.25;
     font-weight: 400;
@@ -189,26 +186,12 @@
     }
   }
 
-  // &-button-pink {
-  //   background-color: $accent-color;
-  //   color: $white-text-color;
-  // }
-
-  // &-button:hover,
-  // &-button:focus,
   &-link:hover,
   &-link:focus {
     background-color: $bg-button-hower;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
       0px 2px 2px rgba(0, 0, 0, 0.12);
   }
-
-  // &-button-pink:hover,
-  // &-button-pink:focus {
-  //   background-color: $bg-customers-reviews-dots;
-  //   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-  //     0px 2px 2px rgba(0, 0, 0, 0.12);
-  // }
 
   &-list {
     display: flex;
@@ -278,9 +261,11 @@
   }
 
   &-text {
-    max-width: 114px;
     margin-left: 120px;
     margin-bottom: 7px;
+    max-width: 114px;
+    height: 48px;
+    overflow: hidden;
 
     font-size: 8px;
     line-height: 1.5;
@@ -288,6 +273,7 @@
 
     @include media_min($desktop) {
       max-width: 200px;
+      height: 78px;
       margin-left: 180px;
       margin-bottom: 20px;
 
@@ -295,6 +281,23 @@
       line-height: 1.4;
     }
   }
+
+  &-text.is-shown {
+    height: 78px;
+    overflow-y: scroll;
+    position: absolute;
+    bottom: 0px;
+
+    @include media_min($desktop) {
+      height: 126px;
+    }
+  }
+
+  &-link.is-shown .hero-link {
+    position: absolute;
+    bottom: 0px;
+  }
+
   &-link {
     display: inline-flex;
     justify-content: center;
