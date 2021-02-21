@@ -286,14 +286,14 @@
     height: 78px;
     overflow-y: scroll;
     position: absolute;
-    bottom: 0px;
+    bottom: 15px;
 
     @include media_min($desktop) {
       height: 126px;
     }
   }
 
-  &-link.is-shown .hero-link {
+  &-text.is-shown ~ .hero-link {
     position: absolute;
     bottom: 0px;
   }
@@ -327,5 +327,18 @@
     fill: $accent-color;
     width: 7px;
     height: 7px;
+  }
+
+  &-plug {
+    display: none;
+  }
+
+  &-text.is-shown ~ .hero-plug {
+    display: block;
+    height: 75px;
+
+    @include media_min($desktop) {
+      height: 124px;
+    }
   }
 }
