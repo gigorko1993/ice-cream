@@ -225,7 +225,7 @@
     @include media_min($tablet) {
       position: absolute;
       top: -2px;
-      left: 24px;
+      right: -7px;
       z-index: -1;
 
       background-image: url('../../src/images/circle.svg');
@@ -239,7 +239,7 @@
 
     @include media_min($desktop) {
       top: -6px;
-      left: 39px;
+      right: -16px;
       width: 30px;
       height: 30px;
     }
@@ -307,6 +307,7 @@
     height: 18px;
     border-radius: 50%;
     border-color: transparent;
+    outline: none;
 
     @include media_min($desktop) {
       margin-left: 180px;
