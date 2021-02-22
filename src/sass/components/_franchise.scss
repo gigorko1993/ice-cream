@@ -25,7 +25,8 @@
   }
 
   @media screen and (min-width: $mobile) and (max-width: $max-mobile) {
-    width: 480px;
+    left: auto;
+    min-width: 480px;
   }
 
   @media screen and (min-width: $tablet) {
@@ -40,6 +41,7 @@
   }
 
   &-icon {
+    padding-top: 2px;
     stroke: #d41443;
   }
 
