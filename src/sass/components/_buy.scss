@@ -1,6 +1,8 @@
 .buy {
   padding: 30px 15px;
 
+  background-color: $bg-orange;
+
   &-tittle {
     position: relative;
     margin-bottom: 80px;
@@ -92,7 +94,7 @@
 }
 
 .example {
-  color: #757575;
+  background-color: $bg-header;
 
   &__item:not(:last-child) {
     margin-bottom: 30px;
