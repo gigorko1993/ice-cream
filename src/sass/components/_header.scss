@@ -201,8 +201,7 @@
 
   padding: 10px 37px;
 
-  color: $accent-color;
-  background-color: $white-text-color;
+  @extend %button-white;
   border-radius: 22px;
   border: none;
 
