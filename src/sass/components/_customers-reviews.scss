@@ -3,6 +3,18 @@
   padding-bottom: 170px;
   color: $black-text-color;
   background-color: white;
+
+  & .slider-item {
+    @media screen and (min-width: $tablet) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding-left: 62px;
+      padding-right: 62px;
+    }
+  }
 }
 
 .slider-image {
@@ -12,37 +24,82 @@
   margin-right: auto;
   margin-bottom: 30px;
   border-radius: 50%;
-  background-color: #000;
 }
 
 .review-wrapper {
   padding: 40px 50px 20px;
   margin-bottom: 30px;
   background-color: $bg-customers-review;
+
+  @media screen and (min-width: $tablet) {
+    padding: 50px 45px 28px;
+    margin-bottom: 25px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 47px 55px 32px;
+    margin-bottom: 15px;
+  }
 }
 
 .slider-review {
-  position: relative;
+  padding-left: 8px;
+  padding-right: 8px;
   font-size: 12px;
   line-height: 2.5;
   text-align: center;
-  background: repeating-linear-gradient(
-    to top,
-    $bg-customers-quotes 1px,
-    transparent 3px,
-    transparent 31px
-  );
-  background-origin: border-box;
+  background-image: linear-gradient(#fafafa 2px, transparent 2px),
+    repeating-linear-gradient(
+      to top,
+      transparent 2px,
+      $bg-customers-quotes 2px 3px,
+      transparent 4px 31.5px
+    );
 
-  &:before {
-    content: '';
-    display: block;
-    width: 54px;
-    height: 40px;
-    position: absolute;
-    top: -10px;
-    left: 5px;
-    background-image: url();
+  @media screen and (min-width: $tablet) {
+    padding-left: 35px;
+    padding-right: 35px;
+    font-size: 14px;
+    line-height: 2.16;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-left: 35px;
+    padding-right: 35px;
+    font-size: 16px;
+    line-height: 1.86;
+  }
+
+  & .first-word {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 54px;
+      height: 40px;
+      position: absolute;
+      z-index: -1;
+      top: -16px;
+      left: -34px;
+      background-image: url('../images/MobilePhoto/quotes.png');
+      background-size: 54px 40px;
+      background-repeat: no-repeat;
+
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url('../images/MobilePhoto/quotes@2x.png');
+      }
+
+      @media screen and (min-device-pixel-ratio: 3),
+        screen and (min-resolution: 288dpi),
+        screen and (min-resolution: 3dppx) {
+        background-image: url('../images/MobilePhoto/quotes@3x.png');
+      }
+    }
   }
 }
 
