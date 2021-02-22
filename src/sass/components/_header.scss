@@ -1,23 +1,24 @@
 // Стилі для хедера і мобільного меню
+.header {
+  background-color: $bg-header;
 
+  @media screen and (max-width: $max-mobile) {
+    padding-top: 7px;
+  }
+  @media screen and (min-width: $tablet) {
+    padding-top: 37px;
+  }
+}
 .header__container {
   display: flex;
   align-items: center;
 
-  background-color: $bg-header;
-
   @media screen and (max-width: $max-mobile) {
     justify-content: space-between;
-    padding-top: 7px;
-    padding-left: 70px;
+    padding-left: 90px;
   }
   @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
-    padding-top: 37px;
-    padding-left: 70px;
-  }
-  @media screen and (min-width: $desktop) {
-    padding-top: 37px;
-    padding-left: 70px;
+    padding-left: 104px;
   }
 }
 .header__logo {
@@ -44,7 +45,7 @@
 
   font-family: $secondary-font-family;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 27px;
   line-height: 44px;
   letter-spacing: 0.02em;
   text-transform: uppercase;
@@ -63,27 +64,32 @@
   transform: translateX(-70px);
 
   width: 50px;
-  height: 40px;
 
-  // Поставила тимчасово бекграунд, бо не відображається іконка
-  background-color: $accent-color;
+  background-color: transparent;
+  background-image: url(../images/logo_icon/logo_icon.png);
+  background-repeat: no-repeat;
+  background-position: center;
 
-  // background-image: url(../images/Logo_icon/logo_icon.png);
-  // background-repeat: no-repeat;
-  // background-size: contain;
-  // background-position: center;
+  @media screen and (max-width: $max-mobile) {
+    height: 40px;
+  }
+  @media screen and (min-width: $tablet) {
+    height: 50px;
+    background-size: contain;
+  }
 }
 .header__button-menu {
   display: flex;
-  align-items: center;
+  justify-content: center;
 
   padding: 0px;
-
   color: $bg-menu;
   border: none;
 
-  // Забрати бекграунд, розкоментувати свг
-  background-color: $accent-color;
+  width: 24px;
+  height: 12px;
+
+  background-color: transparent;
 
   @media screen and (max-width: $max-mobile) {
     margin-left: auto;
@@ -91,12 +97,18 @@
   @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
     margin-left: auto;
     margin-right: 30px;
+
+    position: relative;
+    z-index: 4;
   }
   @media screen and (min-width: $desktop) {
     display: none;
   }
 }
 .header__icon-burger {
+  width: 48px;
+  height: 24px;
+
   fill: currentColor;
 }
 .header__navigation {
@@ -105,18 +117,23 @@
   }
   @media screen and (min-width: $desktop) {
     display: block;
-    margin-left: 110px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 .header__list {
   position: relative;
   z-index: 4;
 
+  padding-top: 10px;
+  padding-bottom: 10px;
+
   display: flex;
   justify-items: center;
   align-items: center;
 }
 .header__item {
+    position: relative;
   &:not(:last-of-type) {
     margin-right: 35px;
   }
@@ -136,6 +153,23 @@
   &.header__link-current {
     color: $accent-color;
   }
+}
+.header__link:hover::after {
+
+  content: "";
+
+  position: absolute;
+  left: 0px;
+  top: 16px;
+
+  display: inline-block;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background-color:rgba(255, 0, 0, 0.2);
+  
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header__button-buy {
@@ -158,12 +192,6 @@
   @media screen and (max-width: $max-mobile) {
     display: none;
   }
-  @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
-    margin-left: 30px;
-  }
-  @media screen and (min-width: $desktop) {
-    margin-left: 110px;
-  }
 }
 .header__buy-text {
   display: block;
@@ -171,7 +199,6 @@
 }
 .header__icon-narrow {
   fill: currentColor;
-  background-color: $accent-color;
 }
 
 // Стилі для мобільного меню
@@ -190,7 +217,9 @@
     padding: 23px 34px;
   }
 
-  transform: translateX(100%);
+  display: none;
+
+    //   transform: translateX(100%);
 }
 .menu__close {
   display: flex;
@@ -199,10 +228,8 @@
   padding: 0px;
 
   color: $white-text-color;
+  background-color: $bg-menu;
   border: none;
-
-  // Забрати бекграунд, розкоментувати свг
-  background-color: $white-text-color;
 
   margin-right: 8px;
   margin-bottom: 23px;
@@ -267,3 +294,6 @@
     color: $accent-color;
   }
 }
+
+
+
