@@ -81,8 +81,6 @@
   }
 }
 .header__button-menu {
-  position: absolute;
-  z-index: 6;
   padding: 0;
   // padding-top: 10px;
   // padding-left: 10px;
@@ -95,6 +93,7 @@
 
   background-color: transparent;
 
+
   @media screen and (max-width: $max-mobile) {
     top: 7px;
     right: 20px;
@@ -103,10 +102,29 @@
     top: 0px;
     right: 34px;
   }
+    // @media screen and (max-width: $max-mobile) {
+    //   top: 25px;
+    //   right: 20px;
+    // }
+  @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
+    margin-left: auto;
+    margin-right: 30px;  
+
+    position: relative;
+  }
+  @media screen and (min-width: $desktop) {
+    display: none;
+
+  }
     //   @media screen and (min-width: $desktop) {
     //     display: none;
     //   }
 }
+
+.button-menu--close {
+    position: absolute;
+}
+
 .header__icon {
   width: 100%;
   height: 100%;
@@ -114,19 +132,11 @@
   stroke: $accent-color;
 }
 
-.header__button-menu .header__icon--cross {
-  display: none;
-}
-
-.header__button-menu.is-open .header__icon--cross {
+ .header__icon--cross {
   display: block;
   width: 14px;
   height: 14px;
   stroke: #fff;
-}
-
-.header__button-menu.is-open .header__icon--burger {
-  display: none;
 }
 
 .header__navigation {
@@ -200,8 +210,7 @@
 
   padding: 10px 37px;
 
-  color: $accent-color;
-  background-color: $white-text-color;
+  @extend %button-white;
   border-radius: 22px;
   border: none;
 
@@ -227,10 +236,28 @@
 // Стилі для мобільного меню
 
 .menu {
-  display: none;
+
   position: fixed;
   top: 0;
   left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 5;
+
+    // padding-top: 60px;
+
+  color: $white-text-color;
+  background-color: $bg-menu;
+  border: none;
+
+  margin-right: 8px;
+  margin-bottom: 23px;
+  margin-left: auto;
+
+  @media screen and (min-width: $tablet) {
+    margin-right: 0px;
+  }
 
   width: 100%;
   height: 100vh;
@@ -244,26 +271,9 @@
 
   //   transform: translateX(100%);
 }
-.menu.is-open {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  z-index: 5;
 
-  padding-top: 60px;
 
-  color: $white-text-color;
-  background-color: $bg-menu;
-  border: none;
 
-  margin-right: 8px;
-  margin-bottom: 23px;
-  margin-left: auto;
-
-  @media screen and (min-width: $tablet) {
-    margin-right: 0px;
-  }
-}
 
 .menu__button-buy {
   font-family: $main-font-family;
