@@ -2,6 +2,7 @@
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+  overflow-y: scroll;
 
   & .franchise {
     transform: translate(-50%, -50%) scale(1.2);
@@ -12,13 +13,18 @@
   position: absolute;
   top: 0;
   left: 0;
+  width: calc(100% - 30px);
 
   padding: 40px 30px;
   background: #ffb8ca;
 
-  @media screen and (min-width: $mobile) {
-    left: 50%;
-    transform: translate(-50%, 0) scale(1);
+  @media screen and (max-width: $max-responsive-mobile) {
+    transform: translate(0, 0) scale(1);
+    min-width: 320px;
+    min-height: 100vh;
+  }
+
+  @media screen and (min-width: $mobile) and (max-width: $max-mobile) {
     width: 480px;
   }
 
@@ -33,13 +39,18 @@
     width: 800px;
   }
 
+  &-icon {
+    stroke: #d41443;
+  }
+
   &-button {
     position: absolute;
     top: 15px;
     right: 20px;
-    border: none;
-    // щоб бачити кнопку. Коли появится свг, bgc потрібно забрати
-    background-color: teal;
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    outline: transparent;
 
     @media screen and (min-width: $tablet) {
       top: 19px;
@@ -49,6 +60,17 @@
     @media screen and (min-width: $desktop) {
       top: 23px;
       right: 34px;
+    }
+
+    &:focus,
+    &:hover {
+      background-color: #d41443;
+      border-color: #d41443;
+    }
+
+    &:focus .franchise-icon,
+    &:hover .franchise-icon {
+      stroke: #fff;
     }
   }
 
@@ -67,7 +89,7 @@
 
     color: #d41443;
 
-    @media screen and (max-width: $max-tablet) {
+    @media screen and (max-width: $max-mobile) {
       margin-bottom: 15px;
     }
 
@@ -86,7 +108,7 @@
     font-family: DM Sans;
     font-style: normal;
     font-weight: bold;
-    font-size: 10px;
+    font-size: 12px;
     line-height: 1.13;
     letter-spacing: 0.02em;
 
@@ -95,12 +117,22 @@
 
     color: #000000;
 
+    @media screen and (max-width: $max-mobile) {
+      display: none;
+    }
+
     @media screen and (min-width: $tablet) {
-      font-size: 12px;
+      font-size: 13px;
     }
 
     @media screen and (min-width: $desktop) {
       font-size: 14px;
+    }
+
+    &-invitation {
+      display: block;
+      text-align: center;
+      text-indent: 0;
     }
   }
 
@@ -140,7 +172,7 @@
 
   &-form-input {
     height: 40px;
-    padding-left: 42px;
+    padding-left: 16px;
   }
 
   &-form-input:focus {
@@ -162,7 +194,8 @@
 
   &-form-textarea {
     padding: 12px 16px;
-    height: 120px;
+    // min-height: 80px;
+    // height: 100%;
     resize: none;
   }
 
