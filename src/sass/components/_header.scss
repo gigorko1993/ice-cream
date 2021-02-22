@@ -10,6 +10,8 @@
   }
 }
 .header__container {
+  position: relative;
+
   display: flex;
   align-items: center;
 
@@ -94,15 +96,12 @@
   background-color: transparent;
 
   @media screen and (max-width: $max-mobile) {
-    top: 25px;
+    top: 7px;
     right: 20px;
   }
   @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
-    margin-left: auto;
-    margin-right: 30px;
-
-    position: relative;
-    // z-index: 4;
+    top: 0px;
+    right: 34px;
   }
     //   @media screen and (min-width: $desktop) {
     //     display: none;
@@ -208,6 +207,13 @@
 
   @media screen and (max-width: $max-mobile) {
     display: none;
+  }
+  @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
+    margin-right: 60px;
+    margin-left: auto;
+
+    position: relative;
+    z-index: 4;
   }
 }
 .header__buy-text {
