@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css">
-    <title>Заголовок страницы</title>
-    <link rel="shortcut icon" href="images/favicon.png" type="images/png">
-  </head>
-  <body>
+
     <section class="contact">
         <div class="container">
             <h2 class="visually-hidden">Our schedule and contacts</h2>
@@ -95,13 +86,9 @@
                 </ul>
 
                 <div class="contacts-button">
-                    <button type="button" class="contacts-location">Our Locations</button>
-                    <button type="button" class="contacts-franchise">Franchise</button>
+                    <button type="button" class="contacts-location" data-modal-open>Our Locations</button>
+                    <button type="button" class="contacts-franchise" data-franchise-open>Franchise</button>
                 </div>
         </div>
     </section>
 
-    <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
-    <script src="./index.js"></script>
-  </body>
-</html>
