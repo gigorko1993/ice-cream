@@ -73,10 +73,31 @@
 .slick-dots {
   display: flex;
   justify-content: center;
-  border: none; 
+  border: none;
+
+  & li {
+    line-height: unset;
+  }
 
   & li:not(:last-child) {
     margin-right: 18px;
   }
 
+  & button {
+    font-size: 0;
+    padding: 0;
+    border: none;
+    width: 12px;
+    height: 12px;
+    background-color: #d9d9d9;
+    border-radius: 50%;
+  }
 
+  & li.slick-active {
+    button {
+      background: transparent url('../images/svg/house-icon.svg') no-repeat
+        center;
+      border-radius: 0;
+    }
+  }
+}
