@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="./slick/slick.scss" />
+    <!--<link rel="stylesheet" href="./slick/slick-theme.scss" />-->
+    <title>IceCreame</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="images/png" />
+    <link rel="stylesheet" href="./sass/main.scss">
+  </head>
+    <body>
+
+        <!-- <div class="overlay"></div> -->
+
+<header class="container">
+    <div class=" header__container">
+        <div class="header__logo"></div>
+        <a class="header__link-logo" href="">
+            <span class="header__logo-text">icecream</span>
+        </a>
+        <button type="button" class="header__button-menu" data-menu-open>
+            <svg class="header__icon-burger" width="20px" height="12px">
+                <!-- Закомітила іконку, бо в мене ламається все, виправлю -->
+
+                <!-- <use
+                    href="..src/images/symbol-defs.svg#icon-burger">
+                </use> -->
+            </svg>
+        </button>
+        <nav class="header__navigation">
+            <ul class="header__list">
+                <li class="header__item">
+                    <a class="header__link header__link-current" href="">Home</a>
+                </li>
+                <li class="header__item">
+                    <a class="header__link" href="">About us</a>
+                </li>
+                <li class="header__item">
+                    <a class="header__link" href="">How it’s made?</a>
+                </li>
+                <li class="header__item">
+                    <a class="header__link" href="">Our products</a>
+                </li >
+                <li class="header__item">
+                    <a class="header__link" href="">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <button type="button" class="header__button-buy">
+            <span class="header__buy-text">Buy now</span>
+            <svg class="header__icon-narrow" width="4px" height="8px">
+                <!-- <use
+                    href="..src/images/symbol-defs.svg#icon-Vector-button">
+                </use> -->
+            </svg>
+        </button>
+    </div>
+</header>
+
+
+<!-- Розмітка для мобільного меню -->
+<div class="menu" data-menu>
+    <button type="button" class="menu__close" data-menu-close>
+        <svg class="menu__icon-close" width="14px" height="14px">
+            <!-- Закомітила іконку, бо в мене ламається все, виправлю -->
+
+            <!-- <use
+                href="..src/images/symbol-defs.svg#icon-close">
+            </use> -->
+        </svg>
+    </button>
+    <button type="button" class="menu__button-buy">
+        <span class="header__buy-text">Buy now</span>
+        <svg class="header__icon-narrow" width="4px" height="8px">
+            <!-- <use
+                href="..src/images/symbol-defs.svg#icon-Vector-button">
+            </use> -->
+        </svg>
+    </button>    
+    <ul class="menu__list">
+        <li class="menu__item">
+            <a class="menu__link menu__link-current" href="">Home</a>
+        </li>
+        <li class="menu__item">
+            <a class="menu__link" href="">About us</a>
+        </li>
+        <li class="menu__item">
+            <a class="menu__link" href="">How it’s made?</a>
+        </li>
+        <li class="menu__item">
+            <a class="menu__link" href="">Our products</a>
+        </li >
+        <li class="menu__item">
+            <a class="menu__link" href="">Contact</a>
+        </li>
+    </ul>
+</div>
+
+
+    <!-- <ul>
+        <button class="button" onclick="firstP(1)">1st Project</button>
+        <div id="Project1" style="display:none" align="right">
+            <img
+            class="products-card__pictur"
+            src="../src/images/MobilePhoto/iceCreamMobile.png"
+            alt=""
+          />
+        </div>
+      
+    </ul>
+      
+    <ul>
+        <button class="button" onclick="firstP(2)">2nd Project</button>
+        <div id="Project2" style="display:none" align="right">
+            <img
+            class="products-card__pictur"
+            src="../src/images/MobilePhoto/iceCofeeMobile.png"
+            alt=""
+          />
+        </div>
+    </ul>
+      
+    <ul>
+        <button class="button" onclick="firstP(3)">3rd Project</button>
+        <div id="Project3" style="display:none" align="right">
+            <img
+            class="products-card__pictur"
+            src="../src/images/MobilePhoto/milkshakeMobile.png"
+            alt=""
+          />
+        </div>
+    </ul> -->
+
+<section class="buy">
+    <h2 class="buy-tittle">
+        Select a product category
+    </h2>
+
+    <ul>
+        <button class="buy-button buy-button-icecream" onclick="showDiv()">Ice Cream</button>
+        <div class="info-div" style="display:none" align="right">
+            <ul class="example__list list">
+                <li class="example__item">
+                    <a class="example__link" href="#">
+                        <div class="example__overlay">
+                            <picture>
+                                <!-- <source srcset="
+                                ./images/imgproject1.webp 1x,
+                                ./images/imgproject1@2x.webp 2x"
+                                type="image/webp"
+                                media="(max-width: 767px)">
+
+                                <source srcset="
+                                ./images/projectdesktop1.webp 1x,
+                                ./images/projectdesktop1@2x.webp 2x"
+                                type="image/webp"
+                                media="(min-width: 768px)">
+
+                                <source srcset="
+                                ./images/imgproject1.jpg 1x,
+                                ./images/imgproject1@2x.jpg 2x"
+                                media="(max-width: 767px)">
+
+                                <source srcset="
+                                ./images/projectdesktop1.jpg 1x,
+                                ./images/projectdesktop1@2x.jpg 2x"
+                                media="(min-width: 768px)"> -->
+    
+                                <img class="example__photo" 
+                                src="./images/Buy/icecream/card 1.jpg" 
+                                alt="Ice Cream" />
+                            </picture>
+                            <div class="example__description">
+                                <p class="example__specification">
+                                    Price
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="example__content">
+                            <h3 class="example__title">Strawberry</h3>
+                            <p class="example__text">Ice Cream</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="example__item">
+                    <a class="example__link" href="#">
+                        <div class="example__overlay">
+                             <picture>
+                                <!--<source srcset="
+                                ./images/imgproject2.webp 1x,
+                                ./images/imgproject2@2x.webp 2x"
+                                type="image/webp"
+                                media="(max-width: 767px)">
+
+                                <source srcset="
+                                ./images/projectdesktop2.webp 1x,
+                                ./images/projectdesktop2@2x.webp 2x"
+                                type="image/webp"
+                                media="(min-width: 768px)">
+
+                                <source srcset="
+                                ./images/imgproject2.jpg 1x,
+                                ./images/imgproject2@2x.jpg 2x"
+                                media="(max-width: 767px)">
+
+                                <source srcset="
+                                ./images/projectdesktop2.jpg 1x,
+                                ./images/projectdesktop2@2x.jpg 2x"
+                                media="(min-width: 768px)">-->
+    
+                                <img class="example__photo" 
+                                src="./images/Buy/icecream/card 2.jpg" 
+                                alt="Ice Cream" />
+                            </picture> 
+                            <div class="example__description">
+                                <p class="example__specification">
+                                    Price
+                                </p>
+                            </div>
+                        </div>
+                        <div class="example__content">
+                            <h3 class="example__title">Strawberry</h3>
+                            <p class="example__text">Ice Cream</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="example__item">
+                    <a class="example__link" href="#">
+                        <div class="example__overlay">
+                             <picture>
+                                <!--<source srcset="
+                                ./images/imgproject3.webp 1x,
+                                ./images/imgproject3@2x.webp 2x"
+                                type="image/webp"
+                                media="(max-width: 767px)">
+
+                                <source srcset="
+                                ./images/projectdesktop3.webp 1x,
+                                ./images/projectdesktop3@2x.webp 2x"
+                                type="image/webp"
+                                media="(min-width: 768px)">
+
+                                <source srcset="
+                                ./images/imgproject3.jpg 1x,
+                                ./images/imgproject3@2x.jpg 2x"
+                                media="(max-width: 767px)">
+
+                                <source srcset="
+                                ./images/projectdesktop3.jpg 1x,
+                                ./images/projectdesktop3@2x.jpg 2x"
+                                media="(min-width: 768px)">-->
+    
+                                <img class="example__photo" 
+                                src="./images/Buy/icecream/card 3.jpg" 
+                                alt="Ice Cream" />
+                            </picture> 
+                            <div class="example__description">
+                                <p class="example__specification">
+                                    Price
+                                </p>
+                            </div>
+                        </div>
+                        <div class="example__content">
+                            <h3 class="example__title">Strawberry</h3>
+                            <p class="example__text">Ice Cream</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="example__item">
+                    <a class="example__link" href="#">
+                        <div class="example__overlay">
+                             <picture>
+                                <!--<source srcset="
+                                ./images/imgproject4.webp 1x,
+                                ./images/imgproject4@2x.webp 2x"
+                                type="image/webp"
+                                media="(max-width: 767px)">
+
+                                <source srcset="
+                                ./images/projectdesktop4.webp 1x,
+                                ./images/projectdesktop4@2x.webp 2x"
+                                type="image/webp"
+                                media="(min-width: 768px)">
+
+                                <source srcset="
+                                ./images/imgproject4.jpg 1x,
+                                ./images/imgproject4@2x.jpg 2x"
+                                media="(max-width: 767px)">
+
+                                <source srcset="
+                                ./images/projectdesktop4.jpg 1x,
+                                ./images/projectdesktop4@2x.jpg 2x"
+                                media="(min-width: 768px)">-->
+    
+                                <img class="example__photo" 
+                                src="./images/Buy/icecream/card 4.jpg" 
+                                alt="Ice Cream" />
+                            </picture> 
+                            <div class="example__description">
+                                <p class="example__specification">
+                                    Price
+                                </p>
+                            </div>
+                        </div>
+                        <div class="example__content">
+                            <h3 class="example__title">Strawberry</h3>
+                            <p class="example__text">Ice Cream</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="example__item">
+                    <a class="example__link" href="#">
+                        <div class="example__overlay">
+                             <picture>
+                                <!--<source srcset="
+                                ./images/imgproject5.webp 1x,
+                                ./images/imgproject5@2x.webp 2x"
+                                type="image/webp"
+                                media="(max-width: 767px)">
+
+                                <source srcset="
+                                ./images/projectdesktop5.webp 1x,
+                                ./images/projectdesktop5@2x.webp 2x"
+                                type="image/webp"
+                                media="(min-width: 768px)">
+
+                                <source srcset="
+                                ./images/imgproject5.jpg 1x,
+                                ./images/imgproject5@2x.jpg 2x"
+                                media="(max-width: 767px)">
+
+                                <source srcset="
+                                ./images/projectdesktop5.jpg 1x,
+                                ./images/projectdesktop5@2x.jpg 2x"
+                                media="(min-width: 768px)">-->
+    
+                                <img class="example__photo" 
+                                src="./images/Buy/icecream/card 5.jpg" 
+                                alt="Ice Cream" />
+                            </picture> 
+                            <div class="example__description">
+                                <p class="example__specification">
+                                    Price
+                                </p>
+                            </div>
+                        </div>   
+                        <div class="example__content">
+                            <h3 class="example__title">Strawberry</h3>
+                            <p class="example__text">Ice Cream</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="example__item">
+                    <a class="example__link" href="#">
+                        <div class="example__overlay">
+                            <picture>
+                                <!-- <source srcset="
+                                ./images/imgproject6.webp 1x,
+                                ./images/imgproject6@2x.webp 2x"
+                                type="image/webp"
+                                media="(max-width: 767px)">
+
+                                <source srcset="
+                                ./images/projectdesktop6.webp 1x,
+                                ./images/projectdesktop6@2x.webp 2x"
+                                type="image/webp"
+                                media="(min-width: 768px)">
+
+                                <source srcset="
+                                ./images/imgproject6.jpg 1x,
+                                ./images/imgproject6@2x.jpg 2x"
+                                media="(max-width: 767px)">
+
+                                <source srcset="
+                                ./images/projectdesktop6.jpg 1x,
+                                ./images/projectdesktop6@2x.jpg 2x"
+                                media="(min-width: 768px)">-->
+    
+                                <img class="example__photo" 
+                                src="./images/Buy/icecream/iceCreamDesktop.png" 
+                                alt="Ice Cream" />
+                            </picture> 
+                            <div class="example__description">
+                                <p class="example__specification">
+                                    Price 
+                                </p>
+                            </div>
+                        </div>   
+                        <div class="example__content">
+                            <h3 class="example__title">Strawberry</h3>
+                            <p class="example__text">Ice Cream</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+
+            <button class="buy-button-order" type="button">Place an order</button>
+        </div>
+    </ul>
+
+    <ul>
+        <button class="buy-button buy-button-icecoffee" onclick="showDiv()">Ice Coffee</button>
+        <div class="info-div" style="display:none" align="right">
+            <ul class="example__list list">
+                <li class="example__item">
+                    <a class="example__link" href="#">
+                        <div class="example__overlay">
+                            <picture>
+                                <!-- <source srcset="
+                                ./images/imgproject1.webp 1x,
+                                ./images/imgproject1@2x.webp 2x"
+                                type="image/webp"
+                                media="(max-width: 767px)">
+
+                                <source srcset="
+                                ./images/projectdesktop1.webp 1x,
+                                ./images/projectdesktop1@2x.webp 2x"
+                                type="image/webp"
+                                media="(min-width: 768px)">
+
+                                <source srcset="
+                                ./images/imgproject1.jpg 1x,
+                                ./images/imgproject1@2x.jpg 2x"
+                                media="(max-width: 767px)">
+
+                                <source srcset="
+                                ./images/projectdesktop1.jpg 1x,
+                                ./images/projectdesktop1@2x.jpg 2x"
+                                media="(min-width: 768px)"> -->
+    
+                                <img class="example__photo" 
+                                src="./images/Buy/icecoffee/icecoffee card 1.jpg" 
+                                alt="Ice Coffee" />
+                            </picture>
+                            <div class="example__description">
+                                <p class="example__specification">
+                                    Price
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="example__content">
+                            <h3 class="example__title">Cherry</h3>
+                            <p class="example__text">Ice Coffee</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="example__item">
+                    <a class="example__link" href="#">
+                        <div class="example__overlay">
+                             <picture>
+                                <!--<source srcset="
+                                ./images/imgproject2.webp 1x,
+                                ./images/imgproject2@2x.webp 2x"
+                                type="image/webp"
+                                media="(max-width: 767px)">
+
+                                <source srcset="
+                                ./images/projectdesktop2.webp 1x,
+                                ./images/projectdesktop2@2x.webp 2x"
+                                type="image/webp"
+                                media="(min-width: 768px)">
+
+                                <source srcset="
+                                ./images/imgproject2.jpg 1x,
+                                ./images/imgproject2@2x.jpg 2x"
+                                media="(max-width: 767px)">
+
+                                <source srcset="
+                                ./images/projectdesktop2.jpg 1x,
+                                ./images/projectdesktop2@2x.jpg 2x"
+                                media="(min-width: 768px)">-->
+    
+                                <img class="example__photo" 
+                                src="./images/Buy/icecoffee/icecoffee card 2.jpg" 
+                                alt="Ice Coffee" />
+                            </picture> 
+                            <div class="example__description">
+                                <p class="example__specification">
+                                    Price
+                                </p>
+                            </div>
+                        </div>
+                        <div class="example__content">
+                            <h3 class="example__title">Cherry</h3>
+                            <p class="example__text">Ice Coffee</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="example__item">
+                    <a class="example__link" href="#">
+                        <div class="example__overlay">
+                             <picture>
+                                <!--<source srcset="
+                                ./images/imgproject3.webp 1x,
+                                ./images/imgproject3@2x.webp 2x"
+                                type="image/webp"
+                                media="(max-width: 767px)">
+
+                                <source srcset="
+                                ./images/projectdesktop3.webp 1x,
+                                ./images/projectdesktop3@2x.webp 2x"
+                                type="image/webp"
+                                media="(min-width: 768px)">
+
+                                <source srcset="
+                                ./images/imgproject3.jpg 1x,
+                                ./images/imgproject3@2x.jpg 2x"
+                                media="(max-width: 767px)">
+
+                                <source srcset="
+                                ./images/projectdesktop3.jpg 1x,
+                                ./images/projectdesktop3@2x.jpg 2x"
+                                media="(min-width: 768px)">-->
+    
+                                <img class="example__photo" 
+                                src="./images/Buy/icecoffee/icecoffee card 3.jpg" 
+                                alt="Ice Coffee" />
+                            </picture> 
+                            <div class="example__description">
+                                <p class="example__specification">
+                                    Price
+                                </p>
+                            </div>
+                        </div>
+                        <div class="example__content">
+                            <h3 class="example__title">Cherry</h3>
+                            <p class="example__text">Ice Coffee</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="example__item">
+                    <a class="example__link" href="#">
+                        <div class="example__overlay">
+                             <picture>
+                                <!--<source srcset="
+                                ./images/imgproject4.webp 1x,
+                                ./images/imgproject4@2x.webp 2x"
+                                type="image/webp"
+                                media="(max-width: 767px)">
+
+                                <source srcset="
+                                ./images/projectdesktop4.webp 1x,
+                                ./images/projectdesktop4@2x.webp 2x"
+                                type="image/webp"
+                                media="(min-width: 768px)">
+
+                                <source srcset="
+                                ./images/imgproject4.jpg 1x,
+                                ./images/imgproject4@2x.jpg 2x"
+                                media="(max-width: 767px)">
+
+                                <source srcset="
+                                ./images/projectdesktop4.jpg 1x,
+                                ./images/projectdesktop4@2x.jpg 2x"
+                                media="(min-width: 768px)">-->
+    
+                                <img class="example__photo" 
+                                src="./images/Buy/icecoffee/icecoffee card 4.jpg" 
+                                alt="Ice Coffee" />
+                            </picture> 
+                            <div class="example__description">
+                                <p class="example__specification">
+                                    Price
+                                </p>
+                            </div>
+                        </div>
+                        <div class="example__content">
+                            <h3 class="example__title">Cherry</h3>
+                            <p class="example__text">Ice Coffee</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="example__item">
+                    <a class="example__link" href="#">
+                        <div class="example__overlay">
+                             <picture>
+                                <!--<source srcset="
+                                ./images/imgproject5.webp 1x,
+                                ./images/imgproject5@2x.webp 2x"
+                                type="image/webp"
+                                media="(max-width: 767px)">
+
+                                <source srcset="
+                                ./images/projectdesktop5.webp 1x,
+                                ./images/projectdesktop5@2x.webp 2x"
+                                type="image/webp"
+                                media="(min-width: 768px)">
+
+                                <source srcset="
+                                ./images/imgproject5.jpg 1x,
+                                ./images/imgproject5@2x.jpg 2x"
+                                media="(max-width: 767px)">
+
+                                <source srcset="
+                                ./images/projectdesktop5.jpg 1x,
+                                ./images/projectdesktop5@2x.jpg 2x"
+                                media="(min-width: 768px)">-->
+    
+                                <img class="example__photo" 
+                                src="./images/Buy/icecoffee/icecoffee card 5.jpg" 
+                                alt="Ice Coffee" />
+                            </picture> 
+                            <div class="example__description">
+                                <p class="example__specification">
+                                    Price
+                                </p>
+                            </div>
+                        </div>   
+                        <div class="example__content">
+                            <h3 class="example__title">Cherry</h3>
+                            <p class="example__text">Ice Coffee</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="example__item">
+                    <a class="example__link" href="#">
+                        <div class="example__overlay">
+                            <picture>
+                                <!-- <source srcset="
+                                ./images/imgproject6.webp 1x,
+                                ./images/imgproject6@2x.webp 2x"
+                                type="image/webp"
+                                media="(max-width: 767px)">
+
+                                <source srcset="
+                                ./images/projectdesktop6.webp 1x,
+                                ./images/projectdesktop6@2x.webp 2x"
+                                type="image/webp"
+                                media="(min-width: 768px)">
+
+                                <source srcset="
+                                ./images/imgproject6.jpg 1x,
+                                ./images/imgproject6@2x.jpg 2x"
+                                media="(max-width: 767px)">
+
+                                <source srcset="
+                                ./images/projectdesktop6.jpg 1x,
+                                ./images/projectdesktop6@2x.jpg 2x"
+                                media="(min-width: 768px)">-->
+    
+                                <img class="example__photo" 
+                                src="./images/Buy/icecoffee/iceCofeeDesktop.png" 
+                                alt="Ice Coffee" />
+                            </picture> 
+                            <div class="example__description">
+                                <p class="example__specification">
+                                    Price 
+                                </p>
+                            </div>
+                        </div>   
+                        <div class="example__content">
+                            <h3 class="example__title">Cherry</h3>
+                            <p class="example__text">Ice Coffee</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+
+            <button class="buy-button-order" type="button">Place an order</button>
+        </div>
+    </ul>
+
+    <ul>
+        <button class="buy-button buy-button-milkshake" onclick="showDiv()">Milkshake</button>
+        <div class="info-div" style="display:none" align="right">
+            <ul class="example__list list">
+                <li class="example__item">
+                    <a class="example__link" href="#">
+                        <div class="example__overlay">
+                            <picture>
+                                <!-- <source srcset="
+                                ./images/imgproject1.webp 1x,
+                                ./images/imgproject1@2x.webp 2x"
+                                type="image/webp"
+                                media="(max-width: 767px)">
+
+                                <source srcset="
+                                ./images/projectdesktop1.webp 1x,
+                                ./images/projectdesktop1@2x.webp 2x"
+                                type="image/webp"
+                                media="(min-width: 768px)">
+
+                                <source srcset="
+                                ./images/imgproject1.jpg 1x,
+                                ./images/imgproject1@2x.jpg 2x"
+                                media="(max-width: 767px)">
+
+                                <source srcset="
+                                ./images/projectdesktop1.jpg 1x,
+                                ./images/projectdesktop1@2x.jpg 2x"
+                                media="(min-width: 768px)"> -->
+    
+                                <img class="example__photo" 
+                                src="./images/Buy/milkshake/milkshake card 1.png" 
+                                alt="Milkshake" />
+                            </picture>
+                            <div class="example__description">
+                                <p class="example__specification">
+                                    Price
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="example__content">
+                            <h3 class="example__title">Chocolate</h3>
+                            <p class="example__text">Milkshake</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="example__item">
+                    <a class="example__link" href="#">
+                        <div class="example__overlay">
+                             <picture>
+                                <!--<source srcset="
+                                ./images/imgproject2.webp 1x,
+                                ./images/imgproject2@2x.webp 2x"
+                                type="image/webp"
+                                media="(max-width: 767px)">
+
+                                <source srcset="
+                                ./images/projectdesktop2.webp 1x,
+                                ./images/projectdesktop2@2x.webp 2x"
+                                type="image/webp"
+                                media="(min-width: 768px)">
+
+                                <source srcset="
+                                ./images/imgproject2.jpg 1x,
+                                ./images/imgproject2@2x.jpg 2x"
+                                media="(max-width: 767px)">
+
+                                <source srcset="
+                                ./images/projectdesktop2.jpg 1x,
+                                ./images/projectdesktop2@2x.jpg 2x"
+                                media="(min-width: 768px)">-->
+    
+                                <img class="example__photo" 
+                                src="./images/Buy/milkshake/milkshake card 2.jpg" 
+                                alt="Milkshake" />
+                            </picture> 
+                            <div class="example__description">
+                                <p class="example__specification">
+                                    Price
+                                </p>
+                            </div>
+                        </div>
+                        <div class="example__content">
+                            <h3 class="example__title">Chocolate</h3>
+                            <p class="example__text">Milkshake</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="example__item">
+                    <a class="example__link" href="#">
+                        <div class="example__overlay">
+                             <picture>
+                                <!--<source srcset="
+                                ./images/imgproject3.webp 1x,
+                                ./images/imgproject3@2x.webp 2x"
+                                type="image/webp"
+                                media="(max-width: 767px)">
+
+                                <source srcset="
+                                ./images/projectdesktop3.webp 1x,
+                                ./images/projectdesktop3@2x.webp 2x"
+                                type="image/webp"
+                                media="(min-width: 768px)">
+
+                                <source srcset="
+                                ./images/imgproject3.jpg 1x,
+                                ./images/imgproject3@2x.jpg 2x"
+                                media="(max-width: 767px)">
+
+                                <source srcset="
+                                ./images/projectdesktop3.jpg 1x,
+                                ./images/projectdesktop3@2x.jpg 2x"
+                                media="(min-width: 768px)">-->
+    
+                                <img class="example__photo" 
+                                src="./images/Buy/milkshake/milkshake card 3.jpg" 
+                                alt="Milkshake" />
+                            </picture> 
+                            <div class="example__description">
+                                <p class="example__specification">
+                                    Price
+                                </p>
+                            </div>
+                        </div>
+                        <div class="example__content">
+                            <h3 class="example__title">Chocolate</h3>
+                            <p class="example__text">Milkshake</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="example__item">
+                    <a class="example__link" href="#">
+                        <div class="example__overlay">
+                             <picture>
+                                <!--<source srcset="
+                                ./images/imgproject4.webp 1x,
+                                ./images/imgproject4@2x.webp 2x"
+                                type="image/webp"
+                                media="(max-width: 767px)">
+
+                                <source srcset="
+                                ./images/projectdesktop4.webp 1x,
+                                ./images/projectdesktop4@2x.webp 2x"
+                                type="image/webp"
+                                media="(min-width: 768px)">
+
+                                <source srcset="
+                                ./images/imgproject4.jpg 1x,
+                                ./images/imgproject4@2x.jpg 2x"
+                                media="(max-width: 767px)">
+
+                                <source srcset="
+                                ./images/projectdesktop4.jpg 1x,
+                                ./images/projectdesktop4@2x.jpg 2x"
+                                media="(min-width: 768px)">-->
+    
+                                <img class="example__photo" 
+                                src="./images/Buy/milkshake/milkshake card 4.jpg" 
+                                alt="Milkshake" />
+                            </picture> 
+                            <div class="example__description">
+                                <p class="example__specification">
+                                    Price
+                                </p>
+                            </div>
+                        </div>
+                        <div class="example__content">
+                            <h3 class="example__title">Chocolate</h3>
+                            <p class="example__text">Milkshake</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="example__item">
+                    <a class="example__link" href="#">
+                        <div class="example__overlay">
+                             <picture>
+                                <!--<source srcset="
+                                ./images/imgproject5.webp 1x,
+                                ./images/imgproject5@2x.webp 2x"
+                                type="image/webp"
+                                media="(max-width: 767px)">
+
+                                <source srcset="
+                                ./images/projectdesktop5.webp 1x,
+                                ./images/projectdesktop5@2x.webp 2x"
+                                type="image/webp"
+                                media="(min-width: 768px)">
+
+                                <source srcset="
+                                ./images/imgproject5.jpg 1x,
+                                ./images/imgproject5@2x.jpg 2x"
+                                media="(max-width: 767px)">
+
+                                <source srcset="
+                                ./images/projectdesktop5.jpg 1x,
+                                ./images/projectdesktop5@2x.jpg 2x"
+                                media="(min-width: 768px)">-->
+    
+                                <img class="example__photo" 
+                                src="./images/Buy/milkshake/milkshake card 5.jpg" 
+                                alt="Milkshake" />
+                            </picture> 
+                            <div class="example__description">
+                                <p class="example__specification">
+                                    Price
+                                </p>
+                            </div>
+                        </div>   
+                        <div class="example__content">
+                            <h3 class="example__title">Chocolate</h3>
+                            <p class="example__text">Milkshake</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="example__item">
+                    <a class="example__link" href="#">
+                        <div class="example__overlay">
+                            <picture>
+                                <!-- <source srcset="
+                                ./images/imgproject6.webp 1x,
+                                ./images/imgproject6@2x.webp 2x"
+                                type="image/webp"
+                                media="(max-width: 767px)">
+
+                                <source srcset="
+                                ./images/projectdesktop6.webp 1x,
+                                ./images/projectdesktop6@2x.webp 2x"
+                                type="image/webp"
+                                media="(min-width: 768px)">
+
+                                <source srcset="
+                                ./images/imgproject6.jpg 1x,
+                                ./images/imgproject6@2x.jpg 2x"
+                                media="(max-width: 767px)">
+
+                                <source srcset="
+                                ./images/projectdesktop6.jpg 1x,
+                                ./images/projectdesktop6@2x.jpg 2x"
+                                media="(min-width: 768px)">-->
+    
+                                <img class="example__photo" 
+                                src="./images/Buy/milkshake/milkshakeDesktop.png" 
+                                alt="Milkshake" />
+                            </picture> 
+                            <div class="example__description">
+                                <p class="example__specification">
+                                    Price 
+                                </p>
+                            </div>
+                        </div>   
+                        <div class="example__content">
+                            <h3 class="example__title">Chocolate</h3>
+                            <p class="example__text">Milkshake</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+
+            <button class="buy-button-order" type="button">Place an order</button>
+        </div>
+    </ul>
+
+    <!-- тестова ссилка на головну сторінку, потім заберу -->
+    <a href="./index.html">Ссилка на сторінку index</a>
+</section>
+
+<section class="footer">
+    <div class="container footer-wrapper">
+        <p class="footer-title">homemade ice cream made
+               <span class="accent-text">with passion</span>
+        </p>
+        <div class="social-and-contacts">
+        <div class="footer-social">
+        <ul class="social-list">
+            <li class="social-item">
+                <a href="#" class="social-link">
+                    <svg class="social-icon " width="19px"  height="19px">
+                        <use href="../src/images/symbol-defs.svg#icon-github"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="social-item">
+                <a href="#" class="social-link">
+                    <svg class="social-icon" width="19px"  height="15px">
+                        <use href="../src/images/symbol-defs.svg#icon-telegram"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="social-item">
+                <a href="#" class="social-link">
+
+                    <svg class="social-icon" width="8px"  height="19px"> 
+
+                        <use href="../src/images/symbol-defs.svg#icon-facebook"></use>
+                    </svg>
+                 </a>
+            </li>
+        </ul>
+        </div>
+        <div class="footer-contacts">
+            <p class="contact">Feel free to contact <a href="tel:+61 (0) 383 766 284" class="contact-link"> +61 (0) 383 766 284</a></p>
+        </div>
+        </div>
+        </div>
+</section>
+<section class="copyright-section">
+        <div class="footer-border"></div>
+        <div class="copyright-text">
+            &#169 2019 - IceCream.
+            All Rights Reserved.
+        </div>
+</section>
+
+    <script>
+        function showDiv() {
+
+var x = document.querySelectorAll(".info-div");
+x.forEach(item => {
+   item.style.display = 'none';
+});
+event.target.nextElementSibling.style.display = 'block'
+}
+    </script>
+    <!-- <script>
+        function firstP(elementId) {
+            var x = document.getElementById('Project'+elementId);
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
+            }
+          }
+    </script> -->
+
+  </body>
+</html>

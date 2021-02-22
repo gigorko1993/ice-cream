@@ -8,6 +8,12 @@ body {
   color: $white-text-color;
 }
 
+// забираю прокрутку при відкритому модальному вікні
+body.franchise-open,
+body.modal-open {
+  overflow: hidden;
+}
+
 //   Забираємо нижній і верхній маржен декорацію списку
 ul {
   list-style: none;
