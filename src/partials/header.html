@@ -8,11 +8,11 @@
                 class="header__button-menu"
                 aria-expanded="false"
                 aria-controls="menu-container"
-                data-menu-button
+                data-menu-open
         >
             <svg class="header__icon" aria-label="Переключатель мобильного меню">
                 <use class="header__icon--burger" href="../src/images/symbol-defs.svg#icon-burger"></use>
-                <use class="header__icon--cross" href="../src/images/symbol-defs.svg#icon-close"></use>
+                <!-- <use class="header__icon--cross" href="../src/images/symbol-defs.svg#icon-close"></use> -->
             </svg>
         </button>
         <nav class="header__navigation">
@@ -47,7 +47,12 @@
 
 
 <!-- Розмітка для мобільного меню -->
-<div class="menu" id="menu-container" data-menu>
+<div class="menu is-hidden" id="menu-container" data-menu>
+            <button type="button" class="header__button-menu button-menu--close" aria-expanded="false" aria-controls="menu-container" data-menu-close>
+                <svg class="header__icon" aria-label="Переключатель мобильного меню">
+                    <use class="header__icon--cross" href="../src/images/symbol-defs.svg#icon-close"></use>
+                </svg>
+            </button>
     <button type="button" class="menu__button-buy">
         <span class="header__buy-text">Buy now</span>
         <svg class="header__icon-narrow" width="8px" height="16px">
