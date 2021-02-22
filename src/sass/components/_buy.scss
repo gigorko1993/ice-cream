@@ -125,9 +125,16 @@
     border-color: pink;
   }
 
+  &__item {
+    position: relative;
+  }
+
   &__content {
-    padding: 20px 24px;
-    background-color: #ffffff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
   }
 
   &__title {
@@ -136,7 +143,7 @@
 
     font-weight: bold;
     font-size: 18px;
-    line-height: 2;
+    line-height: 1.2;
 
     letter-spacing: 0.06em;
 
@@ -147,16 +154,38 @@
 
   &__text {
     font-size: 16px;
-    line-height: 1.875;
+    line-height: 1.2;
 
     text-align: center;
 
-    color: #757575;
+    color: red;
+
+    opacity: 0;
+  }
+
+  &__link:focus .example__text,
+  &__link:hover .example__text {
+    opacity: 1;
   }
 
   &__overlay {
     position: relative;
     overflow: hidden;
+    height: 200px;
+    text-align: center;
+    background-color: black;
+
+    @media screen and (min-width: 480px) {
+      height: 330px;
+    }
+
+    @media screen and (min-width: 768px) {
+      height: 260px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      height: 290px;
+    }
   }
 
   &__description {
@@ -227,4 +256,10 @@
       }
     }
   }
+}
+
+.example__photo {
+  display: block;
+  margin: 0 auto;
+  // max-height: 100%;
 }
