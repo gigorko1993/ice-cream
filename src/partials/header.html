@@ -4,9 +4,15 @@
         <a class="header__link-logo" href="">
             <span class="header__logo-text">icecream</span>
         </a>
-        <button data-menu-open type="button" class="header__button-menu">
-            <svg class="header__icon-burger">
-                <use href="../src/images/symbol-defs.svg#icon-burger"></use>
+        <button type="button"
+                class="header__button-menu"
+                aria-expanded="false"
+                aria-controls="menu-container"
+                data-menu-button
+        >
+            <svg class="header__icon" aria-label="Переключатель мобильного меню">
+                <use class="header__icon--burger" href="../src/images/symbol-defs.svg#icon-burger"></use>
+                <use class="header__icon--cross" href="../src/images/symbol-defs.svg#icon-close"></use>
             </svg>
         </button>
         <nav class="header__navigation">
@@ -41,14 +47,7 @@
 
 
 <!-- Розмітка для мобільного меню -->
-<div data-menu class="menu">
-    <button data-menu-close type="button" class="menu__close">
-        <svg class="menu__icon-close" width="14px" height="14px">
-            <use
-                href="../src/images/symbol-defs.svg#icon-close">
-            </use>
-        </svg>
-    </button>
+<div class="menu" id="menu-container" data-menu>
     <button type="button" class="menu__button-buy">
         <span class="header__buy-text">Buy now</span>
         <svg class="header__icon-narrow" width="8px" height="16px">
