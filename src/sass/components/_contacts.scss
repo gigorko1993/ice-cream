@@ -215,6 +215,14 @@
   flex-direction: column;
 }
 
+.contacts-location {
+  @extend %button-pink;
+}
+
+.contacts-franchise {
+  @extend %button-white;
+}
+
 // .contacts-location{
 //     width:62px;
 //     height: 44px;

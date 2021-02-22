@@ -1,4 +1,6 @@
-.button-white {
+// доавляємо в код наприклад: @extend %button-white;
+// базові кольори для білої кнопки
+%button-white {
   color: $accent-color;
   background-color: $white-text-color;
 
@@ -10,7 +12,8 @@
   }
 }
 
-.button-pink {
+// базові кольори для рожевої кнопки
+%button-pink {
   background-color: $accent-color;
   color: $white-text-color;
 
