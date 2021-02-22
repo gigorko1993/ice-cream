@@ -19,6 +19,9 @@
   position: relative;
   top: -80px;
 
+  margin-right: auto;
+  margin-left: auto;
+
   padding: 43px 21px;
 
   background-color: white;
@@ -26,10 +29,16 @@
   border-radius: 24px;
 
   &:not(:last-child) {
-    @media screen and (max-width: 767px) {
-      margin-bottom: 15px;
-    }
+    margin-bottom: 15px;
   }
+  @media screen and (min-width: 480px) {
+    width: 220px;
+  }
+
+  @media screen and (max-width: 767px) {
+    min-width: 220px;
+  }
+
   @media screen and (min-width: $tablet) {
     width: calc((100% - 60px) / 3);
     margin-right: 20px;
@@ -199,13 +208,11 @@
   margin-bottom: 10px;
 }
 .contact-border {
-  // padding-top: 25px;
   padding-bottom: 25px;
   border-bottom: 1px solid #e1e1e1;
   margin-bottom: 30px;
 
   @media screen and (min-width: $tablet) {
-    // padding-top: 30px;
     padding-bottom: 30px;
   }
 }
@@ -215,33 +222,59 @@
   flex-direction: column;
 }
 
-// .contacts-location{
-//     width:62px;
-//     height: 44px;
-//     background: red;
-//     margin-bottom: 10px;
-//     border: none;
-//     border-radius: 22px;
+.contacts-button {
+  display: flex;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
 
-//     &:hover,
-//     &:focus{
-//         background-color: white;
-//         color: red;
-//     }
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.contacts-location,
+.contacts-franchise {
+  width: 160px;
+  height: 45px;
+  padding: 0px 17px;
+  border: 1px solid transparent;
+  border-radius: 22px;
+  font-family: 'DM Sans';
 
-// }
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.29;
+  cursor: pointer;
+  @extend %button-white;
 
-// .contacts-franchise {
-//     width:62px;
-//     height: 44px;
-//     background: red;
-//     margin-bottom: 10px;
-//     border: none;
-//     border-radius: 22px;
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
 
-//     &:hover,
-//     &:focus{
-//         background-color: white;
-//         color: red;
-//     }
-// }
+  @media screen and (min-width: $tablet) {
+    width: 190px;
+    padding: 0px 30px;
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+  @media screen and (min-width: $desktop) {
+    width: 200px;
+    padding: 0px 35px;
+  }
+
+  // &-arrow {
+  //     stroke: #d41443;
+  //     fill: none;
+  //     margin-left: 13px;
+  //     padding: 0;
+  //   }
+}
+
+.contacts-location {
+  @extend %button-pink;
+}

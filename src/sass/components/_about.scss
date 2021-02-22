@@ -185,8 +185,7 @@
   font-size: 14px;
   line-height: 1.29;
   padding: 10px 37px;
-  color: $accent-color;
-  background-color: $white-text-color;
+  @extend %button-white;
   cursor: pointer;
   transition-property: background-color;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
