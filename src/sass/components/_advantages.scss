@@ -84,6 +84,7 @@
 
 .icon-udder::before {
   content: '';
+  height: 50px;
   background-image: url('../images/MobilePhoto/iconAdvantades1.png');
 
   @media screen and (min-device-pixel-ratio: 2),
