@@ -19,11 +19,11 @@ $(document).ready(function() {
 	var windowHeight = $(window).height();
  
 	$(document).on('scroll', function() {
-		$('.point').each(function() {
+		$('.appear-point').each(function() {
 			var self = $(this),
 			height = self.offset().top + self.height();
 			if ($(document).scrollTop() + windowHeight >= height) {
-				$('.gallery-images').addClass('rectangle-hover')
+				$('.gallery-appear').addClass('picture-appear')
 			}
 		});
 	});
