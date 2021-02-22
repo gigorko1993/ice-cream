@@ -1,0 +1,143 @@
+.gallery {
+  padding-bottom: 0;
+  background: linear-gradient(
+    $bg-advantages-footer 0%,
+    $bg-advantages-footer 39.5%,
+    $white-text-color 40.5%,
+    $white-text-color 100%
+  );
+
+  @include media_min($tablet) {
+    background: linear-gradient(
+      $bg-advantages-footer 0%,
+      $bg-advantages-footer 34%,
+      $white-text-color 35%,
+      $white-text-color 100%
+    );
+    padding-bottom: 40px;
+  }
+
+  @include media_min($desktop) {
+    background: linear-gradient(
+      $bg-advantages-footer 0%,
+      $bg-advantages-footer 36%,
+      $white-text-color 36.5%,
+      $white-text-color 100%
+    );
+  }
+}
+
+.gallery-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include media_max($mobile) {
+    width: 100%;
+  }
+
+  .gallery-item {
+    @include media_max($mobile) {
+      width: 14%;
+
+      &:nth-child(3) {
+        width: 28%;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 2px;
+
+      @include media_min($tablet) {
+        margin-right: 4px;
+      }
+
+      @include media_min($desktop) {
+        margin-right: 6px;
+      }
+    }
+
+    &:nth-child(2) {
+      margin-top: 8px;
+
+      @include media_min($tablet) {
+        margin-top: 17px;
+      }
+
+      @include media_min($desktop) {
+        margin-top: 28px;
+      }
+    }
+
+    &:nth-child(4) {
+      margin-top: 15px;
+
+      @include media_min($tablet) {
+        margin-top: 33px;
+      }
+
+      @include media_min($desktop) {
+        margin-top: 53px;
+      }
+    }
+
+    &:nth-child(5) {
+      margin-top: -11px;
+
+      @include media_min($tablet) {
+        margin-top: -25px;
+      }
+
+      @include media_min($desktop) {
+        margin-top: -40px;
+      }
+    }
+
+    & > picture {
+      @include media_max($mobile) {
+        width: 100%;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 2px;
+
+        @include media_min($tablet) {
+          margin-bottom: 4px;
+        }
+
+        @include media_min($desktop) {
+          margin-bottom: 6px;
+        }
+      }
+    }
+
+    .gallery-picture {
+      border-radius: 6px;
+      transform: scale(1);
+      z-index: 0;
+      position: relative;
+
+      transition: transform 150ms ease-in-out;
+
+      &:hover {
+        transform: scale(1.2);
+        z-index: 10;
+      }
+
+      @include media_max($mobile) {
+        width: 100%;
+        .small {
+          width: 50%;
+        }
+      }
+
+      @include media_min($tablet) {
+        border-radius: 12px;
+      }
+
+      @include media_min($desktop) {
+        border-radius: 17px;
+      }
+    }
+  }
+}

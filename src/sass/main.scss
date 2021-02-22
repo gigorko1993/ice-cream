@@ -7,14 +7,15 @@
 // @import './example';
 // Утиліти: колір, шрифт, розміри екрану
 @import 'utils/main';
-// Базові стилі
-@import './base/defaults';
-@import './components/background-overlay';
+// шрифти
 @import './base/fonts';
 // Міксіни
 @import './base/mixins';
-// Стилі для кнопок, колір, бекграунд, ховер/фокус
-@import './components/button';
+// Плейсхолдер на стилі для кнопок, колір, бекграунд, ховер/фокус
+@import './base/placeholder';
+// Базові стилі
+@import './base/defaults';
+// @import './components/background-overlay';
 // Стилі для Header
 @import './components/header';
 // Стилі для Hero

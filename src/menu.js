@@ -2,7 +2,7 @@
     const refs = {
       openModalBtn: document.querySelector('[data-menu-open]'),
       closeModalBtn: document.querySelector('[data-menu-close]'),
-      menu: document.querySelector('[data-menu]'),
+      modal: document.querySelector('[data-menu]'),
     };
   
     refs.openModalBtn.addEventListener('click', toggleModal);
@@ -10,6 +10,6 @@
   
     function toggleModal() {
       document.body.classList.toggle("menu-open");
-      refs.menu.classList.toggle('is-hidden');
+      refs.modal.classList.toggle('is-hidden');
     }
   })();
