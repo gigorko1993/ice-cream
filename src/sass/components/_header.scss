@@ -101,9 +101,9 @@
     position: relative;
     z-index: 4;
   }
-  @media screen and (min-width: $desktop) {
-    display: none;
-  }
+    //   @media screen and (min-width: $desktop) {
+    //     display: none;
+    //   }
 }
 .header__icon-burger {
   width: 48px;
