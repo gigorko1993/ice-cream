@@ -302,9 +302,12 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    margin-left: 120px;
+
     width: 18px;
     height: 18px;
+    margin-left: 120px;
+    padding: 0;
+
     border-radius: 50%;
     border-color: transparent;
     outline: none;
@@ -326,8 +329,13 @@
 
   &-link-image {
     fill: $accent-color;
-    width: 7px;
-    height: 7px;
+    width: 5px;
+    height: 4px;
+
+    @include media_min($desktop) {
+      width: 7px;
+      height: 7px;
+    }
   }
 
   &-plug {
@@ -336,7 +344,7 @@
 
   &-text.is-shown ~ .hero-plug {
     display: block;
-    height: 75px;
+    height: 76px;
 
     @include media_min($desktop) {
       height: 124px;
