@@ -4,6 +4,16 @@
   color: $black-text-color;
   background-color: white;
 
+  @media screen and (min-width: $tablet) {
+    padding-top: 121px;
+    padding-bottom: 197px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 123px;
+    padding-bottom: 234px;
+  }
+
   & .slider-item {
     @media screen and (min-width: $tablet) {
       padding-left: 40px;
