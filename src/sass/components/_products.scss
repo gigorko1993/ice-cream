@@ -1,5 +1,8 @@
 .products {
-  margin-top: 122px;
+  position: relative;
+  z-index: 4;
+  padding-top: 122px;
+  background-color: $white-text-color;
 }
 
 .products-card {
@@ -34,6 +37,8 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
+
+    @extend %button-white;
 
     border-radius: 50%;
     border: none;

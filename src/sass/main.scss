@@ -1,47 +1,6 @@
-/*
- * Главный файл стилей.
- * Все паршалы подключаются сюда.
- */
-
-// Стили для файла с примером HTML-фрагмента
-// @import './example';
-// Утиліти: колір, шрифт, розміри екрану
-@import 'utils/main';
-// Базові стилі
-@import './base/defaults';
-@import './components/background-overlay';
-@import './base/fonts';
-// Міксіни
-@import './base/mixins';
-// Стилі для кнопок, колір, бекграунд, ховер/фокус
-@import './components/button';
-// Стилі для Header
-@import './components/header';
-// Стилі для Hero
-@import './components/hero';
-// Стилі для Products
-@import './components/products';
-// Стилі для About
-@import './components/about';
-// Стилі для Advantages
-@import './components/advantages';
-// Стилі для Gallery
-@import './components/gallery';
-// Стилі для Customer Reviews
-@import './components/customers-reviews';
-// Стилі для Contacts
-@import './components/contacts';
-// Стилі для Footer
-@import './components/footer';
-// Стилі для модалки Map
-@import './components/map';
-// Стилі для модалки Franchise
-@import './components/franchise';
-// Стилі для кнопки наверх
-@import './components/button-top';
-
 @import './base/main';
+
 
 @import './utils/main';
 
-// @import './components/main';
+@import './components/main';

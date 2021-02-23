@@ -86,6 +86,7 @@
   content: '';
   height: 50px;
   background-image: url('../images/MobilePhoto/iconAdvantades1.png');
+  background-size: contain;
 
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
@@ -107,6 +108,7 @@
 .icon-apple::before {
   content: '';
   background-image: url('../images/MobilePhoto/iconAdvantades2.png');
+  background-size: contain;
 
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
@@ -117,13 +119,14 @@
   @media screen and (min-device-pixel-ratio: 3),
     screen and (min-resolution: 3dppx),
     screen and (min-resolution: 288dpi) {
-    background-image: url('../images/MobilePhoto/iconAdvantades3@3x.png');
+    background-image: url('../images/MobilePhoto/iconAdvantades2@3x.png');
   }
 }
 
 .icon-heart::before {
   content: '';
   background-image: url('../images/MobilePhoto/iconAdvantades3.png');
+  background-size: contain;
 
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),

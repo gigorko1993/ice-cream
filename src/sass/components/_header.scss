@@ -10,6 +10,8 @@
   }
 }
 .header__container {
+  position: relative;
+
   display: flex;
   align-items: center;
 
@@ -19,25 +21,6 @@
   }
   @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
     padding-left: 104px;
-  }
-}
-.header__logo {
-  @media screen and (max-width: $max-tablet) {
-    display: none;
-  }
-  @media screen and (min-width: $desktop) {
-    display: flex;
-
-    position: absolute;
-    top: 37px;
-    left: 0px;
-
-    width: 50px;
-    height: 40px;
-
-    background-color: $accent-color;
-
-    transform: translateX(-70px);
   }
 }
 .header__link-logo {
@@ -67,6 +50,18 @@
 
   background-color: transparent;
   background-image: url(../images/logo_icon/logo_icon.png);
+
+  //   @media screen and (min-device-pixel-ratio: 2),
+  //   screen and (min-resolution: 192dpi),
+  //   screen and (min-resolution: 2dppx) {
+  //     background-image: url(../images/logo_icon/logo_icon@2x.png);
+  //   }
+
+  //   @media screen and (min-device-pixel-ratio: 3),
+  //   screen and (min-resolution: 288dpi),
+  //   screen and (min-resolution: 3dppx) {
+  //     background-image: url(../images/logo_icon/logo_icon@3x.png);
+  //   }
   background-repeat: no-repeat;
   background-position: center;
 
@@ -79,11 +74,11 @@
   }
 }
 .header__button-menu {
-  position: absolute;
-  z-index: 6;
-  padding: 0;
-  // padding-top: 10px;
-  // padding-left: 10px;
+  position: relative;
+  z-index: 4;
+
+  //   padding: 0;
+  padding-top: 15px;
   box-sizing: content-box;
   color: $bg-menu;
   border: none;
@@ -94,40 +89,21 @@
   background-color: transparent;
 
   @media screen and (max-width: $max-mobile) {
-    top: 25px;
-    right: 20px;
+    margin-left: auto;
   }
   @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
     margin-left: auto;
     margin-right: 30px;
-
-    position: relative;
-    // z-index: 4;
   }
   @media screen and (min-width: $desktop) {
     display: none;
   }
 }
 .header__icon {
-  width: 100%;
-  height: 100%;
+  width: 30px;
+  height: 30px;
 
   stroke: $accent-color;
-}
-
-.header__button-menu .header__icon--cross {
-  display: none;
-}
-
-.header__button-menu.is-open .header__icon--cross {
-  display: block;
-  width: 14px;
-  height: 14px;
-  stroke: #fff;
-}
-
-.header__button-menu.is-open .header__icon--burger {
-  display: none;
 }
 
 .header__navigation {
@@ -201,8 +177,7 @@
 
   padding: 10px 37px;
 
-  color: $accent-color;
-  background-color: $white-text-color;
+  @extend %button-white;
   border-radius: 22px;
   border: none;
 
@@ -214,51 +189,62 @@
   display: block;
   margin-right: 12px;
 }
-.header__icon-narrow {
+.header__icon-arrow {
   fill: currentColor;
 }
 
 // Стилі для мобільного меню
 
 .menu {
-  display: none;
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 0px;
+  right: 0px;
 
-  width: 100%;
-  height: 100vh;
-  padding: 23px 20px;
-  background-color: $bg-menu;
-
-  @media screen and (min-width: $tablet) {
-    width: 250px;
-    padding: 23px 34px;
-  }
-
-  //   transform: translateX(100%);
-}
-.menu.is-open {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   z-index: 5;
-
-  padding-top: 60px;
 
   color: $white-text-color;
   background-color: $bg-menu;
   border: none;
 
-  margin-right: 8px;
-  margin-bottom: 23px;
-  margin-left: auto;
+  height: 100vh;
+  background-color: $bg-menu;
 
-  @media screen and (min-width: $tablet) {
-    margin-right: 0px;
+  @media screen and (max-width: $max-mobile) {
+    width: 100%;
+    padding: 23px 20px;
   }
-}
+  @media screen and (min-width: $tablet) {
+    width: 40%;
+    padding: 23px 34px;
+  }
 
+  transform: translateX(0);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.menu.is-hidden {
+  transform: translateX(100%);
+  display: none;
+}
+.menu__button-close {
+  padding: 0;
+  box-sizing: content-box;
+  color: $white-text-color;
+  border: none;
+
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-left: auto;
+  margin-bottom: 23px;
+}
+.menu__icon-close {
+  width: 14px;
+  height: 14px;
+
+  stroke: $white-text-color;
+}
 .menu__button-buy {
   font-family: $main-font-family;
   font-weight: 700;

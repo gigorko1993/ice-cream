@@ -76,19 +76,15 @@
       left: 878px;
       bottom: -56px;
     }
-  }
 
-  &-image-bio {
-    left: 34px;
-    bottom: -5px;
+    transform: translateY(100%);
+    opacity: 0;
 
-    @include media_max($max-mobile) {
-      display: none;
-    }
-    @include media_min($desktop) {
-      left: 77px;
-      bottom: 0px;
-    }
+    animation: bounceInUp;
+    animation-duration: 500ms;
+    animation-delay: 750ms;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
   }
 
   &-thumb {
@@ -186,11 +182,13 @@
     }
   }
 
-  &-link:hover,
-  &-link:focus {
-    background-color: $bg-button-hower;
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-      0px 2px 2px rgba(0, 0, 0, 0.12);
+  &-button-pink {
+    @extend %button-pink;
+  }
+
+  &-button-white,
+  &-link {
+    @extend %button-white;
   }
 
   &-list {
@@ -198,6 +196,7 @@
     flex-direction: column;
     align-items: flex-end;
   }
+
   &-item {
     display: flex;
     flex-direction: column;
@@ -260,6 +259,40 @@
     margin-bottom: 15px;
   }
 
+  &-link-thumb-flex {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+
+    @include media_max($max-mobile) {
+      display: none;
+    }
+  }
+
+  &-link-milk {
+    border: 0px;
+    outline: none;
+    padding: 0px;
+    background-color: transparent;
+    transition: transform 250ms ease;
+
+    height: 73px;
+
+    @include media_min($desktop) {
+      height: 124px;
+    }
+  }
+
+  &-image-bio {
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+
+    @include media_min($desktop) {
+      left: -38px;
+    }
+  }
+
   &-text {
     margin-left: 120px;
     margin-bottom: 7px;
@@ -299,7 +332,7 @@
   }
 
   &-link {
-    display: inline-flex;
+    display: flex;
     justify-content: center;
     align-items: center;
 
@@ -317,6 +350,10 @@
       width: 26px;
       height: 26px;
     }
+  }
+
+  &-add-thumb {
+    display: inline-block;
   }
 
   &-list,
@@ -337,17 +374,27 @@
       height: 7px;
     }
   }
+}
 
-  &-plug {
-    display: none;
+@include media_min($tablet) {
+  .hero-link-milk:hover .hero-image-bio,
+  .hero-link-milk:focus .hero-image-bio {
+    transform: rotate(5deg) scale(1.07);
+  }
+}
+
+@keyframes bounceInUp {
+  0% {
+    transform: translateY(100%);
   }
 
-  &-text.is-shown ~ .hero-plug {
-    display: block;
-    height: 76px;
+  50% {
+    transform: translateY(50%);
+    opacity: 1;
+  }
 
-    @include media_min($desktop) {
-      height: 124px;
-    }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
   }
 }

@@ -1,6 +1,4 @@
 .gallery {
-  overflow: hidden;
-
   padding-bottom: 0;
   background: linear-gradient(
     $bg-advantages-footer 0%,
@@ -16,7 +14,6 @@
       $white-text-color 35%,
       $white-text-color 100%
     );
-    padding-bottom: 40px;
   }
 
   @include media_min($desktop) {
@@ -114,90 +111,33 @@
     }
 
     .gallery-picture {
-      border-radius: 6px;
-      // transform: scale(1);
+      border-radius: 8px;
+      transform: scale(1);
       z-index: 0;
       position: relative;
-
-      transition: transform 500ms ease-in-out;
+      box-shadow: none;
+      transition: transform 150ms ease-in-out;
 
       &:hover {
         transform: scale(1.2);
-        transition: transform 250ms;
         z-index: 10;
+        box-shadow: 0px 0px 8px 5px rgba(202, 206, 202, 1);
       }
 
       @include media_max($mobile) {
         width: 100%;
-        .small {
+        &.small {
           width: 50%;
         }
       }
 
       @include media_min($tablet) {
-        border-radius: 12px;
+        border-radius: 13px;
       }
 
       @include media_min($desktop) {
-        border-radius: 17px;
+        border-radius: 19px;
       }
     }
   }
-}
-
-.gallery-picture1 {
-  transform: translateY(-205%) translateX(-200%);
-  transition: transform 250ms ease-in-out 250ms;
-}
-
-.gallery-picture2 {
-  transform: translateY(-165%) translateX(-100%);
-  transition: transform 250ms ease-in-out 500ms;
-}
-
-.gallery-picture3 {
-  transform: translateY(175%) translateX(-150%);
-  transition: transform 250ms ease-in-out 400ms;
-}
-
-.gallery-picture4 {
-  transform: translateY(-100%);
-  transition: transform 250ms ease-in-out 2s;
-}
-
-.gallery-picture5 {
-  transform: translateY(130%);
-  transition: transform 250ms ease-in-out 2s;
-}
-
-.gallery-picture6 {
-  transform: translateY(-175%);
-  transition: transform 250ms ease-in-out 2s;
-}
-
-.gallery-picture7 {
-  transform: translateY(165%);
-  transition: transform 250ms ease-in-out;
-}
-
-.gallery-picture8 {
-  transform: translateY(-140%) translateX(150%);
-  transition: transform 250ms ease-in-out;
-  transition-delay: 500ms;
-}
-
-.gallery-picture9 {
-  transform: translateY(200%) translateX(-150%);
-  transition: transform 250ms ease-in-out;
-  transition-delay: 250ms;
-}
-
-.gallery-picture10 {
-  transform: translateY(235%) translateX(200%);
-  transition: transform 250ms ease-in-out;
-  transition-delay: 500ms;
-}
-
-.picture-appear {
-  transform: translateY(0);
 }
