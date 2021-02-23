@@ -673,16 +673,21 @@
                         </div>
                         <div class="example__content">
                             <h3 class="example__tittle">Chocolate</h3>
-                            <p class="example__text">2,49$</p>
-                            <form class="example__modal-form">
-                                <div class="example__modal-form__checkbox-field">
-                                    <input class="example__modal-form__checkbox-input visually-hidden" type="checkbox" name="consent" value="consent" id="checkbox">
+                            <div class="example__price-container">
+                                <p class="example__text">2,49$</p>
+                                <form class="example__modal-form">
+                                    <label class="example__modal-form__label">
+                                        Amount:
+                                        <input class="example__modal-form__input" type="number" name="weight" min="1" max="100" step="1" value="0" />
+                                    </label>
+                                    <div class="example__modal-form__checkbox-field">
+                                        <input class="example__modal-form__checkbox-input visually-hidden" type="checkbox" name="consent" value="consent" id="checkbox">
                                         <label class="example__modal-form__checkbox" for="checkbox">
                                             <span class="example__modal-form__checkbox-text">Buy</span>
                                         </label>
-                                </div>
-
-                            </form>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </a>
                 </li>
