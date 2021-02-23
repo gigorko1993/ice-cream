@@ -76,6 +76,31 @@
       left: 878px;
       bottom: -56px;
     }
+
+    transform: translateY(100%);
+    opacity: 0;
+
+    animation: bounceInUp;
+    animation-duration: 500ms;
+    animation-delay: 750ms;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes bounceInUp {
+    0% {
+      transform: translateY(100%);
+    }
+
+    50% {
+      transform: translateY(50%);
+      opacity: 1;
+    }
+
+    100% {
+      transform: translateY(0%);
+      opacity: 1;
+    }
   }
 
   &-thumb {
