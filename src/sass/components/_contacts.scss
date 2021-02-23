@@ -29,11 +29,14 @@
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
     
-  &:not(:last-child) {
-    margin-bottom: 15px;
-    }
+  
     @media screen and (min-width: 480px) {
     width: 220px;
+    }
+    @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+     }
     }
 
     @media screen and (max-width: 767px) {
@@ -42,7 +45,7 @@
 
   @media screen and (min-width: $tablet) {
     width: calc((100% - 60px) / 3);
-    margin-right: 20px;
+    // margin-right: 8px;
 
     padding: 50px 32px;
     }
@@ -237,9 +240,12 @@
 }
 .contacts-location,
 .contacts-franchise {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     width: 160px;
     height: 45px;
-    padding: 0px 17px;
     border: 1px solid transparent;
     border-radius: 22px;
     font-family: 'DM Sans';
@@ -277,13 +283,12 @@
         width: 200px;
         padding: 0px 35px;
     }
+  }
 
-
-
-    // &-arrow {
-    //     stroke: #d41443;
-    //     fill: none;
-    //     margin-left: 13px;
-    //     padding: 0;
-    //   }
-}
+.location-text {
+    margin-right: 8px;
+  }
+// .icon-arrow {
+//     justify-content: center;
+//     align-items: center;
+// }
