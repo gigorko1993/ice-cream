@@ -1,5 +1,3 @@
-// Добавляємо базові стилі для компонентів, які часто повторюються в коді або є скелетом проекту (bodi , li, img). Патерни, як наприклад .visualy-hidden
-// Загальне для body
 body {
   font-family: $main-font-family;
   font-weight: $main-font-weight;
@@ -8,20 +6,17 @@ body {
   color: $white-text-color;
 }
 
-// забираю прокрутку при відкритому модальному вікні
 body.franchise-open,
 body.modal-open {
   overflow: hidden;
 }
 
-//   Забираємо нижній і верхній маржен декорацію списку
 ul {
   list-style: none;
   margin-top: 0;
   margin-bottom: 0;
   padding: 0;
 }
-// Забираємо нижній і верхній маржини
 p,
 h1,
 h2,
@@ -30,18 +25,15 @@ h4 {
   margin-top: 0;
   margin-bottom: 0;
 }
-// Забираємо підкреслення в ссилок
 a {
   text-decoration: none;
 }
-// Базові дані для контентних картинок
 img,
 picture {
   display: block;
   max-width: 100%;
   height: auto;
 }
-/*Контейнер загальний для всіх секцій*/
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -62,7 +54,6 @@ picture {
     padding-right: 115px;
   }
 }
-// Приховування елементів
 .visually-hidden {
   position: absolute;
   width: 1px;
