@@ -1,5 +1,8 @@
 .products {
-  margin-top: 122px;
+  position: relative;
+  z-index: 4;
+  padding-top: 122px;
+  background-color: #fff;
 }
 
 .products-card {
