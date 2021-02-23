@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ru">
   <head>
@@ -14,7 +13,7 @@
             <h2 class="visually-hidden">Our schedule and contacts</h2>
                 <ul class="contact-list">
                     <li class="contact-item">
-                        <span class="contact-decor">Cafe</span>
+                        <span class="contact-decor cafe">Cafe</span>
 
                         <div class="contact-border">
                             <h3 class="contact-title">Chicago</h3>
@@ -41,7 +40,7 @@
                     </li>
 
                     <li class="contact-item">
-                        <span class="contact-foodtruck">Foodtruck</span>
+                        <span class="contact-decor foodtruck">Foodtruck</span>
 
                         <div class="contact-border">
                             <h3 class="contact-title">Los Angeles</h3>
@@ -68,7 +67,7 @@
                     </li>
 
                     <li class="contact-item">
-                        <span class="contact-decor">Cafe</span>
+                        <span class="contact-decor cafe">Cafe</span>
 
                         <div class="contact-border">
                             <h3 class="contact-title">New York</h3>
@@ -96,9 +95,23 @@
                 </ul>
 
                 <div class="contacts-button">
-                    <button type="button" class="contacts-location" data-modal-open>Our Locations</button>
-                    <button type="button" class="contacts-franchise" data-franchise-open>Franchise</button>
+                    <button type="button" class="button-pink__location">
+                        <span class="location-text">Our Locations</span>
+                        <svg class="icon-arrow" width="8px" height="16px">
+                            <use href="../src/images/symbol-defs.svg#icon-vector-button"></use>
+                        </svg>
+                    </button>
+                    <button type="button" class="button-white__franchise data-franchise-open">
+                        <span class="location-text">Franchise</span>
+                        <svg class="icon-arrow" width="8px" height="16px">
+                            <use href="../src/images/symbol-defs.svg#icon-vector-button"></use>
+                        </svg>
+                    </button>
                 </div>
         </div>
     </section>
 
+    <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
+    <script src="./index.js"></script>
+  </body>
+</html>
