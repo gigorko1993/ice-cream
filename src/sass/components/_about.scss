@@ -18,6 +18,7 @@
   @media screen and (min-width: 767px) and (max-width: 1279px) {
     background-image: none;
   }
+
   @media screen and (min-width: $desktop) {
     background: $bg-advantages-footer
       url('../images/DesktopPhoto/sectionBgMilkDesktop.png') no-repeat 50% 100%;
@@ -33,6 +34,9 @@
       url('../images/DesktopPhoto/sectionBgMilkDesktop@3x.png') no-repeat 50%
       99%;
     background-size: 100%;
+  }
+  @media screen and (min-width: 767px) and (max-width: 1279px) {
+    background-image: none;
   }
 }
 
@@ -292,20 +296,18 @@
   border-radius: 50%;
   background-color: $accent-color;
   cursor: pointer;
+  stroke: #fff;
 
   &:hover,
   &:focus {
-    // color: $accent-color;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-      0px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
   }
 }
 
-// .about-section-modal-close {
-//   fill: currentColor;
-//   transition-property: color;
-//   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-// }
+.about-section-modal-close {
+  fill: currentColor;
+}
 
 .about-section-modal-text {
   font-family: 'DM Sans';
