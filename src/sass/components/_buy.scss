@@ -38,20 +38,13 @@
     font-size: 14px;
     line-height: 1.29;
     padding: 10px 37px;
-    color: $accent-color;
-    background-color: $white-text-color;
+    @extend %button-white;
+
     cursor: pointer;
-    transition-property: background-color;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     @media screen and (min-width: $tablet) {
       font-size: 16px;
       line-height: 1.31;
-    }
-
-    &:hover,
-    &:focus {
-      background-color: #ecebeb;
     }
 
     &-icecream {
@@ -82,20 +75,13 @@
   font-size: 14px;
   line-height: 1.29;
   padding: 10px 37px;
-  color: $accent-color;
-  background-color: $white-text-color;
+  @extend %button-white;
+
   cursor: pointer;
-  transition-property: background-color;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   @media screen and (min-width: $tablet) {
     font-size: 16px;
     line-height: 1.31;
-  }
-
-  &:hover,
-  &:focus {
-    background-color: #ecebeb;
   }
 }
 
@@ -121,7 +107,9 @@
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0), 0px 4px 4px rgba(0, 0, 0, 0),
       1px 4px 6px rgba(0, 0, 0, 0);
 
-    //   @include transition (box-shadow, border-color);
+    transition-property: box-shadow, background-color;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   &__link:focus,
@@ -141,11 +129,14 @@
     width: 100%;
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.5);
+
+    transition-property: background-color;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   &__link:focus .example__content,
   &__link:hover .example__content {
-    background-color: rgba(33, 150, 243, 0.9);
+    background-color: rgba(144, 126, 130, 0.8);
   }
 
   &__tittle {
@@ -169,6 +160,7 @@
     bottom: 8px;
     left: 15px;
     font-size: 18px;
+    font-weight: bold;
     line-height: 1.2;
 
     text-align: center;
@@ -203,48 +195,48 @@
     }
   }
 
-  &__description {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(33, 150, 243, 0.9);
-    transform: translateY(100%);
+  // &__description {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   background-color: rgba(33, 150, 243, 0.9);
+  //   transform: translateY(100%);
 
-    // @include transition (transform);
-  }
+  //   // @include transition (transform);
+  // }
 
-  &__specification {
-    margin: 77px 24px;
+  // &__specification {
+  //   margin: 77px 24px;
 
-    font-weight: normal;
-    font-size: 26px;
-    line-height: 1.56;
+  //   font-weight: normal;
+  //   font-size: 26px;
+  //   line-height: 1.56;
 
-    text-align: center;
+  //   text-align: center;
 
-    color: pink;
+  //   color: pink;
 
-    @media screen and (min-width: 768px) {
-      margin: 49px 24px;
-    }
+  //   @media screen and (min-width: 768px) {
+  //     margin: 49px 24px;
+  //   }
 
-    @media screen and (min-width: 1200px) {
-      position: absolute;
-      width: 322px;
-      height: 168px;
-      margin: 0;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-  }
+  //   @media screen and (min-width: 1200px) {
+  //     position: absolute;
+  //     width: 322px;
+  //     height: 168px;
+  //     margin: 0;
+  //     top: 50%;
+  //     left: 50%;
+  //     transform: translate(-50%, -50%);
+  //   }
+  // }
 
-  &__link:focus .example__description,
-  &__link:hover .example__description {
-    transform: translateY(0);
-  }
+  // &__link:focus .example__description,
+  // &__link:hover .example__description {
+  //   transform: translateY(0);
+  // }
 
   /* TABLET */
 
@@ -283,6 +275,9 @@
   position: relative;
   font-family: $main-font-family;
   visibility: hidden;
+
+  transition-property: visibility;
+  transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .example__link:focus .example__price-container,
@@ -296,19 +291,22 @@
 
   &__label {
     position: absolute;
-    bottom: 4px;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 0;
+    left: -275%;
+    // transform: translateX(-50%);
     font-size: 18px;
     font-weight: bold;
     color: $black-text-color;
 
-    // opacity: 0;
+    opacity: 0;
+
+    transition-property: opacity;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  // &__checkbox-input:checked .example__modal-form__label {
-  //   opacity: 1;
-  // }
+  &__checkbox-input:checked ~ .example__modal-form__label {
+    opacity: 1;
+  }
 
   &__input {
     width: 40px;
@@ -363,7 +361,9 @@
     background-repeat: no-repeat;
     background-origin: border-box;
 
-    // @include transition(background-color, border-color);
+    transition-property: border-color, background-color;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     @media screen and (min-width: 1200px) {
       left: 12px;
