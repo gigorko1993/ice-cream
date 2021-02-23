@@ -10,13 +10,15 @@ body {
 
 // забираю прокрутку при відкритому модальному вікні
 body.franchise-open,
-body.modal-open {
+body.modal-open,
+body.menu-open {
   overflow: hidden;
 }
 
 // забираю стрілку вверх при відкритому модальному вікні
 body.franchise-open .scrollup,
-body.modal-open .scrollup {
+body.modal-open .scrollup,
+body.menu-open .scrollup {
   visibility: hidden;
 }
 
