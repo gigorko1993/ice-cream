@@ -1,0 +1,66 @@
+body {
+  font-family: $main-font-family;
+  font-weight: $main-font-weight;
+  letter-spacing: $main-letter-spacing;
+  background-color: $white-text-color;
+  color: $white-text-color;
+}
+
+body.franchise-open,
+body.modal-open {
+  overflow: hidden;
+}
+
+ul {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+p,
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+a {
+  text-decoration: none;
+}
+img,
+picture {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media screen and (min-width: $mobile) {
+    width: 480px;
+  }
+  @media screen and (min-width: $tablet) {
+    width: 768px;
+    padding-left: 34px;
+    padding-right: 34px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 1280px;
+    padding-left: 115px;
+    padding-right: 115px;
+  }
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}

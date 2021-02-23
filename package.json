@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://goitacademy.github.io/parcel-project-template",
+  "homepage": "https://gigorko1993.github.io/ice-cream",
   "scripts": {
     "dev": "parcel src/*.html",
     "build": "parcel build src/*.html",
-    "predeploy": "npm run build -- --public-url /parcel-project-template/",
+    "predeploy": "npm run build -- --public-url /ice-cream/",
     "deploy": "gh-pages -d dist"
   },
   "repository": {
@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "-": "0.0.1",
+    "jquery": "^3.5.1",
     "v": "^0.3.0"
   }
 }

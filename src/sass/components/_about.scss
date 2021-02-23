@@ -1,0 +1,325 @@
+.about-section {
+  position: relative;
+  background: $bg-advantages-footer
+    url('../images/MobilePhoto/sectionBgMobile.png') no-repeat 50% 99%;
+  background-size: 100%;
+  @media screen and (min-resolution: 2dppx) {
+    background: $bg-advantages-footer
+      url('../images/MobilePhoto/sectionBgMobile@2x.png') no-repeat 50% 99%;
+    background-size: 100%;
+  }
+  @media screen and (min-resolution: 3dppx) {
+    background: $bg-advantages-footer
+      url('../images/MobilePhoto/sectionBgMobile@3x.png') no-repeat 50% 99%;
+    background-size: 100%;
+  }
+
+  @media screen and (min-width: 767px) and (max-width: 1279px) {
+    background-image: none;
+  }
+
+  @media screen and (min-width: $desktop) {
+    background: $bg-advantages-footer
+      url('../images/DesktopPhoto/sectionBgMilkDesktop.png') no-repeat 50% 100%;
+  }
+  @media screen and (min-resolution: 2dppx) {
+    background: $bg-advantages-footer
+      url('../images/DesktopPhoto/sectionBgMilkDesktop@2x.png') no-repeat 50%
+      99%;
+    background-size: 100%;
+  }
+  @media screen and (min-resolution: 3dppx) {
+    background: $bg-advantages-footer
+      url('../images/DesktopPhoto/sectionBgMilkDesktop@3x.png') no-repeat 50%
+      99%;
+    background-size: 100%;
+  }
+  @media screen and (min-width: 767px) and (max-width: 1279px) {
+    background-image: none;
+  }
+}
+
+.about-section {
+  padding-top: 125px;
+
+  &-label {
+    font-family: 'Titan One';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.16;
+    text-align: center;
+    text-transform: uppercase;
+    color: $secondary-text-color;
+    margin-bottom: 15px;
+    @media screen and (min-width: $tablet) {
+      font-size: 26px;
+      line-height: 1.15;
+    }
+    @media screen and (min-width: $tablet) {
+      font-size: 30px;
+      line-height: 1.13;
+    }
+  }
+  &-title {
+    margin-bottom: 26px;
+    font-family: 'Titan One';
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: $main-letter-spacing;
+    text-transform: uppercase;
+    color: $accent-color;
+    @media screen and (min-width: $tablet) {
+      font-size: 48px;
+      line-height: 1.14;
+    }
+    @media screen and (min-width: $tablet) {
+      font-size: 58px;
+      line-height: 1.13;
+    }
+  }
+  &-box {
+    padding: 0px;
+    margin: 0px;
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      justify-content: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+.about-section-picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+  width: 280px;
+  height: auto;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    width: 340px;
+    margin: 50px 17px 0px 0px;
+
+    @media screen and (min-width: $desktop) {
+      width: 516px;
+      margin: 55px 74px 0px 0px;
+    }
+  }
+}
+
+.about-section-image {
+  height: auto;
+  @media screen and (min-width: $tablet) {
+    width: 340px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 516px;
+  }
+}
+
+.about-section-description {
+  margin: 45px 30px 0px;
+  @media screen and (min-width: $tablet) {
+    margin: 100px 0px 0px;
+    width: 340px;
+    @media screen and (min-width: $desktop) {
+      margin: 106px 0px 0px;
+      width: 463px;
+    }
+  }
+}
+.about-section-text-1 {
+  margin-bottom: 35px;
+  font-family: 'DM Sans';
+  color: $black-text-color;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 162%;
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 40px;
+    font-size: 14px;
+    line-height: 176%;
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 35px;
+      font-size: 16px;
+      line-height: 176%;
+    }
+  }
+}
+.about-section-text-2 {
+  margin-bottom: 20px;
+}
+.about-section-text-2,
+.about-section-text-3 {
+  font-family: 'DM Sans';
+  color: $primary-text-color;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 162%;
+  @media screen and (min-width: $tablet) {
+    font-size: 14px;
+    line-height: 176%;
+    @media screen and (min-width: $desktop) {
+      font-size: 14px;
+      line-height: 194%;
+    }
+  }
+}
+.about-section-text-3 {
+  margin-bottom: 25px;
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 62px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 45px;
+  }
+}
+
+.about-section-button {
+  border: 1px solid transparent;
+  border-radius: 22px;
+  font-family: 'DM Sans';
+  align-items: center;
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.29;
+  padding: 10px 37px;
+  @extend %button-white;
+  cursor: pointer;
+  transition-property: background-color;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 1.31;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #ecebeb;
+  }
+
+  &-arrow {
+    stroke: #d41443;
+    fill: none;
+    margin-left: 13px;
+    padding: 0;
+  }
+}
+
+.about-section-backdrop {
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.about-section-backdrop.backdrop--hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.9);
+}
+.about-section-backdrop.backdrop--hidden .about-section-modal {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
+.about-section-modal {
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  left: 50%;
+  width: 320px;
+  height: 500px;
+  padding: 30px 20px 25px;
+  margin: 0px;
+  border-radius: 20px;
+  opacity: 1;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  transform: translate(-50%, -50%) scale(1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  animation-name: changeBgColor;
+  animation: changeBgColor 6000ms infinite ease-in-out;
+
+  &:hover {
+    animation-play-state: paused;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 700px;
+    height: 500px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 900px;
+    height: 500px;
+  }
+}
+
+@keyframes changeBgColor {
+  0% {
+    background-color: $bg-advantages-footer;
+  }
+
+  50% {
+    background-color: $bg-header;
+  }
+
+  100% {
+    background-color: $bg-advantages-footer;
+  }
+}
+
+.about-section-modal-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 25px;
+  height: 25px;
+  right: 15px;
+  top: 10px;
+  border: none;
+  border-radius: 50%;
+  background-color: $accent-color;
+  cursor: pointer;
+  stroke: #fff;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.about-section-modal-close {
+  fill: currentColor;
+}
+
+.about-section-modal-text {
+  font-family: 'DM Sans';
+  color: $primary-text-color;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 162%;
+  margin: 0;
+  @media screen and (min-width: $tablet) {
+    font-size: 18px;
+    line-height: 176%;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 20px;
+    line-height: 176%;
+  }
+}
