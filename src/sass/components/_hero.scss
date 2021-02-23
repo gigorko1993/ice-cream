@@ -78,19 +78,6 @@
     }
   }
 
-  &-image-bio {
-    left: 34px;
-    bottom: -5px;
-
-    @include media_max($max-mobile) {
-      display: none;
-    }
-    @include media_min($desktop) {
-      left: 77px;
-      bottom: 0px;
-    }
-  }
-
   &-thumb {
     position: relative;
     z-index: 4;
@@ -262,18 +249,60 @@
     margin-bottom: 15px;
   }
 
-  &-text {
-    margin-left: 120px;
-    margin-bottom: 7px;
-    max-width: 114px;
-    height: 48px;
-    overflow: hidden;
+  &-link-thumb-flex {
+    display: flex;
+    position: relative;
 
-    font-size: 8px;
-    line-height: 1.5;
-    font-weight: 400;
+    @include media_max($max-mobile) {
+      display: none;
+    }
+  }
+
+  // &-thumb-link-milk {
+  //   position: relative;
+  //   outline: 1px solid palevioletred;
+
+  // }
+
+  &-link-milk {
+    border-color: transparent;
+    outline: none;
+    background-color: transparent;
+    transition: transform 250ms ease;
+
+    height: 139px;
 
     @include media_min($desktop) {
+      height: 246px;
+    }
+  }
+
+  @include media_min($tablet) {
+    &-link-milk:hover &-image-bio,
+    &-link-milk:focus &-image-bio {
+      transform: rotate(5deg) scale(1.07);
+    }
+
+    &-image-bio {
+      position: absolute;
+      top: 0; // bottom: -5px;
+      // @include media_min($desktop) {
+      //   left: 77px;
+      //   bottom: 0px;
+      // }
+    }
+
+    &-text {
+      margin-left: 120px;
+      margin-bottom: 7px;
+      max-width: 114px;
+      height: 48px;
+      overflow: hidden;
+
+      font-size: 8px;
+      line-height: 1.5;
+      font-weight: 400;
+
       max-width: 200px;
       height: 78px;
       margin-left: 180px;
@@ -283,7 +312,6 @@
       line-height: 1.4;
     }
   }
-
   &-text.is-shown {
     height: 78px;
     overflow-y: scroll;
@@ -301,7 +329,7 @@
   }
 
   &-link {
-    display: inline-flex;
+    display: flex;
     justify-content: center;
     align-items: center;
 
@@ -321,6 +349,14 @@
     }
   }
 
+  .add-thumb {
+    display: flex;
+  }
+
+  .add-thumb-second {
+    display: inline-block;
+  }
+
   &-list,
   &-text,
   &-link {
@@ -338,23 +374,5 @@
       width: 7px;
       height: 7px;
     }
-  }
-
-  &-plug {
-    display: none;
-  }
-
-  &-text.is-shown ~ .hero-plug {
-    display: block;
-    height: 76px;
-
-    @include media_min($desktop) {
-      height: 124px;
-    }
-  }
-
-  &-link:hover .hero-image-bio,
-  &-link:focus .hero-image-bio {
-    transform: rotate(5deg) scale(1.07);
   }
 }
