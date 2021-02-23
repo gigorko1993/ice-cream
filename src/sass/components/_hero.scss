@@ -353,8 +353,8 @@
     }
   }
 
-  &-link:hover ~ .hero-image-bio,
-  &-link:focus ~ .hero-image-bio {
+  &-link:hover .hero-image-bio,
+  &-link:focus .hero-image-bio {
     transform: rotate(5deg) scale(1.07);
   }
 }
