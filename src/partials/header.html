@@ -1,7 +1,7 @@
 <header class="header" id="header">
     <div class=" container header__container">
         <div class="header__logo"></div>
-        <a class="header__link-logo" href="">
+        <a class="header__link-logo" href="./index.html">
             <span class="header__logo-text">icecream</span>
         </a>
         <button type="button"
@@ -34,7 +34,7 @@
                 </li>
             </ul>
         </nav>
-        <a class="header__button-buy">
+        <a class="header__button-buy" href="./buy.html">
             <span class="header__buy-text">Buy now</span>
             <svg class="header__icon-arrow" width="8px" height="16px">
                 <use
@@ -43,41 +43,43 @@
             </svg>
         </a>
     </div>
+
+    <!-- Розмітка для мобільного меню -->
+    <div class="menu is-hidden" id="menu-container" data-menu>
+        <button type="button" class="menu__button-close" aria-expanded="false" aria-controls="menu-container"
+            data-menu-close>
+            <svg class="menu__icon-close" aria-label="Переключатель мобильного меню">
+                <use href="../src/images/symbol-defs.svg#icon-close"></use>
+            </svg>
+        </button>
+    
+        <button type="button" class="menu__button-buy">
+            <span class="header__buy-text">Buy now</span>
+            <svg class="header__icon-narrow" width="8px" height="16px">
+                <use href="../src/images/symbol-defs.svg#icon-vector-button">
+                </use>
+            </svg>
+        </button>
+        <ul class="menu__list">
+            <li class="menu__item">
+                <a class="menu__link menu__link-current" href="#header">Home</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" href="#about">About us</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" href="#how-its-made">How it’s made?</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" href="#products">Our products</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" href="#contacts">Contact</a>
+            </li>
+        </ul>
+    </div>
 </header>
 
 
-<!-- Розмітка для мобільного меню -->
-<div class="menu is-hidden" id="menu-container" data-menu>
-    <button type="button" class="menu__button-close" aria-expanded="false" aria-controls="menu-container" data-menu-close>
-        <svg class="menu__icon-close" aria-label="Переключатель мобильного меню">
-            <use href="../src/images/symbol-defs.svg#icon-close"></use>
-        </svg>
-    </button> 
-      
-    <button type="button" class="menu__button-buy">
-        <span class="header__buy-text">Buy now</span>
-        <svg class="header__icon-narrow" width="8px" height="16px">
-            <use
-                href="../src/images/symbol-defs.svg#icon-vector-button">
-            </use>
-        </svg>
-    </button>    
-    <ul class="menu__list">
-        <li class="menu__item">
-            <a class="menu__link menu__link-current" href="#header">Home</a>
-        </li>
-        <li class="menu__item">
-            <a class="menu__link" href="#about">About us</a>
-        </li>
-        <li class="menu__item">
-            <a class="menu__link" href="#how-its-made">How it’s made?</a>
-        </li>
-        <li class="menu__item">
-            <a class="menu__link" href="#products">Our products</a>
-        </li >
-        <li class="menu__item">
-            <a class="menu__link" href="#contacts">Contact</a>
-        </li>
-    </ul>
-</div> 
+
 
