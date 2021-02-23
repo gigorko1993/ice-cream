@@ -288,14 +288,14 @@
   &__checkbox-text {
     padding-left: 21px;
 
-    font-size: $font-size-modal-content;
-    line-height: $line-height-title;
+    font-size: 12px;
+    line-height: 1.2;
 
     @media screen and (min-width: 1200px) {
       height: 24px;
       padding-left: 0;
-      font-size: $font-size-primary;
-      line-height: $line-height-text;
+      font-size: 14px;
+      line-height: 1.2;
     }
   }
 
@@ -309,15 +309,15 @@
     width: 16px;
     height: 16px;
 
-    background-color: $bg-primary-color;
-    border-color: $text-title-color;
+    background-color: #fff;
+    border-color: black;
 
-    background-image: url(../images/checkbox.svg);
+    // background-image: url(../images/checkbox.svg);
     background-size: contain;
     background-repeat: no-repeat;
     background-origin: border-box;
 
-    @include transition(background-color, border-color);
+    // @include transition(background-color, border-color);
 
     @media screen and (min-width: 1200px) {
       left: 12px;
@@ -326,14 +326,14 @@
 
   /*ефект для фокуса чекбокса*/
   &__checkbox-input:focus + &__checkbox::after {
-    border: 2px solid $active-color;
+    border: 2px solid blue;
     border-radius: 2px;
     background-image: none;
   }
 
   &__checkbox-input:checked + &__checkbox::after {
-    background-color: $active-color;
-    background-image: url(../images/icon-check.svg);
+    background-color: blue;
+    // background-image: url(../images/icon-check.svg);
     border-radius: 2px;
     background-size: contain;
     background-repeat: no-repeat;
