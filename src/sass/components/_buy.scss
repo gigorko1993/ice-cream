@@ -200,7 +200,7 @@
     transform: translateY(0);
   }
 
-  /* TABLET */
+  // TABLET
 
   @media screen and (min-width: 768px) {
     &__list {
@@ -224,5 +224,77 @@
         width: calc((100% - 6 * 15px) / 3);
       }
     }
+  }
+}
+
+.example__photo {
+  display: block;
+  margin: 0 auto;
+  // max-height: 100%;
+}
+
+.example__modal-form {
+  &__checkbox-field {
+    position: relative;
+    margin-bottom: 30px;
+
+    @media screen and (min-width: 1200px) {
+      padding-left: 36px;
+    }
+  }
+
+  &__checkbox-text {
+    padding-left: 21px;
+
+    font-size: 12px;
+    line-height: 1.2;
+
+    @media screen and (min-width: 1200px) {
+      height: 24px;
+      padding-left: 0;
+      font-size: 14px;
+      line-height: 1.2;
+    }
+  }
+
+  &__checkbox::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+
+    background-color: #fff;
+    border-color: black;
+
+    // background-image: url(../images/checkbox.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+
+    // @include transition(background-color, border-color);
+
+    @media screen and (min-width: 1200px) {
+      left: 12px;
+    }
+  }
+
+  // ефект для фокуса чекбокса
+  &__checkbox-input:focus + &__checkbox::after {
+    border: 2px solid blue;
+    border-radius: 2px;
+    background-image: none;
+  }
+
+  &__checkbox-input:checked + &__checkbox::after {
+    background-color: blue;
+    // background-image: url(../images/icon-check.svg);
+    border-radius: 2px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-origin: border-box;
   }
 }
