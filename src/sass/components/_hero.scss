@@ -87,22 +87,6 @@
     animation-fill-mode: forwards;
   }
 
-  @keyframes bounceInUp {
-    0% {
-      transform: translateY(100%);
-    }
-
-    50% {
-      transform: translateY(50%);
-      opacity: 1;
-    }
-
-    100% {
-      transform: translateY(0%);
-      opacity: 1;
-    }
-  }
-
   &-thumb {
     position: relative;
     z-index: 4;
@@ -212,6 +196,7 @@
     flex-direction: column;
     align-items: flex-end;
   }
+
   &-item {
     display: flex;
     flex-direction: column;
@@ -276,6 +261,7 @@
 
   &-link-thumb-flex {
     display: flex;
+    align-items: flex-end;
     position: relative;
 
     @include media_max($max-mobile) {
@@ -283,51 +269,42 @@
     }
   }
 
-  // &-thumb-link-milk {
-  //   position: relative;
-  //   outline: 1px solid palevioletred;
-
-  // }
-
   &-link-milk {
-    border-color: transparent;
+    border: 0px;
     outline: none;
+    padding: 0px;
     background-color: transparent;
     transition: transform 250ms ease;
 
-    height: 139px;
+    height: 73px;
 
     @include media_min($desktop) {
-      height: 246px;
+      height: 124px;
     }
   }
 
-  @include media_min($tablet) {
-    &-link-milk:hover &-image-bio,
-    &-link-milk:focus &-image-bio {
-      transform: rotate(5deg) scale(1.07);
+  &-image-bio {
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+
+    @include media_min($desktop) {
+      left: -38px;
     }
+  }
 
-    &-image-bio {
-      position: absolute;
-      top: 0; // bottom: -5px;
-      // @include media_min($desktop) {
-      //   left: 77px;
-      //   bottom: 0px;
-      // }
-    }
+  &-text {
+    margin-left: 120px;
+    margin-bottom: 7px;
+    max-width: 114px;
+    height: 48px;
+    overflow: hidden;
 
-    &-text {
-      margin-left: 120px;
-      margin-bottom: 7px;
-      max-width: 114px;
-      height: 48px;
-      overflow: hidden;
+    font-size: 8px;
+    line-height: 1.5;
+    font-weight: 400;
 
-      font-size: 8px;
-      line-height: 1.5;
-      font-weight: 400;
-
+    @include media_min($desktop) {
       max-width: 200px;
       height: 78px;
       margin-left: 180px;
@@ -337,6 +314,7 @@
       line-height: 1.4;
     }
   }
+
   &-text.is-shown {
     height: 78px;
     overflow-y: scroll;
@@ -374,11 +352,7 @@
     }
   }
 
-  .add-thumb {
-    display: flex;
-  }
-
-  .add-thumb-second {
+  &-add-thumb {
     display: inline-block;
   }
 
@@ -399,5 +373,28 @@
       width: 7px;
       height: 7px;
     }
+  }
+}
+
+@include media_min($tablet) {
+  .hero-link-milk:hover .hero-image-bio,
+  .hero-link-milk:focus .hero-image-bio {
+    transform: rotate(5deg) scale(1.07);
+  }
+}
+
+@keyframes bounceInUp {
+  0% {
+    transform: translateY(100%);
+  }
+
+  50% {
+    transform: translateY(50%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
   }
 }
