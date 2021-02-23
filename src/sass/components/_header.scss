@@ -23,25 +23,6 @@
     padding-left: 104px;
   }
 }
-.header__logo {
-  @media screen and (max-width: $max-tablet) {
-    display: none;
-  }
-  @media screen and (min-width: $desktop) {
-    display: flex;
-
-    position: absolute;
-    top: 37px;
-    left: 0px;
-
-    width: 50px;
-    height: 40px;
-
-    background-color: $accent-color;
-
-    transform: translateX(-70px);
-  }
-}
 .header__link-logo {
   position: relative;
 
@@ -69,18 +50,18 @@
 
   background-color: transparent;
   background-image: url(../images/logo_icon/logo_icon.png);
-    
-//   @media screen and (min-device-pixel-ratio: 2),
-//   screen and (min-resolution: 192dpi),
-//   screen and (min-resolution: 2dppx) {
-//     background-image: url(../images/logo_icon/logo_icon@2x.png);
-//   }
 
-//   @media screen and (min-device-pixel-ratio: 3),
-//   screen and (min-resolution: 288dpi),
-//   screen and (min-resolution: 3dppx) {
-//     background-image: url(../images/logo_icon/logo_icon@3x.png);
-//   }
+  //   @media screen and (min-device-pixel-ratio: 2),
+  //   screen and (min-resolution: 192dpi),
+  //   screen and (min-resolution: 2dppx) {
+  //     background-image: url(../images/logo_icon/logo_icon@2x.png);
+  //   }
+
+  //   @media screen and (min-device-pixel-ratio: 3),
+  //   screen and (min-resolution: 288dpi),
+  //   screen and (min-resolution: 3dppx) {
+  //     background-image: url(../images/logo_icon/logo_icon@3x.png);
+  //   }
   background-repeat: no-repeat;
   background-position: center;
 
@@ -112,7 +93,7 @@
   }
   @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
     margin-left: auto;
-    margin-right: 30px;  
+    margin-right: 30px;
   }
   @media screen and (min-width: $desktop) {
     display: none;
@@ -261,7 +242,7 @@
 .menu__icon-close {
   width: 14px;
   height: 14px;
-  
+
   stroke: $white-text-color;
 }
 .menu__button-buy {
