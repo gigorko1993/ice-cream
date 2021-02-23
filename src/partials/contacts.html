@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ru">
   <head>
@@ -8,7 +9,7 @@
     <link rel="shortcut icon" href="images/favicon.png" type="images/png">
   </head>
   <body>
-    <section class="contact">
+    <section class="contact" id="contacts">
         <div class="container">
             <h2 class="visually-hidden">Our schedule and contacts</h2>
                 <ul class="contact-list">
@@ -95,13 +96,9 @@
                 </ul>
 
                 <div class="contacts-button">
-                    <button type="button" class="contacts-location">Our Locations</button>
-                    <button type="button" class="contacts-franchise">Franchise</button>
+                    <button type="button" class="contacts-location" data-modal-open>Our Locations</button>
+                    <button type="button" class="contacts-franchise" data-franchise-open>Franchise</button>
                 </div>
         </div>
     </section>
 
-    <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
-    <script src="./index.js"></script>
-  </body>
-</html>

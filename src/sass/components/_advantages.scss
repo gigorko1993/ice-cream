@@ -13,7 +13,7 @@
 }
 
 .advantages-item {
-  width: 230px;
+  max-width: 230px;
 
   @include media_max(767px) {
     &:not(:last-child) {
@@ -36,18 +36,6 @@
     &:not(:last-child) {
       margin-right: 30px;
     }
-  }
-}
-
-.advantages-picture {
-  margin-bottom: 16px;
-
-  @include media_min(768px) {
-    margin-bottom: 36px;
-  }
-
-  @include media_min(1280px) {
-    margin-bottom: 40px;
   }
 }
 
@@ -75,6 +63,80 @@
 
     font-size: 58px;
     line-height: 1.14;
+  }
+}
+
+.advantages-span::before {
+  display: block;
+  height: 50px;
+  background-repeat: no-repeat;
+
+  margin-bottom: 16px;
+
+  @include media_min(768px) {
+    margin-bottom: 36px;
+  }
+
+  @include media_min(1280px) {
+    margin-bottom: 40px;
+  }
+}
+
+.icon-udder::before {
+  content: '';
+  background-image: url('../images/MobilePhoto/iconAdvantades1.png');
+  background-size: contain;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('../images/MobilePhoto/iconAdvantades1@2x.png');
+  }
+
+  @media screen and (min-device-pixel-ratio: 3),
+    screen and (min-resolution: 3dppx),
+    screen and (min-resolution: 288dpi) {
+    background-image: url('../images/MobilePhoto/iconAdvantades1@3x.png');
+  }
+}
+
+.apple-text {
+  display: flex;
+}
+
+.icon-apple::before {
+  content: '';
+  background-image: url('../images/MobilePhoto/iconAdvantades2.png');
+  background-size: contain;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('../images/MobilePhoto/iconAdvantades2@2x.png');
+  }
+
+  @media screen and (min-device-pixel-ratio: 3),
+    screen and (min-resolution: 3dppx),
+    screen and (min-resolution: 288dpi) {
+    background-image: url('../images/MobilePhoto/iconAdvantades2@3x.png');
+  }
+}
+
+.icon-heart::before {
+  content: '';
+  background-image: url('../images/MobilePhoto/iconAdvantades3.png');
+  background-size: contain;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('../images/MobilePhoto/iconAdvantades3@2x.png');
+  }
+
+  @media screen and (min-device-pixel-ratio: 3),
+    screen and (min-resolution: 3dppx),
+    screen and (min-resolution: 288dpi) {
+    background-image: url('../images/MobilePhoto/iconAdvantades3@3x.png');
   }
 }
 

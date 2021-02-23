@@ -1,5 +1,4 @@
 // Добавляємо базові стилі для компонентів, які часто повторюються в коді або є скелетом проекту (bodi , li, img). Патерни, як наприклад .visualy-hidden
-
 // Загальне для body
 body {
   font-family: $main-font-family;
@@ -7,6 +6,12 @@ body {
   letter-spacing: $main-letter-spacing;
   background-color: $bg-main-color;
   color: $white-text-color;
+}
+
+// забираю прокрутку при відкритому модальному вікні
+body.franchise-open,
+body.modal-open {
+  overflow: hidden;
 }
 
 //   Забираємо нижній і верхній маржен декорацію списку
@@ -40,27 +45,21 @@ picture {
 .container {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 115px;
-  padding-right: 115px;
-
-
-  @media screen and (max-width: $max-responsive-mobile) {
-    min-width: 100%;
-  }
+  padding-left: 20px;
+  padding-right: 20px;
 
   @media screen and (min-width: $mobile) {
-    min-width: 480px;
-
+    width: 480px;
   }
   @media screen and (min-width: $tablet) {
-    min-width: 768px;
+    width: 768px;
     padding-left: 34px;
     padding-right: 34px;
   }
   @media screen and (min-width: $desktop) {
-    min-width: 1080px;
-    padding-left: 15px;
-    padding-right: 15px;
+    width: 1280px;
+    padding-left: 115px;
+    padding-right: 115px;
   }
 }
 // Приховування елементів

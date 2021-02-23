@@ -1,85 +1,83 @@
-<!-- <div class="overlay"></div> -->
-
-<header class="container">
-    <div class=" header__container">
+<header class="header" id="header">
+    <div class=" container header__container">
         <div class="header__logo"></div>
         <a class="header__link-logo" href="">
             <span class="header__logo-text">icecream</span>
         </a>
-        <button type="button" class="header__button-menu" data-menu-open>
-            <svg class="header__icon-burger" width="20px" height="12px">
-                <!-- Закомітила іконку, бо в мене ламається все, виправлю -->
-
-                <!-- <use
-                    href="..src/images/symbol-defs.svg#icon-burger">
-                </use> -->
+        <button type="button"
+                class="header__button-menu"
+                aria-expanded="false"
+                aria-controls="menu-container"
+                data-menu-open
+        >
+            <svg class="header__icon" aria-label="Переключатель мобильного меню">
+                <use class="header__icon--burger" href="../src/images/symbol-defs.svg#icon-burger"></use>
+                <!-- <use class="header__icon--cross" href="../src/images/symbol-defs.svg#icon-close"></use> -->
             </svg>
         </button>
         <nav class="header__navigation">
             <ul class="header__list">
                 <li class="header__item">
-                    <a class="header__link header__link-current" href="">Home</a>
+                    <a class="header__link header__link-current" href="#header">Home</a>
                 </li>
                 <li class="header__item">
-                    <a class="header__link" href="">About us</a>
+                    <a class="header__link" href="#about">About us</a>
                 </li>
                 <li class="header__item">
-                    <a class="header__link" href="">How it’s made?</a>
+                    <a class="header__link" href="#how-its-made">How it’s made?</a>
                 </li>
                 <li class="header__item">
-                    <a class="header__link" href="">Our products</a>
+                    <a class="header__link" href="#products">Our products</a>
                 </li >
                 <li class="header__item">
-                    <a class="header__link" href="">Contact</a>
+                    <a class="header__link" href="#contacts">Contact</a>
                 </li>
             </ul>
         </nav>
-        <button type="button" class="header__button-buy">
+        <a class="header__button-buy">
             <span class="header__buy-text">Buy now</span>
-            <svg class="header__icon-narrow" width="4px" height="8px">
-                <!-- <use
-                    href="..src/images/symbol-defs.svg#icon-Vector-button">
-                </use> -->
+            <svg class="header__icon-arrow" width="8px" height="16px">
+                <use
+                    href="../src/images/symbol-defs.svg#icon-vector-button">
+                </use>
             </svg>
-        </button>
+        </a>
     </div>
 </header>
 
 
 <!-- Розмітка для мобільного меню -->
-<div class="menu" data-menu>
-    <button type="button" class="menu__close" data-menu-close>
-        <svg class="menu__icon-close" width="14px" height="14px">
-            <!-- Закомітила іконку, бо в мене ламається все, виправлю -->
-
-            <!-- <use
-                href="..src/images/symbol-defs.svg#icon-close">
-            </use> -->
+<div class="menu is-hidden" id="menu-container" data-menu>
+    <button type="button" class="menu__button-close" aria-expanded="false" aria-controls="menu-container" data-menu-close>
+        <svg class="menu__icon-close" aria-label="Переключатель мобильного меню">
+            <use href="../src/images/symbol-defs.svg#icon-close"></use>
         </svg>
-    </button>
+    </button> 
+      
     <button type="button" class="menu__button-buy">
         <span class="header__buy-text">Buy now</span>
-        <svg class="header__icon-narrow" width="4px" height="8px">
-            <!-- <use
-                href="..src/images/symbol-defs.svg#icon-Vector-button">
-            </use> -->
+        <svg class="header__icon-narrow" width="8px" height="16px">
+            <use
+                href="../src/images/symbol-defs.svg#icon-vector-button">
+            </use>
         </svg>
     </button>    
     <ul class="menu__list">
         <li class="menu__item">
-            <a class="menu__link menu__link-current" href="">Home</a>
+            <a class="menu__link menu__link-current" href="#header">Home</a>
         </li>
         <li class="menu__item">
-            <a class="menu__link" href="">About us</a>
+            <a class="menu__link" href="#about">About us</a>
         </li>
         <li class="menu__item">
-            <a class="menu__link" href="">How it’s made?</a>
+            <a class="menu__link" href="#how-its-made">How it’s made?</a>
         </li>
         <li class="menu__item">
-            <a class="menu__link" href="">Our products</a>
+            <a class="menu__link" href="#products">Our products</a>
         </li >
         <li class="menu__item">
-            <a class="menu__link" href="">Contact</a>
+            <a class="menu__link" href="#contacts">Contact</a>
         </li>
     </ul>
-</div>
+</div> 
+

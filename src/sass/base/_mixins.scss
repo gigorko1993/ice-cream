@@ -22,3 +22,21 @@
 // @include media_min($desktop) {
 //       display: flex;
 //     }
+
+$maxWidth: 767;
+@mixin adaptiv-font($tabletSize, $mobSize) {
+  $addSize: $tabletSize - $mobSize;
+  $addMobSize: $addSize + $addSize * 0.7;
+  font-size: calc(
+    #{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$maxWidth})
+  );
+}
+// Підключаєте наступним чином:
+// ---------------
+// @include media_max($mobile) {
+//   @include adaptiv-font(48, 34);
+// }
+// ---------------
+// в цьому прикладі:
+//  48 - це розмір шрифту на таблетці,
+//  34 - розмір шрифту на мобілці

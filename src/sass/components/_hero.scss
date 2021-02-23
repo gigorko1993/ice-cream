@@ -1,0 +1,355 @@
+.hero {
+  padding-top: 137px;
+  padding-bottom: 160px;
+
+  background-color: $bg-header;
+
+  @include media_max($max-mobile) {
+    overflow-x: hidden;
+  }
+
+  @include media_min($tablet) {
+    padding-top: 20px;
+    padding-bottom: 33px;
+  }
+
+  @include media_min($desktop) {
+    padding-top: 89px;
+    padding-bottom: 56px;
+  }
+
+  &-container {
+    position: relative;
+  }
+
+  // Позиціонування фонових картинок
+  &-image {
+    position: absolute;
+    z-index: 3;
+  }
+
+  &-image-circle {
+    left: 36px;
+    bottom: -85px;
+    z-index: 2;
+    width: 346px;
+    height: 346px;
+    fill: $secondary-text-color;
+
+    @include media_min($tablet) {
+      left: 307px;
+      bottom: 12px;
+      width: 324px;
+      height: 324px;
+    }
+    @include media_min($desktop) {
+      left: 475px;
+      bottom: 19px;
+      width: 538px;
+      height: 538px;
+    }
+  }
+
+  &-image-main {
+    left: 117px;
+    bottom: -160px;
+
+    @include media_min($tablet) {
+      left: 378px;
+      bottom: -33px;
+    }
+    @include media_min($desktop) {
+      left: 594px;
+      bottom: -56px;
+    }
+  }
+
+  &-image-tasty {
+    left: 566px;
+    bottom: -33px;
+
+    @include media_max($max-mobile) {
+      display: none;
+    }
+
+    @include media_min($desktop) {
+      left: 878px;
+      bottom: -56px;
+    }
+  }
+
+  &-image-bio {
+    left: 34px;
+    bottom: -5px;
+
+    @include media_max($max-mobile) {
+      display: none;
+    }
+    @include media_min($desktop) {
+      left: 77px;
+      bottom: 0px;
+    }
+  }
+
+  &-thumb {
+    position: relative;
+    z-index: 4;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include media_min($tablet) {
+      margin-bottom: 66px;
+    }
+    @include media_min($desktop) {
+      margin-bottom: 112px;
+    }
+  }
+
+  &-title-box {
+    max-width: 220px;
+
+    @include media_min($tablet) {
+      max-width: 162px;
+    }
+
+    @include media_min($desktop) {
+      max-width: 277px;
+    }
+  }
+
+  &-title {
+    color: $accent-color;
+
+    font-family: $secondary-font-family;
+    font-size: 48px;
+    line-height: 0.958;
+    text-transform: uppercase;
+    font-weight: 400;
+
+    margin-bottom: 20px;
+
+    @include media_min($tablet) {
+      font-size: 34px;
+      line-height: 0.912;
+    }
+
+    @include media_min($desktop) {
+      margin-bottom: 25px;
+      font-size: 58px;
+      line-height: 0.897;
+    }
+  }
+
+  &-title-label {
+    display: inline-block;
+
+    color: $white-text-color;
+
+    font-size: 26px;
+    line-height: 1.15;
+    font-weight: 400;
+
+    @include media_min($tablet) {
+      font-size: 22px;
+      line-height: 1.14;
+    }
+    @include media_min($desktop) {
+      font-size: 38px;
+      line-height: 1.16;
+    }
+  }
+
+  &-button {
+    display: inline-block;
+    padding-top: 8px;
+    padding-right: 13px;
+    padding-bottom: 8px;
+    padding-left: 13px;
+    border-radius: 20px;
+    cursor: pointer;
+
+    font-size: 8px;
+    line-height: 1.25;
+    font-weight: 400;
+    text-align: center;
+
+    @include media_min($desktop) {
+      padding-top: 13px;
+      padding-right: 22px;
+      padding-bottom: 13px;
+      padding-left: 22px;
+
+      font-size: 14px;
+      line-height: 1.29;
+    }
+  }
+
+  &-button-pink {
+    @extend %button-pink;
+  }
+
+  &-button-white,
+  &-link {
+    @extend %button-white;
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  &-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  &-item-number {
+    position: relative;
+
+    color: $accent-color;
+
+    font-family: $secondary-font-family;
+    font-size: 28px;
+    line-height: 1.14;
+    margin-left: auto;
+    font-weight: 400;
+
+    @include media_min($desktop) {
+      font-size: 46px;
+      line-height: 1.15;
+    }
+  }
+
+  &-item-number::after {
+    @include media_min($tablet) {
+      position: absolute;
+      top: -2px;
+      right: -7px;
+      z-index: -1;
+
+      background-image: url('../../src/images/circle.svg');
+      content: '';
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      width: 16px;
+      height: 16px;
+    }
+
+    @include media_min($desktop) {
+      top: -6px;
+      right: -16px;
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  &-item-unit {
+    font-size: 8px;
+    line-height: 10px;
+    font-weight: 400;
+
+    @include media_min($desktop) {
+      font-size: 14px;
+      line-height: 1.28;
+    }
+  }
+
+  &-item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  &-text {
+    margin-left: 120px;
+    margin-bottom: 7px;
+    max-width: 114px;
+    height: 48px;
+    overflow: hidden;
+
+    font-size: 8px;
+    line-height: 1.5;
+    font-weight: 400;
+
+    @include media_min($desktop) {
+      max-width: 200px;
+      height: 78px;
+      margin-left: 180px;
+      margin-bottom: 20px;
+
+      font-size: 14px;
+      line-height: 1.4;
+    }
+  }
+
+  &-text.is-shown {
+    height: 78px;
+    overflow-y: scroll;
+    position: absolute;
+    bottom: 15px;
+
+    @include media_min($desktop) {
+      height: 126px;
+    }
+  }
+
+  &-text.is-shown ~ .hero-link {
+    position: absolute;
+    bottom: 0px;
+  }
+
+  &-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 18px;
+    height: 18px;
+    margin-left: 120px;
+    padding: 0;
+
+    border-radius: 50%;
+    border-color: transparent;
+    outline: none;
+
+    @include media_min($desktop) {
+      margin-left: 180px;
+      width: 26px;
+      height: 26px;
+    }
+  }
+
+  &-list,
+  &-text,
+  &-link {
+    @include media_max($max-mobile) {
+      display: none;
+    }
+  }
+
+  &-link-image {
+    fill: $accent-color;
+    width: 5px;
+    height: 4px;
+
+    @include media_min($desktop) {
+      width: 7px;
+      height: 7px;
+    }
+  }
+
+  &-plug {
+    display: none;
+  }
+
+  &-text.is-shown ~ .hero-plug {
+    display: block;
+    height: 76px;
+
+    @include media_min($desktop) {
+      height: 124px;
+    }
+  }
+}
