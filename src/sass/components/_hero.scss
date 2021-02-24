@@ -29,7 +29,7 @@
   }
 
   &__image-circle {
-    left: 36px;
+    right: -62px;
     bottom: -85px;
     z-index: 2;
     width: 346px;
@@ -37,13 +37,13 @@
     fill: $secondary-text-color;
 
     @include media_min($tablet) {
-      left: 307px;
+      right: 137px;
       bottom: 12px;
       width: 324px;
       height: 324px;
     }
     @include media_min($desktop) {
-      left: 475px;
+      right: 267px;
       bottom: 19px;
       width: 538px;
       height: 538px;
@@ -51,21 +51,21 @@
   }
 
   &__image-main {
-    left: 117px;
+    right: 32px;
     bottom: -160px;
 
     @include media_min($tablet) {
-      left: 378px;
+      right: 247px;
       bottom: -33px;
     }
     @include media_min($desktop) {
-      left: 594px;
+      right: 450px;
       bottom: -56px;
     }
   }
 
   &__image-tasty {
-    left: 566px;
+    right: 34px;
     bottom: -33px;
 
     @include media_max($max-mobile) {
@@ -73,7 +73,7 @@
     }
 
     @include media_min($desktop) {
-      left: 878px;
+      right: 109px;
       bottom: -56px;
     }
 
@@ -380,8 +380,8 @@
 }
 
 @include media_min($tablet) {
-  .hero__link-milk:hover .hero__image-bio,
-  .hero__link-milk:focus .hero__image-bio {
+  .hero__link-milk:hover .hero-image-bio,
+  .hero__link-milk:focus .hero-image-bio {
     transform: rotate(5deg) scale(1.07);
   }
 }
