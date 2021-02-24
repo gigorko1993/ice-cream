@@ -28,3 +28,18 @@
       0px 2px 2px rgba(0, 0, 0, 0.12);
   }
 }
+
+// Добавляє базові стилі для кнопок-ссилок в хедері та мобільному меню
+// @extend %button-buy;
+%button-buy {
+  font-family: $main-font-family;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 22px;
+}
