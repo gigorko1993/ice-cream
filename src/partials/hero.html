@@ -1,6 +1,6 @@
 <section class="hero">
-    <div class="container hero-container">
-        <picture class="hero-image hero-image-main animate__animated animate__backInDown">
+    <div class="container hero__container">
+        <picture class="hero__image hero__image-main animate__animated animate__backInDown">
             <source
                 srcset="./images/DesktopPhoto/heroDesktop.webp 1x, ./images/DesktopPhoto/heroDesktop@2x.webp 2x, ./images/DesktopPhoto/heroDesktop@3x.webp 3x"
                 type="image/webp" media="(min-width:1280px)" />
@@ -13,20 +13,20 @@
 
             <source
                 srcset="./images/DesktopPhoto/heroDesktop.png 1x, ./images/DesktopPhoto/heroDesktop@2x.png 2x, ./images/DesktopPhoto/heroDesktop@3x.png 3x"
-                png media="(min-width:1280px)" />
-            <source
+                media="(min-width:1280px)" />
+            <source 
                 srcset="./images/TabletPhoto/heroTablet.png 1x, ./images/TabletPhoto/heroTablet@2x.png 2x, ./images/TabletPhoto/heroTablet@3x.png 3x"
                 media="(min-width:768px)" />
             <source
                 srcset="./images/MobilePhoto/heroMobile.png 1x, ./images/MobilePhoto/heroMobile@2x.png 2x, ./images/MobilePhoto/heroMobile@3x.png 3x"
                 media="(max-width:767px)" />
 
-            <img src="./images/MobilePhoto/heroMobile.png" alt="" />
+            <img src="./images/MobilePhoto/heroMobile.png" alt="picture of ice cream" />
         </picture>
-        <svg class="hero-image hero-image-circle">
+        <svg class="hero__image hero__image-circle">
             <use href="../src/images/symbol-defs.svg#circle"></use>
         </svg>
-        <picture class="hero-image hero-image-tasty">
+        <picture class="hero__image hero__image-tasty">
             <source
                 srcset="./images/DesktopPhoto/tastyDesktop.webp 1x, ./images/DesktopPhoto/tastyDesktop@2x.webp 2x, ./images/DesktopPhoto/tastyDesktop@3x.webp 3x"
                 type="image/webp" media="(min-width:1280px)" />
@@ -41,36 +41,35 @@
                 srcset="./images/TabletPhoto/tastyTablet.png 1x, ./images/TabletPhoto/tastyTablet@2x.png 2x, ./images/TabletPhoto/tastyTablet@3x.png 3x"
                 media="(min-width:768px)" />
 
-            <img src="./images/TabletPhoto/tastyTablet.png" alt="" />
+            <img src="./images/TabletPhoto/tastyTablet.png" alt="girl with ice cream, said tasty" />
         </picture>
-        <div class="hero-thumb">
-            <div class="hero-title-box" id="scroll">
-                <h1 class="hero-title"><span class="hero-title-label">ice cream made with </span>passion</h1>
-                <a href="#products" class="hero-button hero-button-pink ">Products</a>
-                <a href="#about" class="hero-button hero-button-white ">How it’s made?</a>
+        <div class="hero__thumb">
+            <div class="hero__title-box" id="scroll">
+                <h1 class="hero__title"><span class="hero__title-label">ice cream made with </span>passion</h1>
+                <a href="#products" class="hero__button hero__button-pink ">Products</a>
+                <a href="#about" class="hero__button hero__button-white ">How it’s made?</a>
             </div>
             <h2 id="outlets" class="visually-hidden">Our outlets</h2>
-            <ul aria-labelledby="outlets" class="hero-list" title="our outlets">
-                <li class="hero-item outlets__inner">
-                    <p class="hero-item-number outlets__number-cafe">16</p>
-                    <h3 class="hero-item-unit">cafes</h3>
+            <ul aria-labelledby="outlets" class="hero__list" title="our outlets">
+                <li class="hero__item outlets__inner">
+                    <p class="hero__item-number outlets__number-cafe">16</p>
+                    <h3 class="hero__item-unit">cafes</h3>
                 </li>
-                <li class="hero-item outlets__inner">
-                    <p class="hero-item-number outlets__number-food-truck">23</p>
-                    <h3 class="hero-item-unit">food trucks</h3>
+                <li class="hero__item outlets__inner">
+                    <p class="hero__item-number outlets__number-food-truck">23</p>
+                    <h3 class="hero__item-unit">food trucks</h3>
                 </li>
             </ul>
         </div>
-        <div class="hero-link-thumb-flex">
-            <button class="hero-link-milk" data-show-text-second-button>
-                <picture class="hero-image-bio">
+        <div class="hero__link-thumb-flex">
+            <button class="hero__link-milk" id="button-text-milk" data-show-text-second-button>
+                <picture class="hero__image-bio">
             <source
                 srcset="./images/DesktopPhoto/bioEcoDesktop.webp 1x, ./images/DesktopPhoto/bioEcoDesktop@2x.webp 2x, ./images/DesktopPhoto/bioEcoDesktop@3x.webp 3x"
                 type="image/webp" media="(min-width:1280px)" />
             <source
                 srcset="./images/TabletPhoto/bioEcoTablet.webp 1x, ./images/TabletPhoto/bioEcoTablet@2x.webp 2x, ./images/TabletPhoto/bioEcoTablet@3x.webp 3x"
                 type="image/webp" media="(min-width:768px)" />
-        
             <source
                 srcset="./images/DesktopPhoto/bioEcoDesktop.png 1x, ./images/DesktopPhoto/bioEcoDesktop@2x.png 2x, ./images/DesktopPhoto/bioEcoDesktop@3x.png 3x"
                 media="(min-width:1280px)" />
@@ -78,15 +77,15 @@
                 srcset="./images/TabletPhoto/bioEcoTablet.png 1x, ./images/TabletPhoto/bioEcoTablet@2x.png 2x, ./images/TabletPhoto/bioEcoTablet@3x.png 3x"
                 media="(min-width:768px)" />
         
-            <img src="./images/TabletPhoto/bioEcoTablet.png" alt="" />
+            <img src="./images/TabletPhoto/bioEcoTablet.png" alt="image of bio eco milk" />
                 </picture>
             </button>
-            <div class="hero-add-thumb">
+            <div class="hero__add-thumb">
                 <h2 class="visually-hidden">Сomposition of our product</h2>
-                <p class="hero-text" data-text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                <p class="hero__text" aria-labelledby="button-text-milk button-text" data-text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                     sed do eiusmod tempor ut labore et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque laboriosam, consequatur nobis explicabo iste quos deleniti a dolores. Nostrum eaque, incidunt voluptate laboriosam quasi dolore. Asperiores excepturi dolorem aperiam repellat, fuga suscipit nulla inventore explicabo cum eum corporis alias quo. Dicta inventore quam similique obcaecati officia, corrupti doloribus. Beatae, impedit.</p>
-                    <button class="hero-link" data-show-text-button>
-                        <svg class="hero-link-image">
+                    <button class="hero__link" id="button-text" data-show-text-button>
+                        <svg class="hero__link-image">
                             <use href="../src/images/symbol-defs.svg#arrow-right"></use>
                         </svg> 
                     </button>

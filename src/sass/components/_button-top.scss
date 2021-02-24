@@ -7,23 +7,25 @@
   width: 40px;
   height: 40px;
   padding: 8px 8px;
-  background-color: $secondary-text-color;
+  background-color: rgba(254, 165, 187, 0.3);
   border-radius: 15px;
   cursor: pointer;
 
   &:hover,
   &:focus {
-    background-color: $bg-menu;
+    background-color: rgba(212, 20, 67, 0.3);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   &-svg {
     width: 40px;
     height: 40px;
-    fill: $accent-color;
+    fill: rgba(255, 255, 255);
   }
 
   &:hover .scrollup-svg,
   &:focus .scrollup-svg {
-    fill: $bg-header;
+    fill: rgba(255, 255, 255);
   }
 }
