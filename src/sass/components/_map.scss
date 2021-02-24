@@ -28,6 +28,8 @@
   top: 0;
   left: 0;
 
+  z-index: 30;
+
   padding: 40px 15px;
   background: #ffb8ca;
 
@@ -54,6 +56,8 @@
 
     width: 950px;
     min-height: 600px;
+
+    padding: 40px 20px;
   }
 
   &-icon {
@@ -65,10 +69,11 @@
     position: absolute;
     top: 15px;
     right: 20px;
-    background-color: $white-text-color;
-    border: 1px solid $white-text-color;
+    border: 1px solid transparent;
     border-radius: 25px;
     outline: transparent;
+
+    @extend %button-white;
 
     @media screen and (min-width: $tablet) {
       top: 19px;
@@ -78,17 +83,6 @@
     @media screen and (min-width: $desktop) {
       top: 23px;
       right: 34px;
-    }
-
-    &:focus,
-    &:hover {
-      background-color: #d41443;
-      border-color: #d41443;
-    }
-
-    &:focus .locations-icon,
-    &:hover .locations-icon {
-      stroke: #fff;
     }
   }
 
@@ -118,8 +112,10 @@
 
   &-list {
     @media screen and (min-width: $desktop) {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: 40% 60%;
+      grid-gap: 20px;
+      grid-template-rows: 30% 40% 30%;
     }
   }
 
@@ -129,28 +125,25 @@
     @media screen and (min-width: $tablet) {
       width: 100%px;
     }
-
-    @media screen and (min-width: $desktop) {
-      width: calc((100% - 45px) / 3);
-      margin-right: 15px;
-
-      &-item:last-child {
-        margin-right: 0;
-      }
-    }
   }
 
   &-item:not(:last-child) {
-    margin-bottom: 20px;
+    margin: 20px 0;
+    padding-top: 5px;
+    border-top: 1px solid #d41443;
 
-    @media screen and (min-width: $tablet) {
-      margin-bottom: 30px;
+    @media screen and (min-width: $desktop) {
+      margin: 0;
+      padding: 0;
+      border: none;
     }
   }
 
-  // &-item:nth-child(2n) {
-  //     margin-left: auto;
-  // }
+  &-item:nth-child(2n + 1) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
   &-list-tittle {
     margin-top: 0;
@@ -190,6 +183,32 @@
     text-align: center;
 
     color: #000000;
+
+    @media screen and (min-width: $tablet) {
+      font-size: 14px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      font-size: 16px;
+    }
+  }
+
+  &-button-map {
+    display: block;
+    margin: auto auto;
+    width: 150px;
+    font-family: $main-font-family;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.31;
+
+    text-align: center;
+
+    padding: 10px 10px;
+
+    @extend %button-white;
+    border-radius: 22px;
+    border: none;
 
     @media screen and (min-width: $tablet) {
       font-size: 14px;
