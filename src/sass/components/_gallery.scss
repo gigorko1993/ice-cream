@@ -5,16 +5,16 @@
   overflow: hidden;
   background: linear-gradient(
     $bg-advantages-footer 0%,
-    $bg-advantages-footer 58%,
-    $white-text-color 59%,
+    $bg-advantages-footer 46%,
+    $white-text-color 47%,
     $white-text-color 100%
   );
 
   @include media_min($tablet) {
     background: linear-gradient(
       $bg-advantages-footer 0%,
-      $bg-advantages-footer 48%,
-      $white-text-color 49%,
+      $bg-advantages-footer 45%,
+      $white-text-color 46%,
       $white-text-color 100%
     );
   }
