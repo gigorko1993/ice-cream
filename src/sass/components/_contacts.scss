@@ -3,7 +3,6 @@
 
   @media screen and (max-width: 1279px) {
     background-image: none;
-    // background-position: 0 0px;
   }
  
   @media screen and (min-width: $desktop) {
@@ -25,11 +24,6 @@
     background-size: 100%;
     background-position: 0 -60px;
   }
-  // @media screen and (min-width: 767px) and (max-width: 1279px) {
-  //   background-image: none;
-  //   background-position: 0 -60px;
-  // }
-
 }
 .contact-position {
   position: relative;
