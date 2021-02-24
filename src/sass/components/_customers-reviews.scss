@@ -124,19 +124,30 @@
 }
 
 .decorative-dots {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 18px;
+  position: relative;
+  display: block;
+  margin: 0 auto 18px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: $bg-customers-reviews-dots;
 
-  & .dot {
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
     width: 4px;
     height: 4px;
     border-radius: 50%;
     background-color: $bg-customers-reviews-dots;
+  }
 
-    &:not(:last-child) {
-      margin-right: 10px;
-    }
+  &::after {
+    right: -13px;
+  }
+
+  &::before {
+    left: -13px;
   }
 }
 
