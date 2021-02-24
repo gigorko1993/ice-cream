@@ -124,8 +124,11 @@ $(document).ready(function () {
     arrows: false,
     autoplay: true,
     infinite: true,
-    speed: 250,
-    slidesToShow: 1
+    speed: 1500,
+    autoplaySpeed: 4000,
+    easing: 'easeOutElastic',
+    slidesToShow: 1,
+    pauseOnDotsHover: true
   });
 });
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -156,7 +159,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "4376" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "13581" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
