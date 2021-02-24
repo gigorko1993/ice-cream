@@ -54,6 +54,8 @@
 
     width: 950px;
     min-height: 600px;
+
+    padding: 40px 20px;
   }
 
   &-icon {
@@ -65,10 +67,12 @@
     position: absolute;
     top: 15px;
     right: 20px;
-    background-color: $white-text-color;
-    border: 1px solid $white-text-color;
+    // background-color: $white-text-color;
+    border: 1px solid transparent;
     border-radius: 25px;
     outline: transparent;
+
+    @extend %button-white;
 
     @media screen and (min-width: $tablet) {
       top: 19px;
@@ -80,16 +84,16 @@
       right: 34px;
     }
 
-    &:focus,
-    &:hover {
-      background-color: #d41443;
-      border-color: #d41443;
-    }
+    // &:focus,
+    // &:hover {
+    //   background-color: #d41443;
+    //   border-color: #d41443;
+    // }
 
-    &:focus .locations-icon,
-    &:hover .locations-icon {
-      stroke: #fff;
-    }
+    // &:focus .locations-icon,
+    // &:hover .locations-icon {
+    //   stroke: #fff;
+    // }
   }
 
   &-tittle {
@@ -118,8 +122,13 @@
 
   &-list {
     @media screen and (min-width: $desktop) {
-      display: flex;
-      flex-wrap: wrap;
+      // display: flex;
+      // flex-wrap: wrap;
+
+      display: grid;
+      grid-template-columns: 40% 60%;
+      grid-gap: 20px;
+      grid-template-rows: 30% 40% 30%;
     }
   }
 
@@ -131,22 +140,22 @@
     }
 
     @media screen and (min-width: $desktop) {
-      width: calc((100% - 45px) / 3);
-      margin-right: 15px;
+      // width: calc((100% - 45px) / 3);
+      // margin-right: 15px;
 
-      &-item:last-child {
-        margin-right: 0;
-      }
+      // &-item:last-child {
+      //   margin-right: 0;
+      //   }
     }
   }
 
-  &-item:not(:last-child) {
-    margin-bottom: 20px;
+  // &-item:not(:last-child) {
+  //   margin-bottom: 20px;
 
-    @media screen and (min-width: $tablet) {
-      margin-bottom: 30px;
-    }
-  }
+  //   @media screen and (min-width: $tablet) {
+  //     margin-bottom: 30px;
+  //   }
+  // }
 
   // &-item:nth-child(2n) {
   //     margin-left: auto;
@@ -198,5 +207,21 @@
     @media screen and (min-width: $desktop) {
       font-size: 16px;
     }
+  }
+
+  &-button-map {
+    display: block;
+    font-family: $main-font-family;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.31;
+
+    text-align: center;
+
+    padding: 10px 10px;
+
+    @extend %button-white;
+    border-radius: 22px;
+    border: none;
   }
 }
