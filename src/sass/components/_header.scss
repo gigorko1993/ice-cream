@@ -50,23 +50,23 @@
 
   background-color: transparent;
   background-image: url(../images/logo_icon/logo_icon.png);
-
-  //   @media screen and (min-device-pixel-ratio: 2),
-  //   screen and (min-resolution: 192dpi),
-  //   screen and (min-resolution: 2dppx) {
-  //     background-image: url(../images/logo_icon/logo_icon@2x.png);
-  //   }
-
-  //   @media screen and (min-device-pixel-ratio: 3),
-  //   screen and (min-resolution: 288dpi),
-  //   screen and (min-resolution: 3dppx) {
-  //     background-image: url(../images/logo_icon/logo_icon@3x.png);
-  //   }
   background-repeat: no-repeat;
   background-position: center;
 
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+      background-image: url(../images/logo_icon/logo_icon@2x.png);
+  }
+  @media screen and (min-device-pixel-ratio: 3),
+    screen and (min-resolution: 288dpi),
+    screen and (min-resolution: 3dppx) {
+      background-image: url(../images/logo_icon/logo_icon@3x.png);
+  }
+
   @media screen and (max-width: $max-mobile) {
     height: 40px;
+    background-image: url(../images/logo_icon/logo_icon.png);
   }
   @media screen and (min-width: $tablet) {
     height: 50px;
