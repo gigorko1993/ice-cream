@@ -16,7 +16,7 @@
   width: calc(100% - 30px);
 
   padding: 40px 30px;
-  background: #ffb8ca;
+  background: $bg-header;
 
   @media screen and (max-width: $max-responsive-mobile) {
     transform: translate(0, 0) scale(1);
@@ -42,7 +42,7 @@
 
   &-icon {
     padding-top: 2px;
-    stroke: #d41443;
+    stroke: $accent-color;
   }
 
   &-button {
