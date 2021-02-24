@@ -1,6 +1,5 @@
 .about-section {
   position: relative;
-  // width: 100%;
   background: $bg-advantages-footer
     url('../images/MobilePhoto/sectionBgMobile.png') no-repeat 50% 99%;
   background-size: 100%;
@@ -41,6 +40,7 @@
 }
 
 .about-section {
+  overflow: hidden;
   padding-top: 125px;
 
   &-label {
