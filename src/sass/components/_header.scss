@@ -1,0 +1,310 @@
+// Стилі для хедера і мобільного меню
+.header {
+  background-color: $bg-header;
+
+  @include media_max($max-mobile) {
+    padding-top: 7px;
+  }
+  @include media_min($tablet) {
+    padding-top: 37px;
+  }
+}
+.header__container {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  @include media_max($max-mobile) {
+    justify-content: space-between;
+    padding-left: 90px;
+  }
+  @include media_min_max($tablet, $max-tablet) {
+    padding-left: 104px;
+  }
+}
+.header__link-logo {
+  position: relative;
+
+  font-family: $secondary-font-family;
+  font-weight: 400;
+  font-size: 27px;
+  line-height: 44px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+.header__logo-text {
+  display: block;
+  color: $accent-color;
+  height: 100%;
+}
+.header__logo-text::before {
+  content: "";
+
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: translateX(-70px);
+
+  width: 50px;
+
+  background-color: transparent;
+  background-image: url(../images/logo_icon/logo_icon.png);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+      background-image: url(../images/logo_icon/logo_icon@2x.png);
+  }
+  @media screen and (min-device-pixel-ratio: 3),
+    screen and (min-resolution: 288dpi),
+    screen and (min-resolution: 3dppx) {
+      background-image: url(../images/logo_icon/logo_icon@3x.png);
+  }
+
+  @include media_max($max-mobile) {
+    height: 40px;
+    background-image: url(../images/logo_icon/logo_icon.png);
+  }
+  @include media_min($tablet) {
+    height: 50px;
+    background-size: contain;
+  }
+}
+.header__button-menu {
+  position: relative;
+  z-index: 4;
+
+  padding: 0;
+  border: none;
+
+  width: 24px;
+  height: 24px;
+
+  background-color: transparent;
+
+  @include media_max($max-mobile) {
+    margin-left: auto;
+  }
+  @include media_min_max($tablet, $max-tablet) {
+    margin-left: auto;
+    margin-right: 30px;
+  }
+  @include media_min($desktop) {
+    display: none;
+  }
+}
+.header__burger { 
+  position: relative;
+  width: 24px;
+  height: 3px;
+  align-items: center;
+  background-color: $accent-color;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 0px;
+    width: 24px;
+    height: 3px;
+    align-items: center;
+    background-color: $accent-color;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 0px;
+    width: 24px;
+    height: 3px;
+    align-items: center;
+    background-color: $accent-color;
+  }
+}
+
+.header__icon {
+  width: 30px;
+  height: 30px;
+
+  stroke: $accent-color;
+}
+
+.header__navigation {
+  @include media_max($max-tablet) {
+    display: none;
+  }
+  @include media_min($desktop) {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.header__list {
+  position: relative;
+  z-index: 4;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+.header__item {
+  position: relative;
+  &:not(:last-of-type) {
+    margin-right: 35px;
+  }
+}
+.header__link {
+  font-family: $main-font-family;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+
+  color: $white-text-color;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+  &.header__link-current {
+    color: $accent-color;
+  }
+}
+.header__link:hover {
+  &::after {
+    content: "";
+
+    position: absolute;
+    left: 0px;
+    top: 28px;
+
+    display: inline-block;
+    width: 100%;
+    height: 3px;
+    border-radius: 5px;
+    background-color: rgba(255, 0, 0, 0.2);
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+.header__button-buy {
+  padding: 10px 37px;
+  z-index: 4;
+
+  @extend %button-white;
+  @extend %button-buy;
+
+  @include media_max($max-mobile) {
+    display: none;
+  }
+}
+.header__buy-text {
+  display: block;
+  margin-right: 12px;
+}
+.header__icon-arrow {
+  fill: currentColor;
+}
+
+// Стилі для мобільного меню
+
+.menu {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+
+  z-index: 5;
+
+  color: $white-text-color;
+  background-color: $bg-menu;
+  border: none;
+
+  height: 100vh;
+
+  @include media_min_max($min-mobile, $max-mobile) {
+    width: 100%;
+    padding: 23px 20px;
+  }
+  @include media_min_max($tablet, $max-tablet) {
+    width: 40%;
+    padding: 23px 34px;
+  }
+  @include media_min($desktop) {
+    display: none;
+  }
+
+  transform: translateX(0);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.menu.is-hidden {
+  transform: translateX(100%);
+  display: none;
+}
+.menu__button-close {
+  padding: 0;
+  margin-left: auto;
+  margin-bottom: 23px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-sizing: content-box;
+  border: none;
+
+  color: $white-text-color;
+  background-color: transparent;
+}
+.menu__icon-close {
+  width: 14px;
+  height: 14px;
+
+  stroke: $white-text-color;
+}
+.menu__button-buy {
+  padding: 10px 48px;
+  margin-bottom: 32px;
+  margin-left: auto;
+  margin-right: auto;
+
+  width: max-content;
+
+  @extend %button-white;
+  @extend %button-buy;
+
+  @include media_min($tablet) {
+    padding: 10px 37px;
+  }
+}
+.menu__list {
+  text-align: left;
+}
+.menu__item {
+  &:not(:last-of-type) {
+    margin-bottom: 23px;
+  }
+}
+.menu__link {
+  font-family: $main-font-family;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.29;
+
+  display: flex;
+  align-items: center;
+
+  color: $white-text-color;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+  &.menu__link-current {
+    color: $accent-color;
+  }
+}

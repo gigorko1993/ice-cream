@@ -1,9 +1,20 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Заголовок страницы</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="./slick/slick.scss" />
+
+    <title>IceCreame</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="images/png" />
   </head>
   <body id="top">
     <!-- Добавление фрагментов в главные HTML-файлы страниц -->
@@ -45,8 +56,10 @@
     <script src="./js/franchise.js"></script>
     <script src="./js/open-text.js"></script>
     <script src="./js/menu.js"></script>
+
     <!-- скрипт появления картинок в галерее -->
     <script src="./gallery-appear.js"></script>
+
     <!-- скрипт для плавного скролу по якорним ссилкам -->
     <script src="./js/scroll.js"></script>
     <!-- Скрипт для кнопки прокрутки наверх сторінки -->
@@ -54,7 +67,8 @@
     <script src="js/top-button.js"></script>
 
     <script src="./js/about-modal.js"></script>
-   <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
-    <include src="./partials/example.html"></include>
+
+    <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
+    <script src="./index.js"></script>
   </body>
 </html>

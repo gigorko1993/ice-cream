@@ -1,0 +1,42 @@
+// Створюємо місксіни для коду, який часто поврторюється в CSS
+@mixin media_min($breakpoint) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin media_max($break_max) {
+  @media screen and (max-width: $break_max) {
+    @content;
+  }
+}
+
+@mixin media_min_max($break_min, $break_max) {
+  @media screen and (min-width: $break_min) and (max-width: $break_max) {
+    @content;
+  }
+}
+
+// example:
+
+// @include media_min($desktop) {
+//       display: flex;
+//     }
+
+$maxWidth: 767;
+@mixin adaptiv-font($tabletSize, $mobSize) {
+  $addSize: $tabletSize - $mobSize;
+  $addMobSize: $addSize + $addSize * 0.7;
+  font-size: calc(
+    #{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$maxWidth})
+  );
+}
+// Підключаєте наступним чином:
+// ---------------
+// @include media_max($mobile) {
+//   @include adaptiv-font(48, 34);
+// }
+// ---------------
+// в цьому прикладі:
+//  48 - це розмір шрифту на таблетці,
+//  34 - розмір шрифту на мобілці

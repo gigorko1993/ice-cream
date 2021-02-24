@@ -1,0 +1,191 @@
+.customers-reviews {
+  padding-top: 80px;
+  padding-bottom: 170px;
+  color: $black-text-color;
+  background-color: white;
+
+  @media screen and (min-width: $tablet) {
+    padding-top: 121px;
+    padding-bottom: 197px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 123px;
+    padding-bottom: 234px;
+  }
+
+  & .slider-item {
+    @media screen and (min-width: $tablet) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding-left: 62px;
+      padding-right: 62px;
+    }
+  }
+}
+
+.slider-image {
+  width: 85px;
+  height: 85px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  border-radius: 50%;
+}
+
+.review-wrapper {
+  position: relative;
+  padding: 40px 50px 20px;
+  margin-bottom: 30px;
+  background-color: $bg-customers-review;
+
+  @media screen and (min-width: $tablet) {
+    padding: 50px 45px 28px;
+    margin-bottom: 25px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 47px 55px 32px;
+    margin-bottom: 15px;
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    width: 54px;
+    height: 40px;
+    position: absolute;
+    z-index: 2;
+    top: 23px;
+    left: 60px;
+    background-image: url('../images/MobilePhoto/quotes.png');
+    background-size: 54px 40px;
+    background-repeat: no-repeat;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url('../images/MobilePhoto/quotes@2x.png');
+    }
+
+    @media screen and (min-device-pixel-ratio: 3),
+      screen and (min-resolution: 288dpi),
+      screen and (min-resolution: 3dppx) {
+      background-image: url('../images/MobilePhoto/quotes@3x.png');
+    }
+
+    @media screen and (min-width: 768px) {
+      top: 35px;
+      left: 35px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      top: 30px;
+      left: 50px;
+    }
+  }
+}
+
+.slider-review {
+  padding-left: 8px;
+  padding-right: 8px;
+  font-size: 12px;
+  line-height: 2.5;
+  text-align: center;
+  background-image: linear-gradient(#fafafa 2px, transparent 2px),
+    repeating-linear-gradient(
+      to top,
+      transparent 2px,
+      $bg-customers-quotes 2px 3px,
+      transparent 4px 31.5px
+    );
+
+  @media screen and (min-width: $tablet) {
+    padding-left: 35px;
+    padding-right: 35px;
+    font-size: 14px;
+    line-height: 2.16;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-left: 35px;
+    padding-right: 35px;
+    font-size: 16px;
+    line-height: 1.86;
+  }
+
+  .review-text {
+    position: relative;
+    z-index: 3;
+  }
+}
+
+.decorative-dots {
+  position: relative;
+  display: block;
+  margin: 0 auto 18px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: $bg-customers-reviews-dots;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: $bg-customers-reviews-dots;
+  }
+
+  &::after {
+    right: -13px;
+  }
+
+  &::before {
+    left: -13px;
+  }
+}
+
+.customer-data {
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 1.86;
+  text-align: center;
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  border: none;
+
+  & li {
+    line-height: unset;
+  }
+
+  & li:not(:last-child) {
+    margin-right: 18px;
+  }
+
+  & button {
+    font-size: 0;
+    padding: 0;
+    border: none;
+    width: 12px;
+    height: 12px;
+    background-color: #d9d9d9;
+    border-radius: 50%;
+  }
+
+  & li.slick-active {
+    button {
+      background: transparent url('../images/svg/house-icon.svg') no-repeat
+        center;
+      border-radius: 0;
+    }
+  }
+}
