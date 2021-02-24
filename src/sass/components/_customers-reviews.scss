@@ -37,6 +37,7 @@
 }
 
 .review-wrapper {
+  position: relative;
   padding: 40px 50px 20px;
   margin-bottom: 30px;
   background-color: $bg-customers-review;
@@ -50,10 +51,45 @@
     padding: 47px 55px 32px;
     margin-bottom: 15px;
   }
+
+  &:before {
+    content: '';
+    display: block;
+    width: 54px;
+    height: 40px;
+    position: absolute;
+    z-index: 2;
+    top: 23px;
+    left: 60px;
+    background-image: url('../images/MobilePhoto/quotes.png');
+    background-size: 54px 40px;
+    background-repeat: no-repeat;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url('../images/MobilePhoto/quotes@2x.png');
+    }
+
+    @media screen and (min-device-pixel-ratio: 3),
+      screen and (min-resolution: 288dpi),
+      screen and (min-resolution: 3dppx) {
+      background-image: url('../images/MobilePhoto/quotes@3x.png');
+    }
+
+    @media screen and (min-width: 768px) {
+      top: 35px;
+      left: 35px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      top: 30px;
+      left: 50px;
+    }
+  }
 }
 
 .slider-review {
-  position: relative;
   padding-left: 8px;
   padding-right: 8px;
   font-size: 12px;
@@ -81,30 +117,9 @@
     line-height: 1.86;
   }
 
-  &:before {
-    content: '';
-    display: block;
-    width: 54px;
-    height: 40px;
-    position: absolute;
-    z-index: -1;
-    top: 20px;
-    left: 20px;
-    background-image: url('../images/MobilePhoto/quotes.png');
-    background-size: 54px 40px;
-    background-repeat: no-repeat;
-
-    @media screen and (min-device-pixel-ratio: 2),
-      screen and (min-resolution: 192dpi),
-      screen and (min-resolution: 2dppx) {
-      background-image: url('../images/MobilePhoto/quotes@2x.png');
-    }
-
-    @media screen and (min-device-pixel-ratio: 3),
-      screen and (min-resolution: 288dpi),
-      screen and (min-resolution: 3dppx) {
-      background-image: url('../images/MobilePhoto/quotes@3x.png');
-    }
+  .review-text {
+    position: relative;
+    z-index: 3;
   }
 }
 
