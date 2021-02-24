@@ -1,3 +1,10 @@
+.products {
+  position: relative;
+  z-index: 4;
+  padding-top: 122px;
+  background-color: $white-text-color;
+}
+
 .products-card {
   position: relative;
   height: 485px;
@@ -8,7 +15,6 @@
   &__pictur {
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 22px;
   }
 
   &.pink {
@@ -24,11 +30,15 @@
   }
 
   &__button {
-    display: block;
     width: 40px;
     height: 40px;
     margin-left: auto;
     margin-right: auto;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    @extend %button-white;
 
     border-radius: 50%;
     border: none;
@@ -98,10 +108,18 @@
 .products-item:not(:last-child) {
   margin-bottom: 130px;
 }
+.btn-position {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
-@media screen and (min-width: $mobile) and (max-width: $max-mobile) {
+@media screen and (min-width: $min-mobile) and (max-width: $max-mobile) {
   .products-card {
     width: 280px;
+    &__pictur {
+      margin-bottom: 22px;
+    }
   }
   .products-item:not(:last-child) {
     margin-bottom: 130px;
@@ -198,13 +216,18 @@
   }
   .product-text {
     font-size: 16px;
-    line-height: 176%;
+
     margin-bottom: 62px;
     margin-left: 44px;
     margin-top: 32px;
     margin-right: 44px;
   }
+
+  .btn-position {
+    bottom: 5px;
+  }
 }
+
 .products-dots {
   display: flex;
   justify-content: center;

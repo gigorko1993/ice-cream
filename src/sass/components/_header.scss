@@ -1,3 +1,299 @@
-// Якщо робити весь Header в одному Scss паршалі, можна видалити імпорт, я потім перероблю.
-// Підключаємо мобільне меню до Header
-@import './mobile-menu';
+// Стилі для хедера і мобільного меню
+.header {
+  background-color: $bg-header;
+
+  @media screen and (max-width: $max-mobile) {
+    padding-top: 7px;
+  }
+  @media screen and (min-width: $tablet) {
+    padding-top: 37px;
+  }
+}
+.header__container {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: $max-mobile) {
+    justify-content: space-between;
+    padding-left: 90px;
+  }
+  @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
+    padding-left: 104px;
+  }
+}
+.header__link-logo {
+  position: relative;
+
+  font-family: $secondary-font-family;
+  font-weight: 400;
+  font-size: 27px;
+  line-height: 44px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+.header__logo-text {
+  display: block;
+  color: $accent-color;
+  height: 100%;
+}
+.header__logo-text::before {
+  content: '';
+
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: translateX(-70px);
+
+  width: 50px;
+
+  background-color: transparent;
+  background-image: url(../images/logo_icon/logo_icon.png);
+
+  //   @media screen and (min-device-pixel-ratio: 2),
+  //   screen and (min-resolution: 192dpi),
+  //   screen and (min-resolution: 2dppx) {
+  //     background-image: url(../images/logo_icon/logo_icon@2x.png);
+  //   }
+
+  //   @media screen and (min-device-pixel-ratio: 3),
+  //   screen and (min-resolution: 288dpi),
+  //   screen and (min-resolution: 3dppx) {
+  //     background-image: url(../images/logo_icon/logo_icon@3x.png);
+  //   }
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media screen and (max-width: $max-mobile) {
+    height: 40px;
+  }
+  @media screen and (min-width: $tablet) {
+    height: 50px;
+    background-size: contain;
+  }
+}
+.header__button-menu {
+  position: relative;
+  z-index: 4;
+
+  //   padding: 0;
+  padding-top: 15px;
+  box-sizing: content-box;
+  color: $bg-menu;
+  border: none;
+
+  width: 30px;
+  height: 30px;
+
+  background-color: transparent;
+
+  @media screen and (max-width: $max-mobile) {
+    margin-left: auto;
+  }
+  @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
+    margin-left: auto;
+    margin-right: 30px;
+  }
+  @media screen and (min-width: $desktop) {
+    display: none;
+  }
+}
+.header__icon {
+  width: 30px;
+  height: 30px;
+
+  stroke: $accent-color;
+}
+
+.header__navigation {
+  @media screen and (max-width: $max-tablet) {
+    display: none;
+  }
+  @media screen and (min-width: $desktop) {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.header__list {
+  position: relative;
+  z-index: 4;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+.header__item {
+  position: relative;
+  &:not(:last-of-type) {
+    margin-right: 35px;
+  }
+}
+.header__link {
+  font-family: $main-font-family;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+
+  color: #ffffff;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+  &.header__link-current {
+    color: $accent-color;
+  }
+}
+.header__link:hover::after {
+  content: '';
+
+  position: absolute;
+  left: 0px;
+  top: 16px;
+
+  display: inline-block;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background-color: rgba(255, 0, 0, 0.2);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header__button-buy {
+  font-family: $main-font-family;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 37px;
+
+  @extend %button-white;
+  border-radius: 22px;
+  border: none;
+
+  @media screen and (max-width: $max-mobile) {
+    display: none;
+  }
+}
+.header__buy-text {
+  display: block;
+  margin-right: 12px;
+}
+.header__icon-arrow {
+  fill: currentColor;
+}
+
+// Стилі для мобільного меню
+
+.menu {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+
+  z-index: 5;
+
+  color: $white-text-color;
+  background-color: $bg-menu;
+  border: none;
+
+  height: 100vh;
+  background-color: $bg-menu;
+
+  @media screen and (max-width: $max-mobile) {
+    width: 100%;
+    padding: 23px 20px;
+  }
+  @media screen and (min-width: $tablet) {
+    width: 40%;
+    padding: 23px 34px;
+  }
+
+  transform: translateX(0);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.menu.is-hidden {
+  transform: translateX(100%);
+  display: none;
+}
+.menu__button-close {
+  padding: 0;
+  box-sizing: content-box;
+  color: $white-text-color;
+  border: none;
+
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-left: auto;
+  margin-bottom: 23px;
+}
+.menu__icon-close {
+  width: 14px;
+  height: 14px;
+
+  stroke: $white-text-color;
+}
+.menu__button-buy {
+  font-family: $main-font-family;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 48px;
+
+  color: $accent-color;
+  background-color: $white-text-color;
+  border-radius: 22px;
+  border: none;
+
+  margin-bottom: 32px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: $tablet) {
+    padding: 10px 37px;
+  }
+}
+.menu__list {
+  text-align: left;
+}
+.menu__item {
+  &:not(:last-of-type) {
+    margin-bottom: 23px;
+  }
+}
+.menu__link {
+  font-family: $main-font-family;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.29;
+
+  display: flex;
+  align-items: center;
+
+  color: $white-text-color;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+  &.menu__link-current {
+    color: $accent-color;
+  }
+}
