@@ -2,10 +2,10 @@
 .header {
   background-color: $bg-header;
 
-  @media screen and (max-width: $max-mobile) {
+  @include media_max($max-mobile) {
     padding-top: 7px;
   }
-  @media screen and (min-width: $tablet) {
+  @include media_min($tablet) {
     padding-top: 37px;
   }
 }
@@ -15,11 +15,11 @@
   display: flex;
   align-items: center;
 
-  @media screen and (max-width: $max-mobile) {
+  @include media_max($max-mobile) {
     justify-content: space-between;
     padding-left: 90px;
   }
-  @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
+  @include media_min_max($tablet, $max-tablet) {
     padding-left: 104px;
   }
 }
@@ -39,7 +39,7 @@
   height: 100%;
 }
 .header__logo-text::before {
-  content: '';
+  content: "";
 
   position: absolute;
   top: 0px;
@@ -50,25 +50,25 @@
 
   background-color: transparent;
   background-image: url(../images/logo_icon/logo_icon.png);
-
-  //   @media screen and (min-device-pixel-ratio: 2),
-  //   screen and (min-resolution: 192dpi),
-  //   screen and (min-resolution: 2dppx) {
-  //     background-image: url(../images/logo_icon/logo_icon@2x.png);
-  //   }
-
-  //   @media screen and (min-device-pixel-ratio: 3),
-  //   screen and (min-resolution: 288dpi),
-  //   screen and (min-resolution: 3dppx) {
-  //     background-image: url(../images/logo_icon/logo_icon@3x.png);
-  //   }
   background-repeat: no-repeat;
   background-position: center;
 
-  @media screen and (max-width: $max-mobile) {
-    height: 40px;
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+      background-image: url(../images/logo_icon/logo_icon@2x.png);
   }
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-device-pixel-ratio: 3),
+    screen and (min-resolution: 288dpi),
+    screen and (min-resolution: 3dppx) {
+      background-image: url(../images/logo_icon/logo_icon@3x.png);
+  }
+
+  @include media_max($max-mobile) {
+    height: 40px;
+    background-image: url(../images/logo_icon/logo_icon.png);
+  }
+  @include media_min($tablet) {
     height: 50px;
     background-size: contain;
   }
@@ -77,28 +77,54 @@
   position: relative;
   z-index: 4;
 
-  //   padding: 0;
-  padding-top: 15px;
-  box-sizing: content-box;
-  color: $bg-menu;
+  padding: 0;
   border: none;
 
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
 
   background-color: transparent;
 
-  @media screen and (max-width: $max-mobile) {
+  @include media_max($max-mobile) {
     margin-left: auto;
   }
-  @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
+  @include media_min_max($tablet, $max-tablet) {
     margin-left: auto;
     margin-right: 30px;
   }
-  @media screen and (min-width: $desktop) {
+  @include media_min($desktop) {
     display: none;
   }
 }
+.header__burger { 
+  position: relative;
+  width: 24px;
+  height: 3px;
+  align-items: center;
+  background-color: $accent-color;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 0px;
+    width: 24px;
+    height: 3px;
+    align-items: center;
+    background-color: $accent-color;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 0px;
+    width: 24px;
+    height: 3px;
+    align-items: center;
+    background-color: $accent-color;
+  }
+}
+
 .header__icon {
   width: 30px;
   height: 30px;
@@ -107,10 +133,10 @@
 }
 
 .header__navigation {
-  @media screen and (max-width: $max-tablet) {
+  @include media_max($max-tablet) {
     display: none;
   }
-  @media screen and (min-width: $desktop) {
+  @include media_min($desktop) {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -139,7 +165,7 @@
   font-size: 16px;
   line-height: 1.31;
 
-  color: #ffffff;
+  color: $white-text-color;
 
   &:hover,
   &:focus {
@@ -149,39 +175,31 @@
     color: $accent-color;
   }
 }
-.header__link:hover::after {
-  content: '';
+.header__link:hover {
+  &::after {
+    content: "";
 
-  position: absolute;
-  left: 0px;
-  top: 16px;
+    position: absolute;
+    left: 0px;
+    top: 28px;
 
-  display: inline-block;
-  width: 100%;
-  height: 15px;
-  border-radius: 5px;
-  background-color: rgba(255, 0, 0, 0.2);
+    display: inline-block;
+    width: 100%;
+    height: 3px;
+    border-radius: 5px;
+    background-color: rgba(255, 0, 0, 0.2);
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
-
 .header__button-buy {
-  font-family: $main-font-family;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.31;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   padding: 10px 37px;
+  z-index: 4;
 
   @extend %button-white;
-  border-radius: 22px;
-  border: none;
+  @extend %button-buy;
 
-  @media screen and (max-width: $max-mobile) {
+  @include media_max($max-mobile) {
     display: none;
   }
 }
@@ -207,15 +225,17 @@
   border: none;
 
   height: 100vh;
-  background-color: $bg-menu;
 
-  @media screen and (max-width: $max-mobile) {
+  @include media_min_max($min-mobile, $max-mobile) {
     width: 100%;
     padding: 23px 20px;
   }
-  @media screen and (min-width: $tablet) {
+  @include media_min_max($tablet, $max-tablet) {
     width: 40%;
     padding: 23px 34px;
+  }
+  @include media_min($desktop) {
+    display: none;
   }
 
   transform: translateX(0);
@@ -227,17 +247,18 @@
 }
 .menu__button-close {
   padding: 0;
-  box-sizing: content-box;
-  color: $white-text-color;
-  border: none;
+  margin-left: auto;
+  margin-bottom: 23px;
 
-  background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  margin-left: auto;
-  margin-bottom: 23px;
+  box-sizing: content-box;
+  border: none;
+
+  color: $white-text-color;
+  background-color: transparent;
 }
 .menu__icon-close {
   width: 14px;
@@ -246,27 +267,17 @@
   stroke: $white-text-color;
 }
 .menu__button-buy {
-  font-family: $main-font-family;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.31;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   padding: 10px 48px;
-
-  color: $accent-color;
-  background-color: $white-text-color;
-  border-radius: 22px;
-  border: none;
-
   margin-bottom: 32px;
   margin-left: auto;
   margin-right: auto;
 
-  @media screen and (min-width: $tablet) {
+  width: max-content;
+
+  @extend %button-white;
+  @extend %button-buy;
+
+  @include media_min($tablet) {
     padding: 10px 37px;
   }
 }
