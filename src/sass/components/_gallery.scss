@@ -1,6 +1,7 @@
 .gallery {
   padding-top: 40px;
   padding-bottom: 0;
+  overflow: visible;
   background: linear-gradient(
     $bg-advantages-footer 0%,
     $bg-advantages-footer 39.5%,
@@ -26,7 +27,7 @@
     );
   }
 
-  .gellery-title {
+  .gallery-title {
     position: absolute;
     clip: rect(0 0 0 0);
     width: 1px;
@@ -133,10 +134,6 @@
         box-shadow: 0px 0px 8px 5px rgba(202, 206, 202, 1);
       }
 
-      &:hover > .gallery {
-        overflow: visible;
-      }
-
       @include media_max($mobile) {
         width: 100%;
         &.small {
@@ -152,37 +149,6 @@
         border-radius: 19px;
       }
     }
-  }
-}
-
-.gallery {
-  overflow: hidden;
-
-  padding-bottom: 0;
-  background: linear-gradient(
-    $bg-advantages-footer 0%,
-    $bg-advantages-footer 39.5%,
-    $white-text-color 40.5%,
-    $white-text-color 100%
-  );
-
-  @include media_min($tablet) {
-    background: linear-gradient(
-      $bg-advantages-footer 0%,
-      $bg-advantages-footer 34%,
-      $white-text-color 35%,
-      $white-text-color 100%
-    );
-    padding-bottom: 40px;
-  }
-
-  @include media_min($desktop) {
-    background: linear-gradient(
-      $bg-advantages-footer 0%,
-      $bg-advantages-footer 36%,
-      $white-text-color 36.5%,
-      $white-text-color 100%
-    );
   }
 }
 
