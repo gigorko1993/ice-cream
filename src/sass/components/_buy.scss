@@ -376,10 +376,10 @@
     width: 16px;
     height: 16px;
 
-    background-color: #fff;
-    border-color: black;
+    background-color: $bg-header;
+    border-color: $black-text-color;
 
-    background-image: url(./../images/symbol-defs.svg#icon-checkbox);
+    // background-image: url(./../images/svg/check-mark-black-outline.svg);
     background-size: contain;
     background-repeat: no-repeat;
     background-origin: border-box;
@@ -406,7 +406,7 @@
 
   &__checkbox-input:checked + &__checkbox::after {
     background-color: $accent-color;
-    background-image: url(./../images/symbol-defs.svg#icon-checkbox);
+    background-image: url(./../images/svg/check-mark-black-outline.svg);
     fill: currentColor;
     border-radius: 2px;
     background-size: contain;
