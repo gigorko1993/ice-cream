@@ -1,6 +1,5 @@
 .about-section {
   position: relative;
-  // width: 100%;
   background: $bg-advantages-footer
     url('../images/MobilePhoto/sectionBgMobile.png') no-repeat 50% 99%;
   background-size: 100%;
@@ -41,7 +40,9 @@
 }
 
 .about-section {
+  overflow: hidden;
   padding-top: 125px;
+  padding-bottom: 10px;
 
   &-label {
     font-family: 'Titan One';
@@ -225,12 +226,14 @@
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.about-section-backdrop.backdrop--hidden {
+.about-section-backdrop.is-hidden {
+  visibility: hidden;
   opacity: 0;
   pointer-events: none;
+  overflow-y: scroll;
   transform: translate(-50%, -50%) scale(0.9);
 }
-.about-section-backdrop.backdrop--hidden .about-section-modal {
+.about-section-backdrop.is-hidden .about-section-modal {
   transform: translate(-50%, -50%) scale(0.9);
 }
 
