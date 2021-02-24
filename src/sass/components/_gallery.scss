@@ -1,4 +1,5 @@
 .gallery {
+  padding-top: 40px;
   padding-bottom: 0;
   background: linear-gradient(
     $bg-advantages-footer 0%,
@@ -14,7 +15,6 @@
       $white-text-color 35%,
       $white-text-color 100%
     );
-    padding-bottom: 40px;
   }
 
   @include media_min($desktop) {
@@ -113,16 +113,20 @@
 
     .gallery-picture {
       border-radius: 8px;
-      transform: scale(1);
       z-index: 0;
       position: relative;
       box-shadow: none;
-      transition: transform 150ms ease-in-out;
+      transition: transform 500ms ease-in-out;
 
       &:hover {
         transform: scale(1.2);
+        transition: transform 250ms;
         z-index: 10;
         box-shadow: 0px 0px 8px 5px rgba(202, 206, 202, 1);
+      }
+
+      &:hover > .gallery {
+        overflow: visible;
       }
 
       @include media_max($mobile) {
@@ -141,4 +145,133 @@
       }
     }
   }
+}
+
+.gallery {
+  overflow: hidden;
+
+  padding-bottom: 0;
+  background: linear-gradient(
+    $bg-advantages-footer 0%,
+    $bg-advantages-footer 39.5%,
+    $white-text-color 40.5%,
+    $white-text-color 100%
+  );
+
+  @include media_min($tablet) {
+    background: linear-gradient(
+      $bg-advantages-footer 0%,
+      $bg-advantages-footer 34%,
+      $white-text-color 35%,
+      $white-text-color 100%
+    );
+    padding-bottom: 40px;
+  }
+
+  @include media_min($desktop) {
+    background: linear-gradient(
+      $bg-advantages-footer 0%,
+      $bg-advantages-footer 36%,
+      $white-text-color 36.5%,
+      $white-text-color 100%
+    );
+  }
+}
+
+.gallery-picture1 {
+  transform: translateY(-315%) translateX(-200%);
+  transition: transform 250ms ease-in-out 250ms;
+
+  @include media_min(768px) {
+    transform: translateY(-255%) translateX(-200%);
+  }
+}
+
+.gallery-picture2 {
+  transform: translateY(-270%) translateX(-100%);
+  transition: transform 250ms ease-in-out 500ms;
+
+  @include media_min(768px) {
+    transform: translateY(-210%) translateX(-100%);
+  }
+}
+
+.gallery-picture3 {
+  transform: translateY(150%) translateX(-150%);
+  transition: transform 250ms ease-in-out 400ms;
+
+  @include media_min(768px) {
+    transform: translateY(195%) translateX(-150%);
+  }
+}
+
+.gallery-picture4 {
+  transform: translateY(-150%);
+  transition: transform 250ms ease-in-out 2s;
+
+  @include media_min(768px) {
+    transform: translateY(-125%);
+  }
+}
+
+.gallery-picture5 {
+  transform: translateY(105%);
+  transition: transform 250ms ease-in-out 2s;
+
+  @include media_min(768px) {
+    transform: translateY(150%);
+  }
+
+  @include media_min(1280px) {
+    transform: translateY(130%);
+  }
+}
+
+.gallery-picture6 {
+  transform: translateY(-280%);
+  transition: transform 250ms ease-in-out 2s;
+
+  @include media_min(768px) {
+    transform: translateY(-220%);
+  }
+}
+
+.gallery-picture7 {
+  transform: translateY(140%);
+  transition: transform 250ms ease-in-out;
+
+  @include media_min(768px) {
+    transform: translateY(180%);
+  }
+}
+
+.gallery-picture8 {
+  transform: translateY(-245%) translateX(150%);
+  transition: transform 250ms ease-in-out;
+
+  @include media_min(768px) {
+    transform: translateY(-190%) translateX(150%);
+  }
+}
+
+.gallery-picture9 {
+  transform: translateY(170%) translateX(-150%);
+  transition: transform 250ms ease-in-out;
+
+  @include media_min(768px) {
+    transform: translateY(215%) translateX(-150%);
+  }
+}
+
+.gallery-picture10 {
+  transform: translateY(210%) translateX(200%);
+  transition: transform 250ms ease-in-out;
+
+  @include media_min(768px) {
+    transform: translateY(255%) translateX(200%);
+  }
+}
+
+.picture-appear {
+  transform: translateY(0);
 }
