@@ -2,10 +2,10 @@
 .header {
   background-color: $bg-header;
 
-  @media screen and (max-width: $max-mobile) {
+  @include media_max($max-mobile) {
     padding-top: 7px;
   }
-  @media screen and (min-width: $tablet) {
+  @include media_min($tablet) {
     padding-top: 37px;
   }
 }
@@ -15,11 +15,11 @@
   display: flex;
   align-items: center;
 
-  @media screen and (max-width: $max-mobile) {
+  @include media_max($max-mobile) {
     justify-content: space-between;
     padding-left: 90px;
   }
-  @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
+  @include media_min_max($tablet, $max-tablet) {
     padding-left: 104px;
   }
 }
@@ -64,11 +64,11 @@
       background-image: url(../images/logo_icon/logo_icon@3x.png);
   }
 
-  @media screen and (max-width: $max-mobile) {
+  @include media_max($max-mobile) {
     height: 40px;
     background-image: url(../images/logo_icon/logo_icon.png);
   }
-  @media screen and (min-width: $tablet) {
+  @include media_min($tablet) {
     height: 50px;
     background-size: contain;
   }
@@ -85,14 +85,14 @@
 
   background-color: transparent;
 
-  @media screen and (max-width: $max-mobile) {
+  @include media_max($max-mobile) {
     margin-left: auto;
   }
-  @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
+  @include media_min_max($tablet, $max-tablet) {
     margin-left: auto;
     margin-right: 30px;
   }
-  @media screen and (min-width: $desktop) {
+  @include media_min($desktop) {
     display: none;
   }
 }
@@ -133,10 +133,10 @@
 }
 
 .header__navigation {
-  @media screen and (max-width: $max-tablet) {
+  @include media_max($max-tablet) {
     display: none;
   }
-  @media screen and (min-width: $desktop) {
+  @include media_min($desktop) {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -165,7 +165,7 @@
   font-size: 16px;
   line-height: 1.31;
 
-  color: #ffffff;
+  color: $white-text-color;
 
   &:hover,
   &:focus {
@@ -199,7 +199,7 @@
   @extend %button-white;
   @extend %button-buy;
 
-  @media screen and (max-width: $max-mobile) {
+  @include media_max($max-mobile) {
     display: none;
   }
 }
@@ -226,15 +226,15 @@
 
   height: 100vh;
 
-  @media screen and (min-width: $min-mobile) and (max-width: $max-mobile) {
+  @include media_min_max($min-mobile, $max-mobile) {
     width: 100%;
     padding: 23px 20px;
   }
-  @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
+  @include media_min_max($tablet, $max-tablet) {
     width: 40%;
     padding: 23px 34px;
   }
-  @media screen and (min-width: $desktop) {
+  @include media_min($desktop) {
     display: none;
   }
 
@@ -277,7 +277,7 @@
   @extend %button-white;
   @extend %button-buy;
 
-  @media screen and (min-width: $tablet) {
+  @include media_min($tablet) {
     padding: 10px 37px;
   }
 }
