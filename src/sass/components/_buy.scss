@@ -7,9 +7,17 @@
 
 // розмітка продуктів
 .buy {
-  padding: 30px 15px;
+  position: relative;
+  padding: 30px 0;
 
   background-color: rgba(255, 198, 212, 0.8);
+
+  &-container {
+    @media screen and (min-width: $tablet) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
 
   &-tittle {
     position: relative;
@@ -27,7 +35,7 @@
 
   .buy-button {
     position: absolute;
-    top: 205px;
+    top: 160px;
 
     border: 1px solid transparent;
     border-radius: 22px;
@@ -35,28 +43,77 @@
     align-items: center;
     text-align: center;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.29;
-    padding: 10px 37px;
+    padding: 10px 10px;
     @extend %button-white;
 
     cursor: pointer;
 
-    @media screen and (min-width: $tablet) {
-      font-size: 16px;
-      line-height: 1.31;
-    }
-
     &-icecream {
-      left: 29%;
+      left: 6%;
     }
 
     &-icecoffee {
-      left: 45%;
+      left: 38%;
     }
 
     &-milkshake {
-      left: 60%;
+      left: 70%;
+    }
+
+    @media screen and (min-width: $mobile) {
+      top: 140px;
+
+      font-size: 14px;
+      line-height: 1.29;
+      padding: 10px 20px;
+
+      &-icecream {
+        left: 9%;
+      }
+
+      &-icecoffee {
+        left: 40%;
+      }
+
+      &-milkshake {
+        left: 70%;
+      }
+    }
+
+    @media screen and (min-width: $tablet) {
+      top: 100px;
+      font-size: 16px;
+      line-height: 1.31;
+
+      padding: 10px 37px;
+
+      &-icecream {
+        left: 18%;
+      }
+
+      &-icecoffee {
+        left: 42%;
+      }
+
+      &-milkshake {
+        left: 66%;
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      &-icecream {
+        left: 30%;
+      }
+
+      &-icecoffee {
+        left: 45%;
+      }
+
+      &-milkshake {
+        left: 60%;
+      }
     }
   }
 }
@@ -195,49 +252,6 @@
     }
   }
 
-  // &__description {
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   width: 100%;
-  //   height: 100%;
-  //   background-color: rgba(33, 150, 243, 0.9);
-  //   transform: translateY(100%);
-
-  //   // @include transition (transform);
-  // }
-
-  // &__specification {
-  //   margin: 77px 24px;
-
-  //   font-weight: normal;
-  //   font-size: 26px;
-  //   line-height: 1.56;
-
-  //   text-align: center;
-
-  //   color: pink;
-
-  //   @media screen and (min-width: 768px) {
-  //     margin: 49px 24px;
-  //   }
-
-  //   @media screen and (min-width: 1200px) {
-  //     position: absolute;
-  //     width: 322px;
-  //     height: 168px;
-  //     margin: 0;
-  //     top: 50%;
-  //     left: 50%;
-  //     transform: translate(-50%, -50%);
-  //   }
-  // }
-
-  // &__link:focus .example__description,
-  // &__link:hover .example__description {
-  //   transform: translateY(0);
-  // }
-
   /* TABLET */
 
   @media screen and (min-width: 768px) {
@@ -247,6 +261,7 @@
       margin-top: -50px;
       margin-right: -15px;
       margin-left: -15px;
+      // padding-right: 15px;
     }
 
     &__item {
@@ -291,9 +306,8 @@
 
   &__label {
     position: absolute;
-    bottom: 0;
-    left: -275%;
-    // transform: translateX(-50%);
+    bottom: -2px;
+    left: -190%;
     font-size: 18px;
     font-weight: bold;
     color: $black-text-color;
@@ -302,6 +316,14 @@
 
     transition-property: opacity;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (min-width: $tablet) {
+      left: -170%;
+    }
+
+    @media screen and (min-width: $desktop) {
+      left: -160%;
+    }
   }
 
   &__checkbox-input:checked ~ .example__modal-form__label {
@@ -366,7 +388,7 @@
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
       border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop) {
       left: 12px;
     }
   }
@@ -383,7 +405,7 @@
   }
 
   &__checkbox-input:checked + &__checkbox::after {
-    background-color: blue;
+    background-color: $accent-color;
     background-image: url(./../images/symbol-defs.svg#icon-checkbox);
     fill: currentColor;
     border-radius: 2px;
@@ -395,21 +417,8 @@
   }
 }
 
-// .example__link:focus .example__modal-form__checkbox,
-// .example__link:hover .example__modal-form__checkbox {
-//   opacity: 1;
-// }
-
-// .example__link:focus .example__modal-form__checkbox-text,
-// .example__link:hover .example__modal-form__checkbox-text {
-//   opacity: 1;
-// }
-
-// .example__link:not(:focus)
-//   .example__modal-form__checkbox-input:checked
-//   + .example__modal-form__checkbox::after,
-// .example__link:not(:hover)
-//   .example__modal-form__checkbox-input:checked
-//   + .example__modal-form__checkbox::after {
-//   opacity: 1;
-// }
+.amount-block {
+  @media screen and (max-width: $max-responsive-mobile) {
+    opacity: 0;
+  }
+}

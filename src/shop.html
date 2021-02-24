@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
@@ -9,10 +9,10 @@
     />
     <link rel="stylesheet" href="./slick/slick.scss" />
     <!--<link rel="stylesheet" href="./slick/slick-theme.scss" />-->
-    <tittle>IceCreame</tittle>
+    <title>IceCreame</title>
     <link rel="shortcut icon" href="images/favicon.png" type="images/png" />
     <link rel="stylesheet" href="./sass/main.scss">
-  </head>
+</head>
     <body>
 
         <!-- <div class="overlay"></div> -->
@@ -96,720 +96,742 @@
 
 
 <section class="buy">
-    <h2 class="buy-tittle">
-        Select a product category
-    </h2>
-
-    <ul>
-        <button class="buy-button buy-button-icecream" onclick="showDiv()">Ice Cream</button>
-        <div class="info-div" style="display:none" align="right">
-            <ul class="example__list list">
-                <li class="example__item">
-                    <a class="example__link" href="#">
-                        <div class="example__overlay">
-                            <picture>
-                                <source srcset="
-                                ./images/Buy/icecreamoptimize/photo-icecream1.webp"
-                                type="image/webp">
-
-                                <source srcset="
-                                ./images/Buy/icecreamoptimize/photo-icecream1.jpg">
-    
-                                <img class="example__photo" 
-                                src="./images/Buy/icecreamoptimize/photo-icecream1.jpg" 
-                                alt="Ice Cream" />
-                            </picture>
-                        </div>
-                        <div class="example__content">
-                            <h3 class="example__tittle">Strawberry</h3>
-                            <div class="example__price-container">
-                                <p class="example__text">2,99$</p>
-                                <form class="example__modal-form">
-                                    <div class="example__modal-form__checkbox-field">
-                                        <input class="example__modal-form__checkbox-input visually-hidden" type="checkbox" name="consent"
-                                            value="consent" id="checkbox13">
-                                        <label class="example__modal-form__checkbox" for="checkbox13">
-                                            <span class="example__modal-form__checkbox-text">Buy</span>
-                                        </label>
-                                        <label class="example__modal-form__label">
-                                            Amount:
-                                            <input class="example__modal-form__input" type="number" name="weight" min="1" max="100" step="1"
-                                                value="0" />
-                                        </label>
+    <div class="container buy-container">
+            <h2 class="buy-tittle">
+                Select a product category
+            </h2>
+            
+            <ul>
+                <button class="buy-button buy-button-icecream" onclick="showDiv()">Ice Cream</button>
+                <div class="info-div" style="display:none" align="right">
+                    <ul class="example__list list">
+                        <li class="example__item">
+                            <a class="example__link" href="#">
+                                <div class="example__overlay">
+                                    <picture>
+                                        <source srcset="
+                                            ./images/Buy/icecreamoptimize/photo-icecream1.webp" type="image/webp">
+            
+                                        <source srcset="
+                                            ./images/Buy/icecreamoptimize/photo-icecream1.jpg">
+            
+                                        <img class="example__photo" src="./images/Buy/icecreamoptimize/photo-icecream1.jpg"
+                                            alt="Ice Cream" />
+                                    </picture>
+                                </div>
+                                <div class="example__content">
+                                    <h3 class="example__tittle">Strawberry</h3>
+                                    <div class="example__price-container">
+                                        <p class="example__text">2,99$</p>
+                                        <form class="example__modal-form">
+                                            <div class="example__modal-form__checkbox-field">
+                                                <input class="example__modal-form__checkbox-input visually-hidden" type="checkbox"
+                                                    name="consent" value="consent" id="checkbox13">
+                                                <label class="example__modal-form__checkbox" for="checkbox13">
+                                                    <span class="example__modal-form__checkbox-text">Buy</span>
+                                                </label>
+                                                <label class="example__modal-form__label">
+                                                    <span class="amount-block">
+                                                        Amount:
+                                                    </span>
+                                                    <input class="example__modal-form__input" type="number" name="weight" min="1"
+                                                        max="100" step="1" value="0" />
+                                                </label>
+                                            </div>
+                                        </form>
                                     </div>
-                                </form>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-
-                <li class="example__item">
-                    <a class="example__link" href="#">
-                        <div class="example__overlay">
-                             <picture>
-                                <source srcset="
-                                ./images/Buy/icecreamoptimize/photo-icecream2.webp" type="image/webp">
-                                
-                                <source srcset="
-                                ./images/Buy/icecreamoptimize/photo-icecream2.jpg">
-    
-                                <img class="example__photo" 
-                                src="./images/Buy/icecreamoptimize/photo-icecream2.jpg" 
-                                alt="Ice Cream" />
-                            </picture> 
-                        </div>
-                        <div class="example__content">
-                            <h3 class="example__tittle">Strawberry</h3>
-                            <div class="example__price-container">
-                                <p class="example__text">2,99$</p>
-                                <form class="example__modal-form">
-                                    <div class="example__modal-form__checkbox-field">
-                                        <input class="example__modal-form__checkbox-input visually-hidden" type="checkbox" name="consent"
-                                            value="consent" id="checkbox14">
-                                        <label class="example__modal-form__checkbox" for="checkbox14">
-                                            <span class="example__modal-form__checkbox-text">Buy</span>
-                                        </label>
-                                        <label class="example__modal-form__label">
-                                            Amount:
-                                            <input class="example__modal-form__input" type="number" name="weight" min="1" max="100" step="1"
-                                                value="0" />
-                                        </label>
+                                </div>
+                            </a>
+                        </li>
+            
+                        <li class="example__item">
+                            <a class="example__link" href="#">
+                                <div class="example__overlay">
+                                    <picture>
+                                        <source srcset="
+                                            ./images/Buy/icecreamoptimize/photo-icecream2.webp" type="image/webp">
+            
+                                        <source srcset="
+                                            ./images/Buy/icecreamoptimize/photo-icecream2.jpg">
+            
+                                        <img class="example__photo" src="./images/Buy/icecreamoptimize/photo-icecream2.jpg"
+                                            alt="Ice Cream" />
+                                    </picture>
+                                </div>
+                                <div class="example__content">
+                                    <h3 class="example__tittle">Strawberry</h3>
+                                    <div class="example__price-container">
+                                        <p class="example__text">2,99$</p>
+                                        <form class="example__modal-form">
+                                            <div class="example__modal-form__checkbox-field">
+                                                <input class="example__modal-form__checkbox-input visually-hidden" type="checkbox"
+                                                    name="consent" value="consent" id="checkbox14">
+                                                <label class="example__modal-form__checkbox" for="checkbox14">
+                                                    <span class="example__modal-form__checkbox-text">Buy</span>
+                                                </label>
+                                                <label class="example__modal-form__label">
+                                                                                                        <span class="amount-block">
+                                                                                                            Amount:
+                                                                                                        </span>
+                                                    <input class="example__modal-form__input" type="number" name="weight" min="1"
+                                                        max="100" step="1" value="0" />
+                                                </label>
+                                            </div>
+                                        </form>
                                     </div>
-                                </form>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-
-                <li class="example__item">
-                    <a class="example__link" href="#">
-                        <div class="example__overlay">
-                             <picture>
-                                <source srcset="
-                                ./images/Buy/icecreamoptimize/photo-icecream3.webp" type="image/webp">
-                                
-                                <source srcset="
-                                ./images/Buy/icecreamoptimize/photo-icecream3.jpg">
-    
-                                <img class="example__photo" 
-                                src="./images/Buy/icecreamoptimize/photo-icecream3.jpg" 
-                                alt="Ice Cream" />
-                            </picture> 
-                        </div>
-                        <div class="example__content">
-                            <h3 class="example__tittle">Strawberry</h3>
-                            <div class="example__price-container">
-                                <p class="example__text">2,99$</p>
-                                <form class="example__modal-form">
-                                    <div class="example__modal-form__checkbox-field">
-                                        <input class="example__modal-form__checkbox-input visually-hidden" type="checkbox" name="consent"
-                                            value="consent" id="checkbox15">
-                                        <label class="example__modal-form__checkbox" for="checkbox15">
-                                            <span class="example__modal-form__checkbox-text">Buy</span>
-                                        </label>
-                                        <label class="example__modal-form__label">
-                                            Amount:
-                                            <input class="example__modal-form__input" type="number" name="weight" min="1" max="100" step="1"
-                                                value="0" />
-                                        </label>
+                                </div>
+                            </a>
+                        </li>
+            
+                        <li class="example__item">
+                            <a class="example__link" href="#">
+                                <div class="example__overlay">
+                                    <picture>
+                                        <source srcset="
+                                            ./images/Buy/icecreamoptimize/photo-icecream3.webp" type="image/webp">
+            
+                                        <source srcset="
+                                            ./images/Buy/icecreamoptimize/photo-icecream3.jpg">
+            
+                                        <img class="example__photo" src="./images/Buy/icecreamoptimize/photo-icecream3.jpg"
+                                            alt="Ice Cream" />
+                                    </picture>
+                                </div>
+                                <div class="example__content">
+                                    <h3 class="example__tittle">Strawberry</h3>
+                                    <div class="example__price-container">
+                                        <p class="example__text">2,99$</p>
+                                        <form class="example__modal-form">
+                                            <div class="example__modal-form__checkbox-field">
+                                                <input class="example__modal-form__checkbox-input visually-hidden" type="checkbox"
+                                                    name="consent" value="consent" id="checkbox15">
+                                                <label class="example__modal-form__checkbox" for="checkbox15">
+                                                    <span class="example__modal-form__checkbox-text">Buy</span>
+                                                </label>
+                                                <label class="example__modal-form__label">
+                                                                                                        <span class="amount-block">
+                                                                                                            Amount:
+                                                                                                        </span>
+                                                    <input class="example__modal-form__input" type="number" name="weight" min="1"
+                                                        max="100" step="1" value="0" />
+                                                </label>
+                                            </div>
+                                        </form>
                                     </div>
-                                </form>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-
-                <li class="example__item">
-                    <a class="example__link" href="#">
-                        <div class="example__overlay">
-                             <picture>
-                                <source srcset="
-                                ./images/Buy/icecreamoptimize/photo-icecream4.webp" type="image/webp">
-                                
-                                <source srcset="
-                                ./images/Buy/icecreamoptimize/photo-icecream4.jpg">
-    
-                                <img class="example__photo" 
-                                src="./images/Buy/icecreamoptimize/photo-icecream4.jpg" 
-                                alt="Ice Cream" />
-                            </picture> 
-                        </div>
-                        <div class="example__content">
-                            <h3 class="example__tittle">Strawberry</h3>
-                            <div class="example__price-container">
-                                <p class="example__text">2,99$</p>
-                                <form class="example__modal-form">
-                                    <div class="example__modal-form__checkbox-field">
-                                        <input class="example__modal-form__checkbox-input visually-hidden" type="checkbox" name="consent"
-                                            value="consent" id="checkbox16">
-                                        <label class="example__modal-form__checkbox" for="checkbox16">
-                                            <span class="example__modal-form__checkbox-text">Buy</span>
-                                        </label>
-                                        <label class="example__modal-form__label">
-                                            Amount:
-                                            <input class="example__modal-form__input" type="number" name="weight" min="1" max="100" step="1"
-                                                value="0" />
-                                        </label>
+                                </div>
+                            </a>
+                        </li>
+            
+                        <li class="example__item">
+                            <a class="example__link" href="#">
+                                <div class="example__overlay">
+                                    <picture>
+                                        <source srcset="
+                                            ./images/Buy/icecreamoptimize/photo-icecream4.webp" type="image/webp">
+            
+                                        <source srcset="
+                                            ./images/Buy/icecreamoptimize/photo-icecream4.jpg">
+            
+                                        <img class="example__photo" src="./images/Buy/icecreamoptimize/photo-icecream4.jpg"
+                                            alt="Ice Cream" />
+                                    </picture>
+                                </div>
+                                <div class="example__content">
+                                    <h3 class="example__tittle">Strawberry</h3>
+                                    <div class="example__price-container">
+                                        <p class="example__text">2,99$</p>
+                                        <form class="example__modal-form">
+                                            <div class="example__modal-form__checkbox-field">
+                                                <input class="example__modal-form__checkbox-input visually-hidden" type="checkbox"
+                                                    name="consent" value="consent" id="checkbox16">
+                                                <label class="example__modal-form__checkbox" for="checkbox16">
+                                                    <span class="example__modal-form__checkbox-text">Buy</span>
+                                                </label>
+                                                <label class="example__modal-form__label">
+                                                                                                        <span class="amount-block">
+                                                                                                            Amount:
+                                                                                                        </span>
+                                                    <input class="example__modal-form__input" type="number" name="weight" min="1"
+                                                        max="100" step="1" value="0" />
+                                                </label>
+                                            </div>
+                                        </form>
                                     </div>
-                                </form>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-
-                <li class="example__item">
-                    <a class="example__link" href="#">
-                        <div class="example__overlay">
-                             <picture>
-                                <source srcset="
-                                ./images/Buy/icecreamoptimize/photo-icecream5.webp" type="image/webp">
-                                
-                                <source srcset="
-                                ./images/Buy/icecreamoptimize/photo-icecream5.jpg">
-    
-                                <img class="example__photo" 
-                                src="./images/Buy/icecreamoptimize/photo-icecream5.jpg" 
-                                alt="Ice Cream" />
-                            </picture> 
-                        </div>   
-                        <div class="example__content">
-                            <h3 class="example__tittle">Strawberry</h3>
-                            <div class="example__price-container">
-                                <p class="example__text">2,99$</p>
-                                <form class="example__modal-form">
-                                    <div class="example__modal-form__checkbox-field">
-                                        <input class="example__modal-form__checkbox-input visually-hidden" type="checkbox" name="consent"
-                                            value="consent" id="checkbox17">
-                                        <label class="example__modal-form__checkbox" for="checkbox17">
-                                            <span class="example__modal-form__checkbox-text">Buy</span>
-                                        </label>
-                                        <label class="example__modal-form__label">
-                                            Amount:
-                                            <input class="example__modal-form__input" type="number" name="weight" min="1" max="100" step="1"
-                                                value="0" />
-                                        </label>
+                                </div>
+                            </a>
+                        </li>
+            
+                        <li class="example__item">
+                            <a class="example__link" href="#">
+                                <div class="example__overlay">
+                                    <picture>
+                                        <source srcset="
+                                            ./images/Buy/icecreamoptimize/photo-icecream5.webp" type="image/webp">
+            
+                                        <source srcset="
+                                            ./images/Buy/icecreamoptimize/photo-icecream5.jpg">
+            
+                                        <img class="example__photo" src="./images/Buy/icecreamoptimize/photo-icecream5.jpg"
+                                            alt="Ice Cream" />
+                                    </picture>
+                                </div>
+                                <div class="example__content">
+                                    <h3 class="example__tittle">Strawberry</h3>
+                                    <div class="example__price-container">
+                                        <p class="example__text">2,99$</p>
+                                        <form class="example__modal-form">
+                                            <div class="example__modal-form__checkbox-field">
+                                                <input class="example__modal-form__checkbox-input visually-hidden" type="checkbox"
+                                                    name="consent" value="consent" id="checkbox17">
+                                                <label class="example__modal-form__checkbox" for="checkbox17">
+                                                    <span class="example__modal-form__checkbox-text">Buy</span>
+                                                </label>
+                                                <label class="example__modal-form__label">
+                                                                                                        <span class="amount-block">
+                                                                                                            Amount:
+                                                                                                        </span>
+                                                    <input class="example__modal-form__input" type="number" name="weight" min="1"
+                                                        max="100" step="1" value="0" />
+                                                </label>
+                                            </div>
+                                        </form>
                                     </div>
-                                </form>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-
-                <li class="example__item">
-                    <a class="example__link" href="#">
-                        <div class="example__overlay">
-                            <picture>
-                                <source srcset="
-                                ./images/Buy/icecreamoptimize/photo-icecream6.webp" type="image/webp">
-                                
-                                <source srcset="
-                                ./images/Buy/icecreamoptimize/photo-icecream6.jpg">
-    
-                                <img class="example__photo" 
-                                src="./images/Buy/icecreamoptimize/photo-icecream6.jpg" 
-                                alt="Ice Cream" />
-                            </picture> 
-                        </div>   
-                        <div class="example__content">
-                            <h3 class="example__tittle">Strawberry</h3>
-                            <div class="example__price-container">
-                                <p class="example__text">2,99$</p>
-                                <form class="example__modal-form">
-                                    <div class="example__modal-form__checkbox-field">
-                                        <input class="example__modal-form__checkbox-input visually-hidden" type="checkbox" name="consent"
-                                            value="consent" id="checkbox18">
-                                        <label class="example__modal-form__checkbox" for="checkbox18">
-                                            <span class="example__modal-form__checkbox-text">Buy</span>
-                                        </label>
-                                        <label class="example__modal-form__label">
-                                            Amount:
-                                            <input class="example__modal-form__input" type="number" name="weight" min="1" max="100" step="1"
-                                                value="0" />
-                                        </label>
+                                </div>
+                            </a>
+                        </li>
+            
+                        <li class="example__item">
+                            <a class="example__link" href="#">
+                                <div class="example__overlay">
+                                    <picture>
+                                        <source srcset="
+                                            ./images/Buy/icecreamoptimize/photo-icecream6.webp" type="image/webp">
+            
+                                        <source srcset="
+                                            ./images/Buy/icecreamoptimize/photo-icecream6.jpg">
+            
+                                        <img class="example__photo" src="./images/Buy/icecreamoptimize/photo-icecream6.jpg"
+                                            alt="Ice Cream" />
+                                    </picture>
+                                </div>
+                                <div class="example__content">
+                                    <h3 class="example__tittle">Strawberry</h3>
+                                    <div class="example__price-container">
+                                        <p class="example__text">2,99$</p>
+                                        <form class="example__modal-form">
+                                            <div class="example__modal-form__checkbox-field">
+                                                <input class="example__modal-form__checkbox-input visually-hidden" type="checkbox"
+                                                    name="consent" value="consent" id="checkbox18">
+                                                <label class="example__modal-form__checkbox" for="checkbox18">
+                                                    <span class="example__modal-form__checkbox-text">Buy</span>
+                                                </label>
+                                                <label class="example__modal-form__label">
+                                                                                                        <span class="amount-block">
+                                                                                                            Amount:
+                                                                                                        </span>
+                                                    <input class="example__modal-form__input" type="number" name="weight" min="1"
+                                                        max="100" step="1" value="0" />
+                                                </label>
+                                            </div>
+                                        </form>
                                     </div>
-                                </form>
-                            </div>
-                        </div>
-                    </a>
-                </li>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+            
+                    <button class="buy-button-order" type="button">Place an order</button>
+                </div>
+            </ul>
+            
+            <ul>
+                <button class="buy-button buy-button-icecoffee" onclick="showDiv()">Ice Coffee</button>
+                <div class="info-div" style="display:none" align="right">
+                    <ul class="example__list list">
+                        <li class="example__item">
+                            <a class="example__link" href="#">
+                                <div class="example__overlay">
+                                    <picture>
+                                        <source srcset="
+                                            ./images/Buy/icecoffeeoptimize/icecoffee1.webp" type="image/webp">
+            
+                                        <source srcset="
+                                            ./images/Buy/icecoffeeoptimize/icecoffee1.jpg">
+            
+                                        <img class="example__photo" src="./images/Buy/icecoffeeoptimize/icecoffee1.jpg"
+                                            alt="Ice Coffee" />
+                                    </picture>
+                                </div>
+                                <div class="example__content">
+                                    <h3 class="example__tittle">Cherry</h3>
+                                    <div class="example__price-container">
+                                        <p class="example__text">3,99$</p>
+                                        <form class="example__modal-form">
+                                            <div class="example__modal-form__checkbox-field">
+                                                <input class="example__modal-form__checkbox-input visually-hidden" type="checkbox"
+                                                    name="consent" value="consent" id="checkbox7">
+                                                <label class="example__modal-form__checkbox" for="checkbox7">
+                                                    <span class="example__modal-form__checkbox-text">Buy</span>
+                                                </label>
+                                                <label class="example__modal-form__label">
+                                                                                                        <span class="amount-block">
+                                                                                                            Amount:
+                                                                                                        </span>
+                                                    <input class="example__modal-form__input" type="number" name="weight" min="1"
+                                                        max="100" step="1" value="0" />
+                                                </label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+            
+                        <li class="example__item">
+                            <a class="example__link" href="#">
+                                <div class="example__overlay">
+                                    <picture>
+                                        <source srcset="
+                                            ./images/Buy/icecoffeeoptimize/icecoffee2.webp" type="image/webp">
+            
+                                        <source srcset="
+                                            ./images/Buy/icecoffeeoptimize/icecoffee2.jpg">
+            
+                                        <img class="example__photo" src="./images/Buy/icecoffeeoptimize/icecoffee2.jpg"
+                                            alt="Ice Coffee" />
+                                    </picture>
+                                </div>
+                                <div class="example__content">
+                                    <h3 class="example__tittle">Cherry</h3>
+                                    <div class="example__price-container">
+                                        <p class="example__text">3,99$</p>
+                                        <form class="example__modal-form">
+                                            <div class="example__modal-form__checkbox-field">
+                                                <input class="example__modal-form__checkbox-input visually-hidden" type="checkbox"
+                                                    name="consent" value="consent" id="checkbox8">
+                                                <label class="example__modal-form__checkbox" for="checkbox8">
+                                                    <span class="example__modal-form__checkbox-text">Buy</span>
+                                                </label>
+                                                <label class="example__modal-form__label">
+                                                                                                        <span class="amount-block">
+                                                                                                            Amount:
+                                                                                                        </span>
+                                                    <input class="example__modal-form__input" type="number" name="weight" min="1"
+                                                        max="100" step="1" value="0" />
+                                                </label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+            
+                        <li class="example__item">
+                            <a class="example__link" href="#">
+                                <div class="example__overlay">
+                                    <picture>
+                                        <source srcset="
+                                            ./images/Buy/icecoffeeoptimize/icecoffee3.webp" type="image/webp">
+            
+                                        <source srcset="
+                                            ./images/Buy/icecoffeeoptimize/icecoffee3.jpg">
+            
+                                        <img class="example__photo" src="./images/Buy/icecoffeeoptimize/icecoffee3.jpg"
+                                            alt="Ice Coffee" />
+                                    </picture>
+                                </div>
+                                <div class="example__content">
+                                    <h3 class="example__tittle">Cherry</h3>
+                                    <div class="example__price-container">
+                                        <p class="example__text">3,99$</p>
+                                        <form class="example__modal-form">
+                                            <div class="example__modal-form__checkbox-field">
+                                                <input class="example__modal-form__checkbox-input visually-hidden" type="checkbox"
+                                                    name="consent" value="consent" id="checkbox9">
+                                                <label class="example__modal-form__checkbox" for="checkbox9">
+                                                    <span class="example__modal-form__checkbox-text">Buy</span>
+                                                </label>
+                                                <label class="example__modal-form__label">
+                                                                                                        <span class="amount-block">
+                                                                                                            Amount:
+                                                                                                        </span>
+                                                    <input class="example__modal-form__input" type="number" name="weight" min="1"
+                                                        max="100" step="1" value="0" />
+                                                </label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+            
+                        <li class="example__item">
+                            <a class="example__link" href="#">
+                                <div class="example__overlay">
+                                    <picture>
+                                        <source srcset="
+                                            ./images/Buy/icecoffeeoptimize/icecoffee4.webp" type="image/webp">
+            
+                                        <source srcset="
+                                            ./images/Buy/icecoffeeoptimize/icecoffee4.jpg">
+            
+                                        <img class="example__photo" src="./images/Buy/icecoffeeoptimize/icecoffee4.jpg"
+                                            alt="Ice Coffee" />
+                                    </picture>
+                                </div>
+                                <div class="example__content">
+                                    <h3 class="example__tittle">Cherry</h3>
+                                    <div class="example__price-container">
+                                        <p class="example__text">3,99$</p>
+                                        <form class="example__modal-form">
+                                            <div class="example__modal-form__checkbox-field">
+                                                <input class="example__modal-form__checkbox-input visually-hidden" type="checkbox"
+                                                    name="consent" value="consent" id="checkbox10">
+                                                <label class="example__modal-form__checkbox" for="checkbox10">
+                                                    <span class="example__modal-form__checkbox-text">Buy</span>
+                                                </label>
+                                                <label class="example__modal-form__label">
+                                                                                                        <span class="amount-block">
+                                                                                                            Amount:
+                                                                                                        </span>
+                                                    <input class="example__modal-form__input" type="number" name="weight" min="1"
+                                                        max="100" step="1" value="0" />
+                                                </label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+            
+                        <li class="example__item">
+                            <a class="example__link" href="#">
+                                <div class="example__overlay">
+                                    <picture>
+                                        <source srcset="
+                                            ./images/Buy/icecoffeeoptimize/icecoffee5.webp" type="image/webp">
+            
+                                        <source srcset="
+                                            ./images/Buy/icecoffeeoptimize/icecoffee5.jpg">
+            
+                                        <img class="example__photo" src="./images/Buy/icecoffeeoptimize/icecoffee5.jpg"
+                                            alt="Ice Coffee" />
+                                    </picture>
+                                </div>
+                                <div class="example__content">
+                                    <h3 class="example__tittle">Cherry</h3>
+                                    <div class="example__price-container">
+                                        <p class="example__text">3,99$</p>
+                                        <form class="example__modal-form">
+                                            <div class="example__modal-form__checkbox-field">
+                                                <input class="example__modal-form__checkbox-input visually-hidden" type="checkbox"
+                                                    name="consent" value="consent" id="checkbox11">
+                                                <label class="example__modal-form__checkbox" for="checkbox11">
+                                                    <span class="example__modal-form__checkbox-text">Buy</span>
+                                                </label>
+                                                <label class="example__modal-form__label">
+                                                                                                        <span class="amount-block">
+                                                                                                            Amount:
+                                                                                                        </span>
+                                                    <input class="example__modal-form__input" type="number" name="weight" min="1"
+                                                        max="100" step="1" value="0" />
+                                                </label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+            
+                        <li class="example__item">
+                            <a class="example__link" href="#">
+                                <div class="example__overlay">
+                                    <picture>
+                                        <source srcset="
+                                            ./images/Buy/icecoffeeoptimize/icecoffee6.webp" type="image/webp">
+            
+                                        <source srcset="
+                                            ./images/Buy/icecoffeeoptimize/icecoffee6.jpg">
+            
+                                        <img class="example__photo" src="./images/Buy/icecoffeeoptimize/icecoffee6.jpg"
+                                            alt="Ice Coffee" />
+                                    </picture>
+                                </div>
+                                <div class="example__content">
+                                    <h3 class="example__tittle">Cherry</h3>
+                                    <div class="example__price-container">
+                                        <p class="example__text">3,99$</p>
+                                        <form class="example__modal-form">
+                                            <div class="example__modal-form__checkbox-field">
+                                                <input class="example__modal-form__checkbox-input visually-hidden" type="checkbox"
+                                                    name="consent" value="consent" id="checkbox12">
+                                                <label class="example__modal-form__checkbox" for="checkbox12">
+                                                    <span class="example__modal-form__checkbox-text">Buy</span>
+                                                </label>
+                                                <label class="example__modal-form__label">
+                                                                                                        <span class="amount-block">
+                                                                                                            Amount:
+                                                                                                        </span>
+                                                    <input class="example__modal-form__input" type="number" name="weight" min="1"
+                                                        max="100" step="1" value="0" />
+                                                </label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+            
+                    <button class="buy-button-order" type="button">Place an order</button>
+                </div>
+            </ul>
+            
+            <ul>
+                <button class="buy-button buy-button-milkshake" onclick="showDiv()">Milkshake</button>
+                <div class="info-div" style="display:none" align="right">
+                    <ul class="example__list list">
+                        <li class="example__item">
+                            <a class="example__link" href="#">
+                                <div class="example__overlay">
+                                    <picture>
+                                        <source srcset="
+                                            ./images/Buy/milkshakeoptimize/milkshake1.webp" type="image/webp">
+            
+                                        <source srcset="
+                                            ./images/Buy/milkshakeoptimize/milkshake1.jpg">
+            
+                                        <img class="example__photo" src="./images/Buy/milkshakeoptimize/milkshake1.jpg"
+                                            alt="Milkshake" />
+                                    </picture>
+                                </div>
+                                <div class="example__content">
+                                    <h3 class="example__tittle">Chocolate</h3>
+                                    <div class="example__price-container">
+                                        <p class="example__text">2,49$</p>
+                                        <form class="example__modal-form">
+                                            <div class="example__modal-form__checkbox-field">
+                                                <input class="example__modal-form__checkbox-input visually-hidden" type="checkbox"
+                                                    name="consent" value="consent" id="checkbox">
+                                                <label class="example__modal-form__checkbox" for="checkbox">
+                                                    <span class="example__modal-form__checkbox-text">Buy</span>
+                                                </label>
+                                                <label class="example__modal-form__label">
+                                                                                                        <span class="amount-block">
+                                                                                                            Amount:
+                                                                                                        </span>
+                                                    <input class="example__modal-form__input" type="number" name="weight" min="1"
+                                                        max="100" step="1" value="0" />
+                                                </label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+            
+                        <li class="example__item">
+                            <a class="example__link" href="#">
+                                <div class="example__overlay">
+                                    <picture>
+                                        <source srcset="
+                                            ./images/Buy/milkshakeoptimize/milkshake2.webp" type="image/webp">
+            
+                                        <source srcset="
+                                            ./images/Buy/milkshakeoptimize/milkshake2.jpg">
+            
+                                        <img class="example__photo" src="./images/Buy/milkshakeoptimize/milkshake2.jpg"
+                                            alt="Milkshake" />
+                                    </picture>
+                                </div>
+                                <div class="example__content">
+                                    <h3 class="example__tittle">Chocolate</h3>
+                                    <div class="example__price-container">
+                                        <p class="example__text">2,49$</p>
+                                        <form class="example__modal-form">
+                                            <div class="example__modal-form__checkbox-field">
+                                                <input class="example__modal-form__checkbox-input visually-hidden" type="checkbox"
+                                                    name="consent" value="consent" id="checkbox2">
+                                                <label class="example__modal-form__checkbox" for="checkbox2">
+                                                    <span class="example__modal-form__checkbox-text">Buy</span>
+                                                </label>
+                                                <label class="example__modal-form__label">
+                                                                                                        <span class="amount-block">
+                                                                                                            Amount:
+                                                                                                        </span>
+                                                    <input class="example__modal-form__input" type="number" name="weight" min="1"
+                                                        max="100" step="1" value="0" />
+                                                </label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+            
+                        <li class="example__item">
+                            <a class="example__link" href="#">
+                                <div class="example__overlay">
+                                    <picture>
+                                        <source srcset="
+                                            ./images/Buy/milkshakeoptimize/milkshake3.webp" type="image/webp">
+            
+                                        <source srcset="
+                                            ./images/Buy/milkshakeoptimize/milkshake3.jpg">
+            
+                                        <img class="example__photo" src="./images/Buy/milkshakeoptimize/milkshake3.jpg"
+                                            alt="Milkshake" />
+                                    </picture>
+                                </div>
+                                <div class="example__content">
+                                    <h3 class="example__tittle">Chocolate</h3>
+                                    <div class="example__price-container">
+                                        <p class="example__text">2,49$</p>
+                                        <form class="example__modal-form">
+                                            <div class="example__modal-form__checkbox-field">
+                                                <input class="example__modal-form__checkbox-input visually-hidden" type="checkbox"
+                                                    name="consent" value="consent" id="checkbox3">
+                                                <label class="example__modal-form__checkbox" for="checkbox3">
+                                                    <span class="example__modal-form__checkbox-text">Buy</span>
+                                                </label>
+                                                <label class="example__modal-form__label">
+                                                                                                        <span class="amount-block">
+                                                                                                            Amount:
+                                                                                                        </span>
+                                                    <input class="example__modal-form__input" type="number" name="weight" min="1"
+                                                        max="100" step="1" value="0" />
+                                                </label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+            
+                        <li class="example__item">
+                            <a class="example__link" href="#">
+                                <div class="example__overlay">
+                                    <picture>
+                                        <source srcset="
+                                            ./images/Buy/milkshakeoptimize/milkshake4.webp" type="image/webp">
+            
+                                        <source srcset="
+                                            ./images/Buy/milkshakeoptimize/milkshake4.jpg">
+            
+                                        <img class="example__photo" src="./images/Buy/milkshakeoptimize/milkshake4.jpg"
+                                            alt="Milkshake" />
+                                    </picture>
+                                </div>
+                                <div class="example__content">
+                                    <h3 class="example__tittle">Chocolate</h3>
+                                    <div class="example__price-container">
+                                        <p class="example__text">2,49$</p>
+                                        <form class="example__modal-form">
+                                            <div class="example__modal-form__checkbox-field">
+                                                <input class="example__modal-form__checkbox-input visually-hidden" type="checkbox"
+                                                    name="consent" value="consent" id="checkbox4">
+                                                <label class="example__modal-form__checkbox" for="checkbox4">
+                                                    <span class="example__modal-form__checkbox-text">Buy</span>
+                                                </label>
+                                                <label class="example__modal-form__label">
+                                                                                                        <span class="amount-block">
+                                                                                                            Amount:
+                                                                                                        </span>
+                                                    <input class="example__modal-form__input" type="number" name="weight" min="1"
+                                                        max="100" step="1" value="0" />
+                                                </label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+            
+                        <li class="example__item">
+                            <a class="example__link" href="#">
+                                <div class="example__overlay">
+                                    <picture>
+                                        <source srcset="
+                                            ./images/Buy/milkshakeoptimize/milkshake5.webp" type="image/webp">
+            
+                                        <source srcset="
+                                            ./images/Buy/milkshakeoptimize/milkshake5.jpg">
+            
+                                        <img class="example__photo" src="./images/Buy/milkshakeoptimize/milkshake5.jpg"
+                                            alt="Milkshake" />
+                                    </picture>
+                                </div>
+                                <div class="example__content">
+                                    <h3 class="example__tittle">Chocolate</h3>
+                                    <div class="example__price-container">
+                                        <p class="example__text">2,49$</p>
+                                        <form class="example__modal-form">
+                                            <div class="example__modal-form__checkbox-field">
+                                                <input class="example__modal-form__checkbox-input visually-hidden" type="checkbox"
+                                                    name="consent" value="consent" id="checkbox5">
+                                                <label class="example__modal-form__checkbox" for="checkbox5">
+                                                    <span class="example__modal-form__checkbox-text">Buy</span>
+                                                </label>
+                                                <label class="example__modal-form__label">
+                                                                                                        <span class="amount-block">
+                                                                                                            Amount:
+                                                                                                        </span>
+                                                    <input class="example__modal-form__input" type="number" name="weight" min="1"
+                                                        max="100" step="1" value="0" />
+                                                </label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+            
+                        <li class="example__item">
+                            <a class="example__link" href="#">
+                                <div class="example__overlay">
+                                    <picture>
+                                        <source srcset="
+                                            ./images/Buy/milkshakeoptimize/milkshake6.webp" type="image/webp">
+            
+                                        <source srcset="
+                                            ./images/Buy/milkshakeoptimize/milkshake6.jpg">
+            
+                                        <img class="example__photo" src="./images/Buy/milkshakeoptimize/milkshake6.jpg"
+                                            alt="Milkshake" />
+                                    </picture>
+                                </div>
+                                <div class="example__content">
+                                    <h3 class="example__tittle">Chocolate</h3>
+                                    <div class="example__price-container">
+                                        <p class="example__text">2,49$</p>
+                                        <form class="example__modal-form">
+                                            <div class="example__modal-form__checkbox-field">
+                                                <input class="example__modal-form__checkbox-input visually-hidden" type="checkbox"
+                                                    name="consent" value="consent" id="checkbox6">
+                                                <label class="example__modal-form__checkbox" for="checkbox6">
+                                                    <span class="example__modal-form__checkbox-text">Buy</span>
+                                                </label>
+                                                <label class="example__modal-form__label">
+                                                                                                        <span class="amount-block">
+                                                                                                            Amount:
+                                                                                                        </span>
+                                                    <input class="example__modal-form__input" type="number" name="weight" min="1"
+                                                        max="100" step="1" value="0" />
+                                                </label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+            
+                    <button class="buy-button-order" type="button">Place an order</button>
+                </div>
             </ul>
 
-            <button class="buy-button-order" type="button">Place an order</button>
-        </div>
-    </ul>
+    </div>
 
-    <ul>
-        <button class="buy-button buy-button-icecoffee" onclick="showDiv()">Ice Coffee</button>
-        <div class="info-div" style="display:none" align="right">
-            <ul class="example__list list">
-                <li class="example__item">
-                    <a class="example__link" href="#">
-                        <div class="example__overlay">
-                            <picture>
-                                <source srcset="
-                                ./images/Buy/icecoffeeoptimize/icecoffee1.webp" type="image/webp">
-                                
-                                <source srcset="
-                                ./images/Buy/icecoffeeoptimize/icecoffee1.jpg">
-    
-                                <img class="example__photo" 
-                                src="./images/Buy/icecoffeeoptimize/icecoffee1.jpg" 
-                                alt="Ice Coffee" />
-                            </picture>
-                        </div>
-                        <div class="example__content">
-                            <h3 class="example__tittle">Cherry</h3>
-                            <div class="example__price-container">
-                                <p class="example__text">3,99$</p>
-                                <form class="example__modal-form">
-                                    <div class="example__modal-form__checkbox-field">
-                                        <input class="example__modal-form__checkbox-input visually-hidden" type="checkbox" name="consent"
-                                            value="consent" id="checkbox7">
-                                        <label class="example__modal-form__checkbox" for="checkbox7">
-                                            <span class="example__modal-form__checkbox-text">Buy</span>
-                                        </label>
-                                        <label class="example__modal-form__label">
-                                            Amount:
-                                            <input class="example__modal-form__input" type="number" name="weight" min="1" max="100" step="1"
-                                                value="0" />
-                                        </label>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-
-                <li class="example__item">
-                    <a class="example__link" href="#">
-                        <div class="example__overlay">
-                             <picture>
-                                <source srcset="
-                                ./images/Buy/icecoffeeoptimize/icecoffee2.webp" type="image/webp">
-                                
-                                <source srcset="
-                                ./images/Buy/icecoffeeoptimize/icecoffee2.jpg">
-    
-                                <img class="example__photo" 
-                                src="./images/Buy/icecoffeeoptimize/icecoffee2.jpg" 
-                                alt="Ice Coffee" />
-                            </picture> 
-                        </div>
-                        <div class="example__content">
-                            <h3 class="example__tittle">Cherry</h3>
-                            <div class="example__price-container">
-                                <p class="example__text">3,99$</p>
-                                <form class="example__modal-form">
-                                    <div class="example__modal-form__checkbox-field">
-                                        <input class="example__modal-form__checkbox-input visually-hidden" type="checkbox" name="consent"
-                                            value="consent" id="checkbox8">
-                                        <label class="example__modal-form__checkbox" for="checkbox8">
-                                            <span class="example__modal-form__checkbox-text">Buy</span>
-                                        </label>
-                                        <label class="example__modal-form__label">
-                                            Amount:
-                                            <input class="example__modal-form__input" type="number" name="weight" min="1" max="100" step="1"
-                                                value="0" />
-                                        </label>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-
-                <li class="example__item">
-                    <a class="example__link" href="#">
-                        <div class="example__overlay">
-                             <picture>
-                                <source srcset="
-                                ./images/Buy/icecoffeeoptimize/icecoffee3.webp" type="image/webp">
-                                
-                                <source srcset="
-                                ./images/Buy/icecoffeeoptimize/icecoffee3.jpg">
-    
-                                <img class="example__photo" 
-                                src="./images/Buy/icecoffeeoptimize/icecoffee3.jpg" 
-                                alt="Ice Coffee" />
-                            </picture> 
-                        </div>
-                        <div class="example__content">
-                            <h3 class="example__tittle">Cherry</h3>
-                            <div class="example__price-container">
-                                <p class="example__text">3,99$</p>
-                                <form class="example__modal-form">
-                                    <div class="example__modal-form__checkbox-field">
-                                        <input class="example__modal-form__checkbox-input visually-hidden" type="checkbox" name="consent"
-                                            value="consent" id="checkbox9">
-                                        <label class="example__modal-form__checkbox" for="checkbox9">
-                                            <span class="example__modal-form__checkbox-text">Buy</span>
-                                        </label>
-                                        <label class="example__modal-form__label">
-                                            Amount:
-                                            <input class="example__modal-form__input" type="number" name="weight" min="1" max="100" step="1"
-                                                value="0" />
-                                        </label>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-
-                <li class="example__item">
-                    <a class="example__link" href="#">
-                        <div class="example__overlay">
-                             <picture>
-                                <source srcset="
-                                ./images/Buy/icecoffeeoptimize/icecoffee4.webp" type="image/webp">
-                                
-                                <source srcset="
-                                ./images/Buy/icecoffeeoptimize/icecoffee4.jpg">
-    
-                                <img class="example__photo" 
-                                src="./images/Buy/icecoffeeoptimize/icecoffee4.jpg" 
-                                alt="Ice Coffee" />
-                            </picture> 
-                        </div>
-                        <div class="example__content">
-                            <h3 class="example__tittle">Cherry</h3>
-                            <div class="example__price-container">
-                                <p class="example__text">3,99$</p>
-                                <form class="example__modal-form">
-                                    <div class="example__modal-form__checkbox-field">
-                                        <input class="example__modal-form__checkbox-input visually-hidden" type="checkbox" name="consent"
-                                            value="consent" id="checkbox10">
-                                        <label class="example__modal-form__checkbox" for="checkbox10">
-                                            <span class="example__modal-form__checkbox-text">Buy</span>
-                                        </label>
-                                        <label class="example__modal-form__label">
-                                            Amount:
-                                            <input class="example__modal-form__input" type="number" name="weight" min="1" max="100" step="1"
-                                                value="0" />
-                                        </label>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-
-                <li class="example__item">
-                    <a class="example__link" href="#">
-                        <div class="example__overlay">
-                             <picture>
-                                <source srcset="
-                                ./images/Buy/icecoffeeoptimize/icecoffee5.webp" type="image/webp">
-                                
-                                <source srcset="
-                                ./images/Buy/icecoffeeoptimize/icecoffee5.jpg">
-    
-                                <img class="example__photo" 
-                                src="./images/Buy/icecoffeeoptimize/icecoffee5.jpg" 
-                                alt="Ice Coffee" />
-                            </picture> 
-                        </div>   
-                        <div class="example__content">
-                            <h3 class="example__tittle">Cherry</h3>
-                            <div class="example__price-container">
-                                <p class="example__text">3,99$</p>
-                                <form class="example__modal-form">
-                                    <div class="example__modal-form__checkbox-field">
-                                        <input class="example__modal-form__checkbox-input visually-hidden" type="checkbox" name="consent"
-                                            value="consent" id="checkbox11">
-                                        <label class="example__modal-form__checkbox" for="checkbox11">
-                                            <span class="example__modal-form__checkbox-text">Buy</span>
-                                        </label>
-                                        <label class="example__modal-form__label">
-                                            Amount:
-                                            <input class="example__modal-form__input" type="number" name="weight" min="1" max="100" step="1"
-                                                value="0" />
-                                        </label>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-
-                <li class="example__item">
-                    <a class="example__link" href="#">
-                        <div class="example__overlay">
-                            <picture>
-                                <source srcset="
-                                ./images/Buy/icecoffeeoptimize/icecoffee6.webp" type="image/webp">
-                                
-                                <source srcset="
-                                ./images/Buy/icecoffeeoptimize/icecoffee6.jpg">
-    
-                                <img class="example__photo" 
-                                src="./images/Buy/icecoffeeoptimize/icecoffee6.jpg" 
-                                alt="Ice Coffee" />
-                            </picture> 
-                        </div>   
-                        <div class="example__content">
-                            <h3 class="example__tittle">Cherry</h3>
-                            <div class="example__price-container">
-                                <p class="example__text">3,99$</p>
-                                <form class="example__modal-form">
-                                    <div class="example__modal-form__checkbox-field">
-                                        <input class="example__modal-form__checkbox-input visually-hidden" type="checkbox" name="consent"
-                                            value="consent" id="checkbox12">
-                                        <label class="example__modal-form__checkbox" for="checkbox12">
-                                            <span class="example__modal-form__checkbox-text">Buy</span>
-                                        </label>
-                                        <label class="example__modal-form__label">
-                                            Amount:
-                                            <input class="example__modal-form__input" type="number" name="weight" min="1" max="100" step="1"
-                                                value="0" />
-                                        </label>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-
-            <button class="buy-button-order" type="button">Place an order</button>
-        </div>
-    </ul>
-
-    <ul>
-        <button class="buy-button buy-button-milkshake" onclick="showDiv()">Milkshake</button>
-        <div class="info-div" style="display:none" align="right">
-            <ul class="example__list list">
-                <li class="example__item">
-                    <a class="example__link" href="#">
-                        <div class="example__overlay">
-                            <picture>
-                                <source srcset="
-                                ./images/Buy/milkshakeoptimize/milkshake1.webp" type="image/webp">
-                                
-                                <source srcset="
-                                ./images/Buy/milkshakeoptimize/milkshake1.jpg">
-    
-                                <img class="example__photo" 
-                                src="./images/Buy/milkshakeoptimize/milkshake1.jpg" 
-                                alt="Milkshake"/>
-                            </picture>
-                        </div>
-                        <div class="example__content">
-                            <h3 class="example__tittle">Chocolate</h3>
-                            <div class="example__price-container">
-                                <p class="example__text">2,49$</p>
-                                <form class="example__modal-form">
-                                    <div class="example__modal-form__checkbox-field">
-                                        <input class="example__modal-form__checkbox-input visually-hidden" type="checkbox" name="consent" value="consent"
-                                            id="checkbox">
-                                        <label class="example__modal-form__checkbox" for="checkbox">
-                                            <span class="example__modal-form__checkbox-text">Buy</span>
-                                        </label>
-                                        <label class="example__modal-form__label">
-                                            Amount:
-                                            <input class="example__modal-form__input" type="number" name="weight" min="1" max="100" step="1" value="0" />
-                                        </label>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-
-                <li class="example__item">
-                    <a class="example__link" href="#">
-                        <div class="example__overlay">
-                             <picture>
-                                <source srcset="
-                                ./images/Buy/milkshakeoptimize/milkshake2.webp" type="image/webp">
-                                
-                                <source srcset="
-                                ./images/Buy/milkshakeoptimize/milkshake2.jpg">
-                                
-                                <img class="example__photo" 
-                                src="./images/Buy/milkshakeoptimize/milkshake2.jpg" 
-                                alt="Milkshake"/>
-                            </picture> 
-                        </div>
-                        <div class="example__content">
-                            <h3 class="example__tittle">Chocolate</h3>
-                            <div class="example__price-container">
-                                <p class="example__text">2,49$</p>
-                                <form class="example__modal-form">
-                                    <div class="example__modal-form__checkbox-field">
-                                        <input class="example__modal-form__checkbox-input visually-hidden" type="checkbox" name="consent"
-                                            value="consent" id="checkbox2">
-                                        <label class="example__modal-form__checkbox" for="checkbox2">
-                                            <span class="example__modal-form__checkbox-text">Buy</span>
-                                        </label>
-                                        <label class="example__modal-form__label">
-                                            Amount:
-                                            <input class="example__modal-form__input" type="number" name="weight" min="1" max="100" step="1"
-                                                value="0" />
-                                        </label>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-
-                <li class="example__item">
-                    <a class="example__link" href="#">
-                        <div class="example__overlay">
-                             <picture>
-                                <source srcset="
-                                ./images/Buy/milkshakeoptimize/milkshake3.webp" type="image/webp">
-                                
-                                <source srcset="
-                                ./images/Buy/milkshakeoptimize/milkshake3.jpg">
-                            
-                                <img class="example__photo" 
-                                src="./images/Buy/milkshakeoptimize/milkshake3.jpg" 
-                                alt="Milkshake" />
-                            </picture> 
-                        </div>
-                        <div class="example__content">
-                            <h3 class="example__tittle">Chocolate</h3>
-                            <div class="example__price-container">
-                                <p class="example__text">2,49$</p>
-                                <form class="example__modal-form">
-                                    <div class="example__modal-form__checkbox-field">
-                                        <input class="example__modal-form__checkbox-input visually-hidden" type="checkbox" name="consent"
-                                            value="consent" id="checkbox3">
-                                        <label class="example__modal-form__checkbox" for="checkbox3">
-                                            <span class="example__modal-form__checkbox-text">Buy</span>
-                                        </label>
-                                        <label class="example__modal-form__label">
-                                            Amount:
-                                            <input class="example__modal-form__input" type="number" name="weight" min="1" max="100" step="1"
-                                                value="0" />
-                                        </label>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-
-                <li class="example__item">
-                    <a class="example__link" href="#">
-                        <div class="example__overlay">
-                             <picture>
-                                <source srcset="
-                                ./images/Buy/milkshakeoptimize/milkshake4.webp" type="image/webp">
-                                
-                                <source srcset="
-                                ./images/Buy/milkshakeoptimize/milkshake4.jpg">
-                                
-                                <img class="example__photo" 
-                                src="./images/Buy/milkshakeoptimize/milkshake4.jpg" 
-                                alt="Milkshake" />
-                            </picture> 
-                        </div>
-                        <div class="example__content">
-                            <h3 class="example__tittle">Chocolate</h3>
-                            <div class="example__price-container">
-                                <p class="example__text">2,49$</p>
-                                <form class="example__modal-form">
-                                    <div class="example__modal-form__checkbox-field">
-                                        <input class="example__modal-form__checkbox-input visually-hidden" type="checkbox" name="consent"
-                                            value="consent" id="checkbox4">
-                                        <label class="example__modal-form__checkbox" for="checkbox4">
-                                            <span class="example__modal-form__checkbox-text">Buy</span>
-                                        </label>
-                                        <label class="example__modal-form__label">
-                                            Amount:
-                                            <input class="example__modal-form__input" type="number" name="weight" min="1" max="100" step="1"
-                                                value="0" />
-                                        </label>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-
-                <li class="example__item">
-                    <a class="example__link" href="#">
-                        <div class="example__overlay">
-                             <picture>
-                                <source srcset="
-                                ./images/Buy/milkshakeoptimize/milkshake5.webp" type="image/webp">
-                                
-                                <source srcset="
-                                ./images/Buy/milkshakeoptimize/milkshake5.jpg">
-    
-                                <img class="example__photo" 
-                                src="./images/Buy/milkshakeoptimize/milkshake5.jpg" 
-                                alt="Milkshake" />
-                            </picture> 
-                        </div>   
-                        <div class="example__content">
-                            <h3 class="example__tittle">Chocolate</h3>
-                            <div class="example__price-container">
-                                <p class="example__text">2,49$</p>
-                                <form class="example__modal-form">
-                                    <div class="example__modal-form__checkbox-field">
-                                        <input class="example__modal-form__checkbox-input visually-hidden" type="checkbox" name="consent"
-                                            value="consent" id="checkbox5">
-                                        <label class="example__modal-form__checkbox" for="checkbox5">
-                                            <span class="example__modal-form__checkbox-text">Buy</span>
-                                        </label>
-                                        <label class="example__modal-form__label">
-                                            Amount:
-                                            <input class="example__modal-form__input" type="number" name="weight" min="1" max="100" step="1"
-                                                value="0" />
-                                        </label>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-
-                <li class="example__item">
-                    <a class="example__link" href="#">
-                        <div class="example__overlay">
-                            <picture>
-                                <source srcset="
-                                ./images/Buy/milkshakeoptimize/milkshake6.webp" type="image/webp">
-                                
-                                <source srcset="
-                                ./images/Buy/milkshakeoptimize/milkshake6.jpg">
-    
-                                <img class="example__photo" 
-                                src="./images/Buy/milkshakeoptimize/milkshake6.jpg" 
-                                alt="Milkshake" />
-                            </picture> 
-                        </div>   
-                        <div class="example__content">
-                            <h3 class="example__tittle">Chocolate</h3>
-                            <div class="example__price-container">
-                                <p class="example__text">2,49$</p>
-                                <form class="example__modal-form">
-                                    <div class="example__modal-form__checkbox-field">
-                                        <input class="example__modal-form__checkbox-input visually-hidden" type="checkbox" name="consent"
-                                            value="consent" id="checkbox6">
-                                        <label class="example__modal-form__checkbox" for="checkbox6">
-                                            <span class="example__modal-form__checkbox-text">Buy</span>
-                                        </label>
-                                        <label class="example__modal-form__label">
-                                            Amount:
-                                            <input class="example__modal-form__input" type="number" name="weight" min="1" max="100" step="1"
-                                                value="0" />
-                                        </label>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-
-            <button class="buy-button-order" type="button">Place an order</button>
-        </div>
-    </ul>
 </section>
 
 <section class="footer">
