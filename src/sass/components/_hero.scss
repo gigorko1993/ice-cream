@@ -18,18 +18,18 @@
     padding-bottom: 56px;
   }
 
-  &-container {
+  &__container {
     position: relative;
   }
 
   // Позиціонування фонових картинок
-  &-image {
+  &__image {
     position: absolute;
     z-index: 3;
   }
 
-  &-image-circle {
-    left: 36px;
+  &__image-circle {
+    right: -62px;
     bottom: -85px;
     z-index: 2;
     width: 346px;
@@ -37,35 +37,35 @@
     fill: $secondary-text-color;
 
     @include media_min($tablet) {
-      left: 307px;
+      right: 137px;
       bottom: 12px;
       width: 324px;
       height: 324px;
     }
     @include media_min($desktop) {
-      left: 475px;
+      right: 267px;
       bottom: 19px;
       width: 538px;
       height: 538px;
     }
   }
 
-  &-image-main {
-    left: 117px;
+  &__image-main {
+    right: 32px;
     bottom: -160px;
 
     @include media_min($tablet) {
-      left: 378px;
+      right: 247px;
       bottom: -33px;
     }
     @include media_min($desktop) {
-      left: 594px;
+      right: 450px;
       bottom: -56px;
     }
   }
 
-  &-image-tasty {
-    left: 566px;
+  &__image-tasty {
+    right: 34px;
     bottom: -33px;
 
     @include media_max($max-mobile) {
@@ -73,7 +73,7 @@
     }
 
     @include media_min($desktop) {
-      left: 878px;
+      right: 109px;
       bottom: -56px;
     }
 
@@ -87,7 +87,7 @@
     animation-fill-mode: forwards;
   }
 
-  &-thumb {
+  &__thumb {
     position: relative;
     z-index: 4;
 
@@ -103,7 +103,7 @@
     }
   }
 
-  &-title-box {
+  &__title-box {
     max-width: 220px;
 
     @include media_min($tablet) {
@@ -115,7 +115,7 @@
     }
   }
 
-  &-title {
+  &__title {
     color: $accent-color;
 
     font-family: $secondary-font-family;
@@ -138,7 +138,7 @@
     }
   }
 
-  &-title-label {
+  &__title-label {
     display: inline-block;
 
     color: $white-text-color;
@@ -157,7 +157,7 @@
     }
   }
 
-  &-button {
+  &__button {
     display: inline-block;
     padding-top: 8px;
     padding-right: 13px;
@@ -182,28 +182,28 @@
     }
   }
 
-  &-button-pink {
+  &__button-pink {
     @extend %button-pink;
   }
 
-  &-button-white,
-  &-link {
+  &__button-white,
+  &__link {
     @extend %button-white;
   }
 
-  &-list {
+  &__list {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
   }
 
-  &-item {
+  &__item {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
   }
 
-  &-item-number {
+  &__item-number {
     position: relative;
 
     color: $accent-color;
@@ -220,7 +220,7 @@
     }
   }
 
-  &-item-number::after {
+  &__item-number::after {
     @include media_min($tablet) {
       position: absolute;
       top: -2px;
@@ -244,7 +244,7 @@
     }
   }
 
-  &-item-unit {
+  &__item-unit {
     font-size: 8px;
     line-height: 10px;
     font-weight: 400;
@@ -255,11 +255,11 @@
     }
   }
 
-  &-item:not(:last-child) {
+  &__item:not(:last-child) {
     margin-bottom: 15px;
   }
 
-  &-link-thumb-flex {
+  &__link-thumb-flex {
     display: flex;
     align-items: flex-end;
     position: relative;
@@ -269,7 +269,7 @@
     }
   }
 
-  &-link-milk {
+  &__link-milk {
     border: 0px;
     outline: none;
     padding: 0px;
@@ -283,7 +283,7 @@
     }
   }
 
-  &-image-bio {
+  &__image-bio {
     position: absolute;
     bottom: 0;
     left: 0px;
@@ -293,7 +293,7 @@
     }
   }
 
-  &-text {
+  &__text {
     margin-left: 120px;
     margin-bottom: 7px;
     max-width: 114px;
@@ -318,7 +318,7 @@
     scrollbar-color: rgba(216, 162, 176, 0.4) rgba(248, 121, 151, 0.4);
   }
 
-  &-text.is-shown {
+  &__text.is-shown {
     height: 78px;
     overflow-y: scroll;
     position: absolute;
@@ -329,12 +329,12 @@
     }
   }
 
-  &-text.is-shown ~ .hero-link {
+  &__text.is-shown ~ .hero-link {
     position: absolute;
     bottom: 0px;
   }
 
-  &-link {
+  &__link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -355,19 +355,19 @@
     }
   }
 
-  &-add-thumb {
+  &__add-thumb {
     display: inline-block;
   }
 
-  &-list,
-  &-text,
-  &-link {
+  &__list,
+  &__text,
+  &__link {
     @include media_max($max-mobile) {
       display: none;
     }
   }
 
-  &-link-image {
+  &__link-image {
     fill: $accent-color;
     width: 5px;
     height: 4px;
@@ -380,8 +380,8 @@
 }
 
 @include media_min($tablet) {
-  .hero-link-milk:hover .hero-image-bio,
-  .hero-link-milk:focus .hero-image-bio {
+  .hero__link-milk:hover .hero__image-bio,
+  .hero__link-milk:focus .hero__image-bio {
     transform: rotate(5deg) scale(1.07);
   }
 }
@@ -404,7 +404,7 @@
 
 // Custom scroll bar for IE Opera Chrome Safari
 // width of the entire scrollbar
-.hero-text::-webkit-scrollbar {
+.hero__text::-webkit-scrollbar {
   width: 3px;
 
   @include media_min($desktop) {
@@ -413,7 +413,7 @@
 }
 
 //  color of the tracking area
-.hero-text::-webkit-scrollbar-track {
+.hero__text::-webkit-scrollbar-track {
   background: rgba(216, 162, 176, 0.4);
 }
 
@@ -421,7 +421,7 @@
 //  roundness of the scroll thumb
 //  creates padding around scroll thumb
 
-.hero-text::-webkit-scrollbar-thumb {
+.hero__text::-webkit-scrollbar-thumb {
   background-color: rgba(248, 121, 151, 0.4);
   border-radius: 5px;
   border: 1px solid rgba(255, 145, 171, 0.479);
