@@ -166,20 +166,10 @@
 }
 
 .header__button-buy {
-  font-family: $main-font-family;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.31;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   padding: 10px 37px;
 
   @extend %button-white;
-  border-radius: 22px;
-  border: none;
+  @extend %button-buy;
 
   @media screen and (max-width: $max-mobile) {
     display: none;
@@ -207,7 +197,6 @@
   border: none;
 
   height: 100vh;
-  background-color: $bg-menu;
 
   @media screen and (min-width: $min-mobile) and (max-width: $max-mobile) {
     width: 100%;
@@ -249,25 +238,14 @@
   stroke: $white-text-color;
 }
 .menu__button-buy {
-  font-family: $main-font-family;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.31;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   padding: 10px 48px;
-
-  color: $accent-color;
-  background-color: $white-text-color;
-  border-radius: 22px;
-  border: none;
-
   margin-bottom: 32px;
+  width: max-content;
   margin-left: auto;
   margin-right: auto;
+
+  @extend %button-white;
+  @extend %button-buy;
 
   @media screen and (min-width: $tablet) {
     padding: 10px 37px;
