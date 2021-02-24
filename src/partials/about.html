@@ -6,11 +6,27 @@
 <div class="about-section-box">
 
     <div class="about-section-picture">
-      <img class="about-section-image" src="../src/images/MobilePhoto/cowMobile.png" 
-        alt="фото корови" 
-        width="280"
-        srcset="../src/images/MobilePhoto/cowMobile.webp 1x, ../src/images/MobilePhoto/cowMobile@2x.webp 2x, ../src/images/MobilePhoto/cowMobile@2x.png 2x, ../src/images/MobilePhoto/cowMobile@3x.webp 3x, ../src/images/MobilePhoto/cowMobile@3x.png 3x, ../src/images/TabletPhoto/cowTablet.webp 1x, ../src/images/TabletPhoto/cowTablet@2x.webp 2x, ../src/images/TabletPhoto/cowTablet@2x.png 2x, ../src/images/TabletPhoto/cowTablet@3x.webp 3x, ../src/images/TabletPhoto/cowTablet@3x.png 3x,
-        ../src/images/DesktopPhoto/cowDesktop.webp 1x, ../src/images/DesktopPhoto/cowDesktop@2x.webp 2x, ../src/images/DesktopPhoto/cowDesktop@2x.png 2x, ../src/images/DesktopPhoto/cowDesktop@3x.webp 3x, ../src/images/DesktopPhoto/cowDesktop@3x.png 3x "/>
+<picture class="about-section-picture-2">
+  <source 
+  srcset="../src/images/MobilePhoto/cowMobile.webp 1x, ../src/images/MobilePhoto/cowMobile@2x.webp 2x, ../src/images/MobilePhoto/cowMobile@3x.webp 3x"
+  type="image/webp" media="(max-width: 767px)" />
+  <source 
+  srcset="../src/images/TabletPhoto/cowTablet.webp 1x, ../src/images/TabletPhoto/cowTablet@2x.webp 2x, ../src/images/TabletPhoto/cowTablet@3x.webp 3x"
+  type="image/webp" media="(max-width: 1279px)" />
+  <source
+    srcset="../src/images/DesktopPhoto/cowDesktop.webp 1x, ../src/images/DesktopPhoto/cowDesktop@2x.webp 2x, ../src/images/DesktopPhoto/cowDesktop@3x.webp 3x"
+    type="image/webp" media="(min-width: 1280px)" />
+  <source
+      srcset="../src/images/DesktopPhoto/cowDesktop.png 1x, ../src/images/DesktopPhoto/cowDesktop@2x.png 2x, ../src/images/DesktopPhoto/cowDesktop@3x.png 3x"
+      media="(min-width: 1280px)" />
+  <!-- <img class="about-section-image" src="../src/images/MobilePhoto/cowMobile.png" 
+        alt="cow image" 
+        width="280"> -->
+  <!-- srcset="../src/images/MobilePhoto/cowMobile.webp 1x, ../src/images/MobilePhoto/cowMobile@2x.webp 2x, ../src/images/MobilePhoto/cowMobile@2x.png 2x, ../src/images/MobilePhoto/cowMobile@3x.webp 3x, ../src/images/MobilePhoto/cowMobile@3x.png 3x, ../src/images/TabletPhoto/cowTablet.webp 1x, ../src/images/TabletPhoto/cowTablet@2x.webp 2x, ../src/images/TabletPhoto/cowTablet@2x.png 2x, ../src/images/TabletPhoto/cowTablet@3x.webp 3x, ../src/images/TabletPhoto/cowTablet@3x.png 3x,
+        ../src/images/DesktopPhoto/cowDesktop.webp 1x, ../src/images/DesktopPhoto/cowDesktop@2x.webp 2x, ../src/images/DesktopPhoto/cowDesktop@2x.png 2x, ../src/images/DesktopPhoto/cowDesktop@3x.webp 3x, ../src/images/DesktopPhoto/cowDesktop@3x.png 3x "/> -->
+<img class="about-section-image" src="../src/images/MobilePhoto/cowMobile.png" 
+        alt="cow image" width="280" />
+</picture>
     </div>
 
    <div class="about-section-description">
@@ -27,7 +43,7 @@
       <p class="about-section-text-3">
         Aliquam erat volutpat. Aenean accumsan.
       </p>
-      <button type="button" class="about-section-button" data-toggle-backdrop-schedule>Read more
+      <button type="button" class="about-section-button" data-about-open>Read more
         <!-- <svg width="8" height="9" class="about-section-button-arrow" style="outline: none;">
         <polyline points="0,0 4, 4,0 8" fill="transparent" stroke-width="1.5" />
       </svg> -->
@@ -39,9 +55,9 @@
 
 </div>
 <!-- modal  -->
-<div class="about-section-backdrop is-hidden backdrop--hidden" data-backdrop-schedule>
-<div class="about-section-modal backdrop--hidden">
-  <button type="button" class="about-section-modal-button" data-toggle-backdrop-schedule><svg class="about-section-modal-close" width="8"
+<div class="about-section-backdrop is-hidden" data-about>
+<div class="about-section-modal">
+  <button type="button" class="about-section-modal-button" data-about-close><svg class="about-section-modal-close" width="8"
       height="8">
       <use href="../src/images/symbol-defs.svg#icon-close"></use>
     </svg></button>

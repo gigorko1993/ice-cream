@@ -1,13 +1,15 @@
 (() => {
-    const setup = name => {
-    const backdrop = document.querySelector(`[data-backdrop-${name}]`);
-    const buttons = document.querySelectorAll(`[data-toggle-backdrop-${name}]`);
-    const toggleBackdrop = () =>
-      backdrop.classList.toggle('backdrop--hidden');
-    buttons.forEach(button =>
-      button.addEventListener('click', toggleBackdrop),
-    );
-  }
-  setup('schedule')
-    setup('menu')
-})();
+    const refs = {
+      openModalBtn: document.querySelector('[data-about-open]'),
+      closeModalBtn: document.querySelector('[data-about-close]'),
+      modal: document.querySelector('[data-about]'),
+    };
+  
+    refs.openModalBtn.addEventListener('click', toggleModal);
+    refs.closeModalBtn.addEventListener('click', toggleModal);
+  
+    function toggleModal() {
+      document.body.classList.toggle('about-open');
+      refs.modal.classList.toggle('is-hidden');
+    }
+  })();
