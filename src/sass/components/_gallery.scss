@@ -1,7 +1,8 @@
 .gallery {
   padding-top: 40px;
   padding-bottom: 40px;
-  overflow: visible;
+  //overflow: visible;
+  overflow: hidden;
   background: linear-gradient(
     $bg-advantages-footer 0%,
     $bg-advantages-footer 58%,
