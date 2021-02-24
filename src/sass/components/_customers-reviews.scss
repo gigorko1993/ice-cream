@@ -1,16 +1,16 @@
 .customers-reviews {
-  padding-top: 80px;
+  padding-top: 40px;
   padding-bottom: 170px;
   color: $black-text-color;
   background-color: white;
 
   @media screen and (min-width: $tablet) {
-    padding-top: 121px;
+    padding-top: 81px;
     padding-bottom: 197px;
   }
 
   @media screen and (min-width: $desktop) {
-    padding-top: 123px;
+    padding-top: 83px;
     padding-bottom: 234px;
   }
 
