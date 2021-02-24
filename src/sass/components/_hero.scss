@@ -380,8 +380,8 @@
 }
 
 @include media_min($tablet) {
-  .hero__link-milk:hover .hero-image-bio,
-  .hero__link-milk:focus .hero-image-bio {
+  .hero__link-milk:hover .hero__image-bio,
+  .hero__link-milk:focus .hero__image-bio {
     transform: rotate(5deg) scale(1.07);
   }
 }
