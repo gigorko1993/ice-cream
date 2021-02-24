@@ -49,10 +49,11 @@
     position: absolute;
     top: 15px;
     right: 20px;
-    background-color: #fff;
-    border: 1px solid #fff;
+    border: 1px solid transparent;
     border-radius: 25px;
     outline: transparent;
+
+    @extend %button-white;
 
     @media screen and (min-width: $tablet) {
       top: 19px;
@@ -62,17 +63,6 @@
     @media screen and (min-width: $desktop) {
       top: 23px;
       right: 34px;
-    }
-
-    &:focus,
-    &:hover {
-      background-color: #d41443;
-      border-color: #d41443;
-    }
-
-    &:focus .franchise-icon,
-    &:hover .franchise-icon {
-      stroke: #fff;
     }
   }
 
@@ -237,18 +227,10 @@
     text-align: center;
     letter-spacing: 0.06em;
 
-    color: #ffffff;
-
-    background: #d41342;
+    @extend %button-pink;
 
     border-radius: 22px;
     border-color: rgba(255, 255, 255, 0);
     outline: transparent;
-  }
-
-  &-form-button:focus,
-  &-form-button:hover {
-    background-color: #ecebeb;
-    color: #d41443;
   }
 }
