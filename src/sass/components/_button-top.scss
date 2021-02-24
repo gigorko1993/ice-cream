@@ -7,15 +7,15 @@
   width: 40px;
   height: 40px;
   padding: 8px 8px;
-  background-color: rgba(254, 165, 187, 0.3);
+  background-color: rgba(254, 165, 187, 0.6);
   border-radius: 15px;
   cursor: pointer;
 
   &:hover,
   &:focus {
-    background-color: rgba(212, 20, 67, 0.3);
+    background-color: rgba(212, 20, 67, 0.6);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   &-svg {
