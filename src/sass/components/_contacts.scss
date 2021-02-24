@@ -1,25 +1,35 @@
 .contact {
   background-color: $bg-advantages-footer;
+
+  @media screen and (max-width: 1279px) {
+    background-image: none;
+    // background-position: 0 0px;
+  }
  
   @media screen and (min-width: $desktop) {
     background: $bg-advantages-footer
       url('../images/DesktopPhoto/sectionDropDesktop.png') no-repeat 50% 100%;
+      background-position: 0 -60px;
   }
   @media screen and (min-resolution: 2dppx) {
     background: $bg-advantages-footer
       url('../images/DesktopPhoto/sectionDropDesktop@2x.png') no-repeat 50%
       99%;
     background-size: 100%;
+    background-position: 0 -60px;
   }
   @media screen and (min-resolution: 3dppx) {
     background: $bg-advantages-footer
       url('../images/DesktopPhoto/sectionDropDesktop@3x.png') no-repeat 50%
       99%;
     background-size: 100%;
+    background-position: 0 -60px;
   }
-  @media screen and (min-width: 767px) and (max-width: 1279px) {
-    background-image: none;
-  }
+  // @media screen and (min-width: 767px) and (max-width: 1279px) {
+  //   background-image: none;
+  //   background-position: 0 -60px;
+  // }
+
 }
 .contact-position {
   position: relative;
@@ -87,7 +97,6 @@
     width: 330px;
     width: calc((100% - 90px) / 3);
     margin-right: 30px;
-    // top: -110px;
     padding: 60px 45px;
   }
 }
@@ -178,17 +187,19 @@
   font-family: $main-font-family;
   font-weight: $main-font-weight;
   font-size: 12px;
-  line-height: 1.8px;
+  line-height: 18px;
   letter-spacing: normal;
 
   color: $primary-text-color;
 
   @media screen and (min-width: $tablet) {
     font-size: 14px;
+    line-height: 23px;
   }
 
   @media screen and (min-width: $desktop) {
     font-size: 16px;
+    line-height: 29px;
   }
 }
 
@@ -214,16 +225,17 @@
   font-family: $main-font-family;
   font-weight: $main-font-weight;
   font-size: 12px;
-  line-height: 1.5px;
-  letter-spacing: $main-letter-spacing;
+  line-height: 18px;
 
   color: #907e82;
 
   @media screen and (min-width: $tablet) {
     font-size: 14px;
+    line-height: 25px;
   }
   @media screen and (min-width: $desktop) {
     font-size: 16px;
+    line-height: 29px;
   }
 }
 
@@ -321,6 +333,5 @@
 
 .icon-arrow:hover,
 .icon-arrow:focus {
-  stroke: $white-text-color;
-  
+  stroke: $white-text-color; 
 }
