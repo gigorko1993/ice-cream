@@ -110,10 +110,11 @@
 }
 .btn-position {
   position: absolute;
-  // left: 120px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-@media screen and (min-width: $mobile) and (max-width: $max-mobile) {
+@media screen and (min-width: $min-mobile) and (max-width: $max-mobile) {
   .products-card {
     width: 280px;
     &__pictur {
@@ -122,11 +123,6 @@
   }
   .products-item:not(:last-child) {
     margin-bottom: 130px;
-  }
-
-  .btn-position {
-    position: absolute;
-    left: 120px;
   }
 }
 
@@ -182,11 +178,6 @@
     text-align: center;
     letter-spacing: 0.04em;
   }
-
-  .btn-position {
-    position: absolute;
-    left: auto;
-  }
 }
 
 @media screen and (min-width: $desktop) {
@@ -233,9 +224,7 @@
   }
 
   .btn-position {
-    position: absolute;
     bottom: 5px;
-    right: 144px;
   }
 }
 
