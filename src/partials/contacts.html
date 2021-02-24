@@ -1,18 +1,10 @@
-<!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css">
-    <title>Заголовок страницы</title>
-    <link rel="shortcut icon" href="images/favicon.png" type="images/png">
-  </head>
-  <body>
-    <section class="contact" id="contacts">
+    <section class="contact">
         <div class="container">
             <h2 class="visually-hidden">Our schedule and contacts</h2>
+
+            <div class="contact-position">
                 <ul class="contact-list">
-                    <li class="contact-item">
+                    <li class="contact-item" id="contacts">
                         <span class="contact-decor cafe">Cafe</span>
 
                         <div class="contact-border">
@@ -25,16 +17,16 @@
                         <div class="contact-border">
                             <div class="contact-days">
                                 <h3 class="contact-title">Monday - Friday</h3>
-                                <time class="contact-time" datetime="06:00 AM - 10:00 PM">06:00 AM - 10:00 PM</time>
+                                <time class="contact-time" datetime="06:00AM-10:00 PM">06:00 AM - 10:00 PM</time>
                             </div>
                             <div class="contact-days">
                                 <h3 class="contact-title">Saturday - Sunday</h3>
-                                <time class="contact-time" datetime="06:00 AM - 10:00 PM">08:00 AM - 16:00 PM</time>
+                                <time class="contact-time" datetime="06:00AM-10:00PM">08:00 AM - 16:00 PM</time>
                             </div>
                         </div>
 
                         <ul class="contact-meta">
-                            <li><a class="contact-tel" href="tel:+61(0) 383 766 284">+61(0) 383 766 284</a></li>
+                            <li><a class="contact-tel" href="tel:+61(0)383766284">+61(0) 383 766 284</a></li>
                             <li><a class="contact-mail" href="mailto:noreply@envato.com">noreply@envato.com</a></li>
                         </ul>
                     </li>
@@ -52,16 +44,16 @@
                         <div class="contact-border">
                             <div class="contact-days">
                                 <h3 class="contact-title">Monday - Friday</h3>
-                                <time class="contact-time" datetime="06:00 AM - 10:00 PM">06:00 AM - 10:00 PM</time>
+                                <time class="contact-time" datetime="06:00AM-10:00PM">06:00 AM - 10:00 PM</time>
                             </div>
                             <div class="contact-days">
                                 <h3 class="contact-title">Saturday - Sunday</h3>
-                                <time class="contact-time" datetime="06:00 AM - 10:00 PM">08:00 AM - 16:00 PM</time>
+                                <time class="contact-time" datetime="06:00AM-10:00PM">08:00 AM - 16:00 PM</time>
                             </div>
                         </div>
 
                         <ul class="contact-meta">
-                            <li><a class="contact-tel" href="tel:+61(0) 383 766 284">+61(0) 383 766 284</a></li>
+                            <li><a class="contact-tel" href="tel:+61(0)383766284">+61(0) 383 766 284</a></li>
                             <li><a class="contact-mail" href="mailto:noreply@envato.com">noreply@envato.com</a></li>
                         </ul>
                     </li>
@@ -79,16 +71,16 @@
                         <div class="contact-border">
                             <div class="contact-days">
                                 <h3 class="contact-title">Monday - Friday</h3>
-                                <time class="contact-time" datetime="06:00 AM - 10:00 PM">06:00 AM - 10:00 PM</time>
+                                <time class="contact-time" datetime="06:00AM-10:00PM">06:00 AM - 10:00 PM</time>
                             </div>
                             <div class="contact-days">
                                 <h3 class="contact-title">Saturday - Sunday</h3>
-                                <time class="contact-time" datetime="06:00 AM - 10:00 PM">08:00 AM - 16:00 PM</time>
+                                <time class="contact-time" datetime="06:00AM-10:00PM">08:00 AM - 16:00 PM</time>
                             </div>
                         </div>
 
                         <ul class="contact-meta">
-                            <li><a class="contact-tel" href="tel:+61(0) 383 766 284">+61(0) 383 766 284</a></li>
+                            <li><a class="contact-tel" href="tel:+61(0)383766284">+61(0) 383 766 284</a></li>
                             <li><a class="contact-mail" href="mailto:noreply@envato.com">noreply@envato.com</a></li>
                         </ul>
                     </li>
@@ -98,7 +90,7 @@
                     <button type="button" class="button-pink__location" data-modal-open>
                         <span class="location-text">Our Locations</span>
                         <svg class="icon-arrow" width="8px" height="16px">
-                            <use href="../src/images/symbol-defs.svg#icon-vector-button"></use>
+                            <use href="../src/images/symbol-defs.svg#icon-vector-button-white"></use>
                         </svg>
                     </button>
                     <button type="button" class="button-white__franchise data-franchise-open" data-franchise-open>
@@ -109,9 +101,8 @@
                     </button>
                 </div>
         </div>
+    </div>
     </section>
 
     <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
     <script src="./index.js"></script>
-  </body>
-</html>

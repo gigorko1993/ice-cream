@@ -1,6 +1,6 @@
 .advantages {
   padding-top: 65px;
-  padding-bottom: 140px;
+  padding-bottom: 100px;
 
   background-color: $bg-advantages-footer;
 }
@@ -84,6 +84,7 @@
 
 .icon-udder::before {
   content: '';
+  height: 50px;
   background-image: url('../images/MobilePhoto/iconAdvantades1.png');
   background-size: contain;
 
