@@ -313,6 +313,9 @@
       font-size: 14px;
       line-height: 1.4;
     }
+
+    scrollbar-width: thin;
+    scrollbar-color: rgba(216, 162, 176, 0.4) rgba(248, 121, 151, 0.4);
   }
 
   &-text.is-shown {
@@ -396,5 +399,35 @@
   100% {
     transform: translateY(0%);
     opacity: 1;
+  }
+}
+
+// Custom scroll bar for IE Opera Chrome Safari
+// width of the entire scrollbar
+.hero-text::-webkit-scrollbar {
+  width: 3px;
+
+  @include media_min($desktop) {
+    width: 6px;
+  }
+}
+
+//  color of the tracking area
+.hero-text::-webkit-scrollbar-track {
+  background: rgba(216, 162, 176, 0.4);
+}
+
+//  color of the scroll thumb
+//  roundness of the scroll thumb
+//  creates padding around scroll thumb
+
+.hero-text::-webkit-scrollbar-thumb {
+  background-color: rgba(248, 121, 151, 0.4);
+  border-radius: 5px;
+  border: 1px solid rgba(255, 145, 171, 0.479);
+
+  @include media_min($desktop) {
+    border-radius: 10px;
+    border: 2px solid rgba(255, 145, 171, 0.479);
   }
 }
