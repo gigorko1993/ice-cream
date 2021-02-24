@@ -7,23 +7,23 @@
   width: 40px;
   height: 40px;
   padding: 8px 8px;
-  background-color: $secondary-text-color;
+  background-color: $bg-social-link;
   border-radius: 15px;
   cursor: pointer;
 
   &:hover,
   &:focus {
-    background-color: $bg-menu;
+    background-color: $accent-color;
   }
 
   &-svg {
     width: 40px;
     height: 40px;
-    fill: $accent-color;
+    fill:  $white-text-color;
   }
 
   &:hover .scrollup-svg,
   &:focus .scrollup-svg {
-    fill: $bg-header;
+    fill: $white-text-color;
   }
 }
