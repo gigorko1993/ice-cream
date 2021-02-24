@@ -12,7 +12,10 @@ body {
 body.franchise-open,
 body.modal-open,
 body.menu-open,
-body.about-open {
+body.about-open,
+body.buy-coffee-open,
+body.buy-cream-open,
+body.buy-shake-open {
   overflow: hidden;
 }
 
@@ -20,7 +23,10 @@ body.about-open {
 body.franchise-open .scrollup,
 body.modal-open .scrollup,
 body.menu-open .scrollup,
-body.about-open .scrollup {
+body.about-open .scrollup,
+body.buy-coffee-open .scrollup,
+body.buy-cream-open .scrollup,
+body.buy-shake-open .scrollup {
   visibility: hidden;
 }
 
